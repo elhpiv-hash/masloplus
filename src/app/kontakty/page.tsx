@@ -1,46 +1,76 @@
+import { Suspense } from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Card, Container, Section, buttonVariants } from "@/components/ui";
 import { siteConfig } from "@/content/site";
+import { LocationItem } from "@/components/layout/LocationItem";
+import { LocationsMap } from "@/components/sections";
+import { BookingForm } from "@/features/booking";
 
 export const metadata: Metadata = {
   title: "Контакты",
   description:
-    "Контакты автосервиса «Масло Плюс» в Чебоксарах: 3 точки, адреса, телефоны, график работы. Онлайн-запись.",
+    "Контакты автосервиса «Масло Плюс» в Чебоксарах: 3 точки, адреса, телефоны, график работы, карта. Онлайн-запись.",
 };
 
-/**
- * Контакты — заглушка (Промт 2). Карта и форма записи будут в Промте 9.
- * Данные NAP берём из единого источника content/site.ts.
- */
 export default function KontaktyPage() {
   return (
-    <main className="mx-auto max-w-3xl px-6 py-16">
-      <h1 className="text-3xl font-bold tracking-tight">Контакты</h1>
-      <ul className="mt-6 space-y-6">
-        {siteConfig.locations.map((location) => (
-          <li key={location.slug}>
-            <h2 className="text-lg font-semibold">{location.addressStreet}</h2>
-            <p className="text-sm text-neutral-500">
-              {location.hours.weekdays} · {location.hours.weekend}
-            </p>
-            <ul className="mt-1">
-              {location.phones.map((phone) => (
-                <li key={phone.tel}>
-                  <a
-                    className="text-blue-700 underline underline-offset-4"
-                    href={`tel:${phone.tel}`}
-                  >
-                    {phone.display}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </li>
-        ))}
-      </ul>
-      <Link className="mt-8 inline-block text-blue-700 underline underline-offset-4" href="/">
-        ← На главную
-      </Link>
+    <main>
+      <Section surface="dark">
+        <Container>
+          <h1 className="font-display text-4xl font-extrabold tracking-tight sm:text-5xl">
+            Контакты
+          </h1>
+          <p className="mt-4 max-w-2xl text-muted-foreground">
+            Три точки в Чебоксарах. Запишитесь онлайн — перезвоним и подтвердим удобное время.
+          </p>
+        </Container>
+      </Section>
+
+      <Section surface="light">
+        <Container>
+          <div className="grid gap-10 lg:grid-cols-2">
+            <div>
+              <h2 className="font-display text-2xl font-bold tracking-tight">Наши точки</h2>
+              <div className="mt-6 space-y-4">
+                {siteConfig.locations.map((location) => (
+                  <Card key={location.slug} className="p-5">
+                    <LocationItem location={location} showHours />
+                    {location.maps.gis2 && (
+                      <Link
+                        href={location.maps.gis2}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={buttonVariants({
+                          variant: "secondary",
+                          size: "sm",
+                          className: "mt-4",
+                        })}
+                      >
+                        Открыть в 2ГИС
+                      </Link>
+                    )}
+                  </Card>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <Suspense
+                fallback={
+                  <Card className="p-6 sm:p-8">
+                    <p className="text-muted-foreground">Загрузка формы…</p>
+                  </Card>
+                }
+              >
+                <BookingForm />
+              </Suspense>
+            </div>
+          </div>
+        </Container>
+      </Section>
+
+      <LocationsMap />
     </main>
   );
 }
