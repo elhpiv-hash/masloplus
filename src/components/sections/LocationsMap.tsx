@@ -2,22 +2,26 @@ import Link from "next/link";
 import { Container, Section, buttonVariants } from "@/components/ui";
 import { siteConfig } from "@/content/site";
 import { yandexMapWidgetSrc } from "@/content/integrations";
+import { buildYandexMapUrl } from "@/lib/yandex-map";
 import { SectionHeading } from "./SectionHeading";
 import { LazyEmbed } from "./LazyEmbed";
 
 /**
  * Карта с 3 точками: ленивый виджет Яндекс.Карт (грузится при скролле).
- * Пока нет ключа/виджета — показываем адреса с переходом в 2ГИС. Полная карта — на /kontakty.
+ * URL берётся из integrations (если владелец задал свой конструктор), иначе строится
+ * из координат точек. Фолбэк (адреса + 2ГИС) — если координат нет.
  */
 export function LocationsMap() {
+  const mapSrc = yandexMapWidgetSrc ?? buildYandexMapUrl(siteConfig.locations);
+
   return (
     <Section surface="light" className="pt-0">
       <Container className="space-y-8">
         <SectionHeading eyebrow="На карте" title="Наши точки в Чебоксарах" />
         <LazyEmbed
-          src={yandexMapWidgetSrc}
+          src={mapSrc}
           title="Карта точек Масло Плюс на Яндекс.Картах"
-          heightClassName="min-h-[320px]"
+          heightClassName="h-[420px] sm:h-[460px]"
           fallback={
             <div className="w-full">
               <p className="text-center text-muted-foreground">
