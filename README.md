@@ -62,10 +62,21 @@ docs/           # spec.md, content-model.md
 
 ## Безопасность
 
-- Security-заголовки настроены в [`next.config.ts`](next.config.ts): `Content-Security-Policy` (пока строгая; белый список embed VK/RuTube/Яндекс добавим позже), `Strict-Transport-Security`, `X-Content-Type-Options`, `X-Frame-Options`, `Referrer-Policy`, `Permissions-Policy`.
+- Security-заголовки настроены в [`next.config.ts`](next.config.ts): `Content-Security-Policy` (embed разрешены только с белого списка — VK Видео / RuTube; Яндекс добавим позже), `Strict-Transport-Security`, `X-Content-Type-Options`, `X-Frame-Options`, `Referrer-Policy`, `Permissions-Policy`.
 - Секреты — только в `.env` (см. [`.env.example`](.env.example)); токены VK/Telegram используются **только серверно**.
 - **152-ФЗ:** формы будут с чекбоксом согласия на обработку ПД; для боевого запуска ПД клиентов должны храниться на хостинге в РФ.
 
+## Галерея — как добавлять работы
+
+Раздел `/galereya` берёт контент из двух источников (данные забираются **серверно**):
+
+1. **Автоматически из VK** (приоритет). Задайте в `.env` `VK_SERVICE_TOKEN` и `VK_COMMUNITY_ID` — сайт сам подтянет последние фото со стены сообщества. Обновление — раз в час (ISR `revalidate = 3600`). Токен клиенту не отдаётся.
+2. **Вручную** — список в [`src/content/gallery.ts`](src/content/gallery.ts). Используется, когда авто-подтяжка не настроена.
+   - **Фото:** положите файл в `public/gallery/` и добавьте объект `{ id, type: "photo", src: "/gallery/файл.jpg", alt, caption }`.
+   - **Видео:** только VK Видео / RuTube (YouTube нельзя). Добавьте `{ id, type: "video", title, video: { provider: "rutube", id: "ID" } }` или `{ provider: "vk", ownerId: "-123", id: "456" }`.
+
+Подписи из VK/Telegram перед выводом **санитизируются**. Домены embed ограничены белым списком в `next.config.ts`.
+
 ## Статус
 
-Проект собирается по шагам (см. `PROMPTS.md` в корне рабочего стола). Текущий шаг — **Промт 2**: каркас, тулинг и база безопасности. Разделы-заглушки будут наполняться в следующих промтах.
+Проект собирается по шагам (см. `PROMPTS.md` в корне рабочего стола). Готовы: каркас и тулинг, дизайн-система, шапка/подвал, главная, услуги с калькулятором, наборы ТО, галерея. Что нужно от заказчика для боевого запуска — в [`docs/owner-checklist.md`](docs/owner-checklist.md).

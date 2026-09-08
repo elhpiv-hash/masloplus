@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Пример: аппаратная замена жидкости">
+  <rect width="800" height="600" fill="#1c2025"/>
+  <circle cx="160" cy="460" r="200" fill="#f26419" opacity="0.16"/>
+  <rect x="300" y="200" width="200" height="150" rx="18" fill="none" stroke="#f26419" stroke-width="10"/>
+  <path d="M400 350v70M360 420h80" stroke="#f6f7f8" stroke-width="10" stroke-linecap="round"/>
+  <text x="400" y="500" fill="#f6f7f8" font-family="Montserrat, Arial, sans-serif" font-size="38" font-weight="700" text-anchor="middle">Аппаратная замена</text>
+  <text x="400" y="543" fill="#aab1ba" font-family="Arial, sans-serif" font-size="22" text-anchor="middle">пример · заменится реальным фото</text>
+</svg>

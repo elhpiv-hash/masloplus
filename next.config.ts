@@ -19,9 +19,11 @@ const csp = [
   "object-src 'none'",
   "frame-ancestors 'none'",
   "form-action 'self'",
-  "img-src 'self' data: blob:",
+  // Картинки: свои + data/blob + CDN VK и RuTube (фото/превью из галереи).
+  "img-src 'self' data: blob: https://*.userapi.com https://*.vk.com https://*.rutube.ru",
   "font-src 'self' data:",
-  "frame-src 'none'",
+  // Видео-embed: только белый список — VK Видео и RuTube (YouTube не используем).
+  "frame-src https://vk.com https://vkvideo.ru https://rutube.ru",
   `script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ""}`,
   "style-src 'self' 'unsafe-inline'",
   `connect-src 'self'${isDev ? " ws:" : ""}`,
