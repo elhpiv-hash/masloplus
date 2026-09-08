@@ -3,12 +3,33 @@
 @tailwind utilities;
 
 /*
- * Базовые токены (Промт 2). Полная палитра и типографика — в Промте 3.
- * --font-sans задаёт next/font (кириллический subset) в layout.tsx.
- * --font-display пока указывает на sans; собственный display-шрифт добавим в Промте 3.
+ * Семантические токены поверхностей.
+ * Компоненты используют bg-background / text-foreground / border-border / bg-card / …
+ * и автоматически адаптируются, когда секция объявляет тёмную поверхность.
+ *
+ * Светлая поверхность — по умолчанию (:root и [data-surface="light"]).
+ * Тёмная — [data-surface="dark"] (переопределяет переменные внутри секции).
+ * Фиксированные шкалы (graphite, accent) заданы в tailwind.config.ts.
  */
-:root {
-  --font-display: var(--font-sans);
+:root,
+[data-surface="light"] {
+  --background: #ffffff;
+  --foreground: #16191d;
+  --card: #ffffff;
+  --muted: #f4f5f7;
+  --muted-foreground: #5b636d;
+  --border: #e6e8eb;
+  --ring: #f26419;
+}
+
+[data-surface="dark"] {
+  --background: #0c0e11;
+  --foreground: #f4f5f7;
+  --card: #16191d;
+  --muted: #1c2025;
+  --muted-foreground: #aab1ba;
+  --border: #2a2f36;
+  --ring: #f26419;
 }
 
 html {
@@ -17,13 +38,24 @@ html {
 
 body {
   font-family: var(--font-sans), system-ui, sans-serif;
-  -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
 
-/* Уважаем настройку пользователя об уменьшении анимаций. */
+::selection {
+  background-color: #f26419;
+  color: #0c0e11;
+}
+
+/* Глобальное уважение к настройке «уменьшить движение»: гасим анимации/переходы. */
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }

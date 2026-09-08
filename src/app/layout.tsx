@@ -1,14 +1,19 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Montserrat } from "next/font/google";
 import "./globals.css";
 
-/**
- * Основной шрифт с обязательным кириллическим subset (правило проекта).
- * Display-шрифт для заголовков добавим в Промте 3 (дизайн-система).
- */
+/** Текстовый гротеск — кириллический subset обязателен (правило проекта). */
 const inter = Inter({
   subsets: ["latin", "cyrillic"],
   variable: "--font-sans",
+  display: "swap",
+});
+
+/** Display-шрифт для заголовков — геометрический, «дорогой», с кириллицей. */
+const montserrat = Montserrat({
+  subsets: ["latin", "cyrillic"],
+  variable: "--font-display",
+  weight: ["600", "700", "800"],
   display: "swap",
 });
 
@@ -31,9 +36,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ru" className={inter.variable}>
+    <html lang="ru" className={`${inter.variable} ${montserrat.variable}`}>
       {/* Header/Footer добавим в Промте 4. */}
-      <body>{children}</body>
+      <body className="bg-background text-foreground antialiased">{children}</body>
     </html>
   );
 }
