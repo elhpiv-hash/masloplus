@@ -91,10 +91,15 @@ const config: Config = {
           from: { opacity: "0" },
           to: { opacity: "1" },
         },
+        "slide-in-right": {
+          from: { opacity: "0", transform: "translateX(100%)" },
+          to: { opacity: "1", transform: "translateX(0)" },
+        },
       },
       animation: {
         "fade-up": "fade-up 0.5s ease-out both",
         "fade-in": "fade-in 0.4s ease-out both",
+        "slide-in-right": "slide-in-right 0.25s ease-out both",
       },
     },
   },

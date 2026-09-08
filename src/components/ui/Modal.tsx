@@ -1,8 +1,10 @@
 "use client";
 
-import { useCallback, useEffect, useId, useRef, useState, type ReactNode } from "react";
+import { useEffect, useId, useRef, useState, type ReactNode } from "react";
 import { createPortal } from "react-dom";
 import { cn } from "@/lib/cn";
+import { useFocusTrap } from "@/hooks/useFocusTrap";
+import { useScrollLock } from "@/hooks/useScrollLock";
 
 type ModalProps = {
   open: boolean;
@@ -13,9 +15,6 @@ type ModalProps = {
   className?: string;
 };
 
-const FOCUSABLE =
-  'a[href], button:not([disabled]), textarea:not([disabled]), input:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])';
-
 /**
  * Доступная модалка: focus-trap, закрытие по ESC и клику по подложке,
  * блокировка скролла страницы, возврат фокуса на элемент-инициатор.
@@ -23,66 +22,14 @@ const FOCUSABLE =
  */
 export function Modal({ open, onClose, title, description, children, className }: ModalProps) {
   const dialogRef = useRef<HTMLDivElement>(null);
-  const restoreFocusRef = useRef<HTMLElement | null>(null);
   const [mounted, setMounted] = useState(false);
   const titleId = useId();
   const descId = useId();
 
   useEffect(() => setMounted(true), []);
 
-  const getFocusable = useCallback(
-    () =>
-      dialogRef.current
-        ? Array.from(dialogRef.current.querySelectorAll<HTMLElement>(FOCUSABLE))
-        : [],
-    [],
-  );
-
-  useEffect(() => {
-    if (!open) return;
-
-    restoreFocusRef.current = document.activeElement as HTMLElement | null;
-    const previousOverflow = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
-
-    // Начальный фокус — внутрь модалки.
-    const focusables = getFocusable();
-    (focusables[0] ?? dialogRef.current)?.focus();
-
-    const onKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "Escape") {
-        event.preventDefault();
-        onClose();
-        return;
-      }
-      if (event.key !== "Tab") return;
-
-      const items = getFocusable();
-      if (items.length === 0) {
-        event.preventDefault();
-        dialogRef.current?.focus();
-        return;
-      }
-      const first = items[0];
-      const last = items[items.length - 1];
-      const active = document.activeElement;
-
-      if (event.shiftKey && (active === first || !dialogRef.current?.contains(active))) {
-        event.preventDefault();
-        last.focus();
-      } else if (!event.shiftKey && active === last) {
-        event.preventDefault();
-        first.focus();
-      }
-    };
-
-    document.addEventListener("keydown", onKeyDown);
-    return () => {
-      document.removeEventListener("keydown", onKeyDown);
-      document.body.style.overflow = previousOverflow;
-      restoreFocusRef.current?.focus?.();
-    };
-  }, [open, onClose, getFocusable]);
+  useScrollLock(open);
+  useFocusTrap(open, dialogRef, onClose);
 
   if (!mounted || !open) return null;
 

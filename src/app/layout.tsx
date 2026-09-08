@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter, Montserrat } from "next/font/google";
 import "./globals.css";
+import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
 
 /** Текстовый гротеск — кириллический subset обязателен (правило проекта). */
 const inter = Inter({
@@ -37,8 +39,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru" className={`${inter.variable} ${montserrat.variable}`}>
-      {/* Header/Footer добавим в Промте 4. */}
-      <body className="bg-background text-foreground antialiased">{children}</body>
+      <body className="flex min-h-screen flex-col bg-background text-foreground antialiased">
+        <Header />
+        <div className="flex-1">{children}</div>
+        <Footer />
+      </body>
     </html>
   );
 }
