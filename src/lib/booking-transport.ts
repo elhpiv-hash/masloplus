@@ -1,3 +1,4 @@
+import "server-only";
 import { siteConfig } from "@/content/site";
 import type { BookingData } from "@/features/booking/schema";
 

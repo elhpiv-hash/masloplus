@@ -3,15 +3,20 @@ import type { NextConfig } from "next";
 const isDev = process.env.NODE_ENV === "development";
 
 /**
- * Content-Security-Policy.
+ * Content-Security-Policy — строгая база + точечный белый список.
  *
- * Пока СТРОГАЯ: только собственный источник, объекты запрещены, фреймы запрещены.
- * Белый список для embed (VK Видео, RuTube, Яндекс.Карты/Метрика) добавим позже
- * (Промт 8 — галерея, Промт 10 — аналитика/карты, Промт 12 — аудит).
+ * default-src 'self': по умолчанию только собственный источник. Объекты и обрамление
+ * нашего сайта запрещены (object-src/frame-ancestors 'none'). Внешнее разрешено только
+ * там, где это реально нужно:
+ *  - frame-src: VK Видео, RuTube (видео галереи), Яндекс.Карты (карта/отзывы),
+ *    Яндекс SmartCaptcha (антиспам форм). YouTube НЕ разрешён.
+ *  - img-src: CDN VK/RuTube (фото галереи) + пиксель Яндекс.Метрики.
+ *  - script-src/connect-src: Яндекс.Метрика и SmartCaptcha.
  *
- * 'unsafe-inline' для script/style — вынужденный компромисс App Router без nonce;
- * в Промте 12 (аудит) ужесточим через nonce/строгую политику. В dev дополнительно
- * нужен 'unsafe-eval' и ws: для HMR — включаем только в режиме разработки.
+ * Компромисс: 'unsafe-inline' в script-src нужен для инлайновой загрузки Next App Router,
+ * JSON-LD и сниппета Метрики (nonce на статическом экспорте недоступен). Это осознанный
+ * баланс; XSS-риск снижается тем, что весь внешний контент санитизируется, а список
+ * доменов ограничен. В dev дополнительно нужны 'unsafe-eval' и ws: (HMR) — только в dev.
  */
 const csp = [
   "default-src 'self'",
@@ -22,8 +27,8 @@ const csp = [
   // Картинки: свои + data/blob + CDN VK/RuTube (галерея) + пиксель Яндекс.Метрики.
   "img-src 'self' data: blob: https://*.userapi.com https://*.vk.com https://*.rutube.ru https://mc.yandex.ru",
   "font-src 'self' data:",
-  // Видео-embed (VK Видео, RuTube) + фрейм Яндекс SmartCaptcha. YouTube не используем.
-  "frame-src https://vk.com https://vkvideo.ru https://rutube.ru https://smartcaptcha.yandexcloud.net",
+  // Embed по белому списку: VK Видео, RuTube, Яндекс.Карты, SmartCaptcha. YouTube не используем.
+  "frame-src https://vk.com https://vkvideo.ru https://rutube.ru https://yandex.ru https://smartcaptcha.yandexcloud.net",
   `script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ""} https://smartcaptcha.yandexcloud.net https://mc.yandex.ru`,
   "style-src 'self' 'unsafe-inline'",
   `connect-src 'self'${isDev ? " ws:" : ""} https://smartcaptcha.yandexcloud.net https://mc.yandex.ru`,

@@ -1,3 +1,4 @@
+import "server-only";
 import { manualGallery } from "@/content/gallery";
 import { sanitizeText } from "@/lib/sanitize";
 import type { GalleryItem } from "@/types/gallery";
