@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter, Montserrat } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
@@ -14,7 +14,12 @@ const inter = Inter({
   display: "swap",
 });
 
-/** Display-шрифт для заголовков — геометрический, «дорогой», с кириллицей. */
+/**
+ * Display-шрифт для заголовков — геометрический, «дорогой», с кириллицей.
+ * Ключевое: в display-цепочке НЕТ Inter (см. tailwind.config), поэтому до загрузки
+ * заголовки рендерятся в size-adjust фолбэке Montserrat (метрики подогнаны под Montserrat),
+ * и своп на сам Montserrat идёт почти без сдвига макета (низкий CLS детерминированно).
+ */
 const montserrat = Montserrat({
   subsets: ["latin", "cyrillic"],
   variable: "--font-display",
@@ -48,6 +53,13 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: dark)", color: "#0c0e11" },
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -57,8 +69,16 @@ export default function RootLayout({
     <html lang="ru" className={`${inter.variable} ${montserrat.variable}`}>
       <body className="flex min-h-screen flex-col bg-background text-foreground antialiased">
         <OrganizationJsonLd />
+        <a
+          href="#content"
+          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-lg focus:bg-accent-500 focus:px-4 focus:py-2 focus:text-accent-foreground"
+        >
+          Перейти к содержимому
+        </a>
         <Header />
-        <div className="flex-1">{children}</div>
+        <div id="content" className="flex-1">
+          {children}
+        </div>
         <Footer />
         <YandexMetrika />
       </body>

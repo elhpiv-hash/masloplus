@@ -20,6 +20,8 @@
   --muted-foreground: #5b636d;
   --border: #e6e8eb;
   --ring: #f26419;
+  /* Акцентный ТЕКСТ на светлой поверхности — accent-700 (контраст AA к белому/muted). */
+  --accent-strong: #ba3c0c;
 }
 
 [data-surface="dark"] {
@@ -30,10 +32,15 @@
   --muted-foreground: #aab1ba;
   --border: #2a2f36;
   --ring: #f26419;
+  /* Акцентный ТЕКСТ на тёмной поверхности — accent-500 (контраст AA к графиту). */
+  --accent-strong: #f26419;
 }
 
 html {
   scroll-behavior: smooth;
+  /* Резервируем место под вертикальный скроллбар, чтобы его появление
+     не сдвигало макет (устраняет CLS на десктопе с классическим скроллбаром). */
+  scrollbar-gutter: stable;
 }
 
 body {

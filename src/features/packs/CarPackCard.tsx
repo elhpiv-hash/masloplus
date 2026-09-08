@@ -91,7 +91,7 @@ export function CarPackCard({ pack }: { pack: CarPack }) {
       </dl>
 
       {tier.freeOilChange && (
-        <p className="mt-3 text-xs text-accent-600">
+        <p className="mt-3 text-xs text-accent-strong">
           Замена масла в ДВС — бесплатно с материалами сети
         </p>
       )}

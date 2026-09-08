@@ -42,7 +42,7 @@ export function Header() {
                     <a
                       key={phone.tel}
                       href={`tel:${phone.tel}`}
-                      className="rounded text-muted-foreground transition-colors hover:text-accent-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                      className="rounded text-muted-foreground transition-colors hover:text-accent-strong focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
                     >
                       {phone.display}
                     </a>
@@ -76,8 +76,8 @@ export function Header() {
                     className={cn(
                       "rounded-lg px-3 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
                       isActive
-                        ? "text-accent-600"
-                        : "text-foreground hover:bg-muted hover:text-accent-600",
+                        ? "text-accent-strong"
+                        : "text-foreground hover:bg-muted hover:text-accent-strong",
                     )}
                   >
                     {item.label}

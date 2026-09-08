@@ -55,6 +55,8 @@ const config: Config = {
           950: "#410f06",
           // Текст поверх акцентной заливки (тёмный — контраст на янтаре высокий).
           foreground: "#0c0e11",
+          // Акцентный ТЕКСТ на поверхности (CSS-переменная: светлая→700, тёмная→500) — AA.
+          strong: "var(--accent-strong)",
         },
         // Семантические токены поверхностей (см. globals.css).
         background: "var(--background)",
@@ -70,7 +72,9 @@ const config: Config = {
       fontFamily: {
         // CSS-переменные задаёт next/font (кириллический subset) в layout.tsx.
         sans: ["var(--font-sans)", "system-ui", "sans-serif"],
-        display: ["var(--font-display)", "var(--font-sans)", "system-ui", "sans-serif"],
+        // Без var(--font-sans): заголовки не «прыгают» на свопе Inter — только
+        // Montserrat и его size-adjust фолбэк (см. layout.tsx, display: optional).
+        display: ["var(--font-display)", "system-ui", "sans-serif"],
       },
       borderRadius: {
         xl: "0.875rem",

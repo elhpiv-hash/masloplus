@@ -1,13 +1,11 @@
 import Link from "next/link";
 import { cn } from "@/lib/cn";
-import { siteConfig } from "@/content/site";
 
 /** Логотип: капля масла + словесный знак. Ведёт на главную. */
 export function Logo({ className }: { className?: string }) {
   return (
     <Link
       href="/"
-      aria-label={`${siteConfig.brand} — на главную`}
       className={cn(
         "inline-flex items-center gap-2 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background",
         className,
@@ -33,6 +31,7 @@ export function Logo({ className }: { className?: string }) {
       <span className="font-display text-lg font-extrabold tracking-tight text-foreground">
         Масло<span className="text-accent-500">Плюс</span>
       </span>
+      <span className="sr-only"> — на главную</span>
     </Link>
   );
 }

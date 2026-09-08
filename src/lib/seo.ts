@@ -18,7 +18,8 @@ export function pageMetadata(opts: {
   const fullTitle = title ? `${title} — ${SITE_NAME}` : DEFAULT_TITLE;
 
   return {
-    title,
+    // Если title не задан (главная) — не перетираем корневой default пустым значением.
+    ...(title ? { title } : {}),
     description,
     alternates: { canonical: path },
     openGraph: {

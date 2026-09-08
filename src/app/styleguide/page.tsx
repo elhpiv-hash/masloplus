@@ -65,7 +65,7 @@ function Swatches({ scale }: { scale: string[] }) {
 function Heading({ eyebrow, title }: { eyebrow: string; title: string }) {
   return (
     <div>
-      <p className="text-sm font-medium uppercase tracking-wide text-accent-600">{eyebrow}</p>
+      <p className="text-sm font-medium uppercase tracking-wide text-accent-strong">{eyebrow}</p>
       <h2 className="mt-1 font-display text-2xl font-bold tracking-tight sm:text-3xl">{title}</h2>
     </div>
   );
@@ -245,7 +245,7 @@ export default function StyleguidePage() {
                   Согласен на обработку персональных данных
                   <Link
                     href="/policy"
-                    className="ml-1 text-accent-600 underline underline-offset-2"
+                    className="ml-1 text-accent-strong underline underline-offset-2"
                   >
                     (политика)
                   </Link>

@@ -17,7 +17,7 @@ export function LocationItem({ location, showHours = false, className }: Locatio
           <a
             key={phone.tel}
             href={`tel:${phone.tel}`}
-            className="w-fit rounded text-sm text-muted-foreground transition-colors hover:text-accent-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+            className="inline-block w-fit rounded py-0.5 text-sm text-muted-foreground transition-colors hover:text-accent-strong focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
           >
             {phone.display}
           </a>

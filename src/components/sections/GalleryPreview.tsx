@@ -30,7 +30,7 @@ export function GalleryPreview() {
               key={index}
               href={galleryPreview.href}
               aria-label="Перейти в галерею работ и видео"
-              className="group relative flex aspect-[4/3] items-center justify-center overflow-hidden rounded-2xl border border-border bg-card text-muted-foreground transition-colors hover:text-accent-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+              className="group relative flex aspect-[4/3] items-center justify-center overflow-hidden rounded-2xl border border-border bg-card text-muted-foreground transition-colors hover:text-accent-strong focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
             >
               {tile.kind === "video" ? (
                 <svg

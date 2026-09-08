@@ -9,7 +9,7 @@ export function OilsBlock() {
       <Container>
         <div className="grid items-center gap-8 lg:grid-cols-2">
           <div>
-            <p className="text-sm font-medium uppercase tracking-wide text-accent-600">
+            <p className="text-sm font-medium uppercase tracking-wide text-accent-strong">
               {oilsBlock.eyebrow}
             </p>
             <h2 className="mt-1 font-display text-2xl font-bold tracking-tight sm:text-3xl">
@@ -24,7 +24,7 @@ export function OilsBlock() {
             </Link>
           </div>
           <div className="rounded-3xl border border-border bg-muted p-10 text-center">
-            <p className="font-display text-6xl font-extrabold text-accent-600">200+</p>
+            <p className="font-display text-6xl font-extrabold text-accent-strong">200+</p>
             <p className="mt-2 text-muted-foreground">видов масел и технических жидкостей</p>
           </div>
         </div>

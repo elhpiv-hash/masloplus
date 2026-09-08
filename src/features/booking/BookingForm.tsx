@@ -132,7 +132,7 @@ export function BookingForm() {
   if (status === "success") {
     return (
       <Card className="p-6 sm:p-8">
-        <div className="flex h-12 w-12 items-center justify-center rounded-full bg-accent-500/15 text-accent-600">
+        <div className="flex h-12 w-12 items-center justify-center rounded-full bg-accent-500/15 text-accent-strong">
           <svg
             viewBox="0 0 24 24"
             width="26"
@@ -240,7 +240,7 @@ export function BookingForm() {
             label={
               <>
                 Согласен на обработку персональных данных и с{" "}
-                <Link href="/policy" className="text-accent-600 underline underline-offset-2">
+                <Link href="/policy" className="text-accent-strong underline underline-offset-2">
                   Политикой обработки ПД
                 </Link>
               </>

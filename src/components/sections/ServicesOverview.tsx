@@ -63,7 +63,7 @@ export function ServicesOverview() {
                 interactive
                 className="h-full p-6 group-focus-visible:ring-2 group-focus-visible:ring-ring group-focus-visible:ring-offset-2 group-focus-visible:ring-offset-background"
               >
-                <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-accent-500/10 text-accent-600">
+                <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-accent-500/10 text-accent-strong">
                   {categoryIcons[category.slug]}
                 </span>
                 <h3 className="mt-4 font-display text-lg font-semibold">{category.title}</h3>

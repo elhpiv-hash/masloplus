@@ -74,8 +74,8 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
                     className={cn(
                       "block rounded-lg px-3 py-2.5 text-base font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
                       isActive
-                        ? "bg-muted text-accent-600"
-                        : "text-foreground hover:bg-muted hover:text-accent-600",
+                        ? "bg-muted text-accent-strong"
+                        : "text-foreground hover:bg-muted hover:text-accent-strong",
                     )}
                   >
                     {item.label}
