@@ -132,7 +132,7 @@ export function BookingForm() {
   if (status === "success") {
     return (
       <Card className="p-6 sm:p-8">
-        <div className="flex h-12 w-12 items-center justify-center rounded-full bg-accent-500/15 text-accent-strong">
+        <div className="flex h-12 w-12 items-center justify-center rounded-full bg-accent text-accent-foreground">
           <svg
             viewBox="0 0 24 24"
             width="26"
@@ -145,7 +145,7 @@ export function BookingForm() {
           </svg>
         </div>
         <h3 className="mt-4 font-display text-xl font-semibold">Заявка отправлена</h3>
-        <p className="mt-2 text-muted-foreground">
+        <p className="mt-2 text-muted">
           Мы свяжемся с вами в рабочее время, чтобы подтвердить запись. Если нужно срочно —
           позвоните нам.
         </p>
@@ -156,7 +156,7 @@ export function BookingForm() {
   return (
     <Card className="p-6 sm:p-8">
       <h3 className="font-display text-xl font-semibold">Записаться онлайн</h3>
-      <p className="mt-1 text-sm text-muted-foreground">
+      <p className="mt-1 text-sm text-muted">
         Оставьте контакты — перезвоним и подтвердим удобное время.
       </p>
 
@@ -188,7 +188,7 @@ export function BookingForm() {
             id="booking-location"
             value={locationSlug}
             onChange={(event) => setLocationSlug(event.target.value)}
-            className="flex h-11 w-full rounded-xl border border-border bg-background px-3 text-sm text-foreground transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+            className="flex h-11 w-full rounded-xl border border-border bg-background px-3 text-sm text-ink transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
           >
             {siteConfig.locations.map((location) => (
               <option key={location.slug} value={location.slug}>

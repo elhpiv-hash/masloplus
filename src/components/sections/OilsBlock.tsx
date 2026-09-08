@@ -15,7 +15,7 @@ export function OilsBlock() {
             <h2 className="mt-1 font-display text-2xl font-bold tracking-tight sm:text-3xl">
               {oilsBlock.title}
             </h2>
-            <p className="mt-4 max-w-xl text-muted-foreground">{oilsBlock.text}</p>
+            <p className="mt-4 max-w-xl text-muted">{oilsBlock.text}</p>
             <Link
               href="/uslugi"
               className={buttonVariants({ variant: "secondary", className: "mt-6" })}
@@ -23,9 +23,9 @@ export function OilsBlock() {
               Услуги и цены
             </Link>
           </div>
-          <div className="rounded-3xl border border-border bg-muted p-10 text-center">
+          <div className="rounded-3xl border border-border bg-primary/5 p-10 text-center">
             <p className="font-display text-6xl font-extrabold text-accent-strong">200+</p>
-            <p className="mt-2 text-muted-foreground">видов масел и технических жидкостей</p>
+            <p className="mt-2 text-muted">видов масел и технических жидкостей</p>
           </div>
         </div>
       </Container>

@@ -24,7 +24,7 @@ export function LazyEmbed({ src, title, heightClassName = "h-[440px]", fallback 
     <div
       ref={ref}
       className={cn(
-        "relative overflow-hidden rounded-2xl border border-border bg-muted",
+        "relative overflow-hidden rounded-2xl border border-border bg-primary/5",
         heightClassName,
       )}
     >
@@ -38,7 +38,7 @@ export function LazyEmbed({ src, title, heightClassName = "h-[440px]", fallback 
             referrerPolicy="strict-origin-when-cross-origin"
           />
         ) : (
-          <div className="flex h-full items-center justify-center text-sm text-muted-foreground">
+          <div className="flex h-full items-center justify-center text-sm text-muted">
             Загрузка…
           </div>
         )

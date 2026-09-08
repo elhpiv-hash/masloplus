@@ -38,8 +38,8 @@ export default async function OpengraphImage() {
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-between",
-        background: "#0c0e11",
-        color: "#f6f7f8",
+        background: "#0e2559",
+        color: "#ffffff",
         padding: 80,
       }}
     >
@@ -50,7 +50,7 @@ export default async function OpengraphImage() {
             height: 56,
             borderRadius: "50% 50% 50% 0",
             transform: "rotate(45deg)",
-            background: "#f26419",
+            background: "#f7c31c",
           }}
         />
         <div style={{ display: "flex", fontSize: 40, fontWeight: 700 }}>{brand}</div>
@@ -62,7 +62,7 @@ export default async function OpengraphImage() {
         {title}
       </div>
 
-      <div style={{ display: "flex", fontSize: 34, color: "#f26419", fontWeight: 700 }}>
+      <div style={{ display: "flex", fontSize: 34, color: "#f7c31c", fontWeight: 700 }}>
         {subtitle}
       </div>
     </div>,

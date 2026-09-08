@@ -18,7 +18,7 @@ export default function NaboryPage() {
           <h1 className="font-display text-4xl font-extrabold tracking-tight sm:text-5xl">
             Готовые наборы ТО
           </h1>
-          <p className="mt-4 max-w-2xl text-muted-foreground">
+          <p className="mt-4 max-w-2xl text-muted">
             Масло и фильтры под конкретную модель — выберите тариф Бюджет, Оптимум или Премиум. Не
             нашли свою марку — оставьте заявку, подберём.
           </p>
@@ -29,7 +29,7 @@ export default function NaboryPage() {
         <Container className="space-y-8">
           <p
             role="note"
-            className="rounded-xl border border-accent-500/30 bg-accent-500/5 p-4 text-sm text-foreground"
+            className="rounded-xl border border-accent/40 bg-accent/10 p-4 text-sm text-ink"
           >
             Составы и цены наборов указаны предварительно и уточняются. Точный набор и стоимость для
             вашего автомобиля подтвердит мастер при записи.

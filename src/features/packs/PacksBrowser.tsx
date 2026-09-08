@@ -34,7 +34,7 @@ export function PacksBrowser({ packs }: { packs: CarPack[] }) {
       </div>
 
       {filtered.length === 0 ? (
-        <p className="mt-8 rounded-2xl border border-border bg-card p-8 text-center text-muted-foreground">
+        <p className="mt-8 rounded-2xl border border-border bg-surface p-8 text-center text-muted">
           По запросу ничего не нашлось. Оставьте заявку ниже — подберём набор под вашу марку.
         </p>
       ) : (

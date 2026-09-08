@@ -67,11 +67,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru" className={`${inter.variable} ${montserrat.variable}`}>
-      <body className="flex min-h-screen flex-col bg-background text-foreground antialiased">
+      <body className="flex min-h-screen flex-col bg-background text-ink antialiased">
         <OrganizationJsonLd />
         <a
           href="#content"
-          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-lg focus:bg-accent-500 focus:px-4 focus:py-2 focus:text-accent-foreground"
+          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-lg focus:bg-accent focus:px-4 focus:py-2 focus:text-accent-foreground"
         >
           Перейти к содержимому
         </a>

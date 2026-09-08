@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Пример: замена масла">
-  <rect width="800" height="600" fill="#16191d"/>
-  <circle cx="640" cy="140" r="180" fill="#f26419" opacity="0.18"/>
-  <path d="M400 210c60 70 108 131 108 188a108 108 0 0 1-216 0c0-57 48-118 108-188Z" fill="#f26419"/>
-  <text x="400" y="500" fill="#f6f7f8" font-family="Montserrat, Arial, sans-serif" font-size="40" font-weight="700" text-anchor="middle">Замена масла</text>
-  <text x="400" y="545" fill="#aab1ba" font-family="Arial, sans-serif" font-size="22" text-anchor="middle">пример · заменится реальным фото</text>
-</svg>

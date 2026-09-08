@@ -15,8 +15,8 @@ const badgeLabels: Record<PackBadge, string> = {
 function DetailRow({ label, value }: { label: string; value: string }) {
   return (
     <div className="flex justify-between gap-3">
-      <dt className="text-muted-foreground">{label}</dt>
-      <dd className="text-right font-medium text-foreground">{value}</dd>
+      <dt className="text-muted">{label}</dt>
+      <dd className="text-right font-medium text-ink">{value}</dd>
     </div>
   );
 }
@@ -39,7 +39,7 @@ export function CarPackCard({ pack }: { pack: CarPack }) {
           <h3 className="font-display text-lg font-semibold">
             {pack.brand} {pack.model}
           </h3>
-          <p className="text-sm text-muted-foreground">
+          <p className="text-sm text-muted">
             {pack.engine}
             {pack.years ? ` · ${pack.years}` : ""} · объём {pack.fillVolumeL} л
           </p>
@@ -59,7 +59,7 @@ export function CarPackCard({ pack }: { pack: CarPack }) {
       <div
         role="tablist"
         aria-label="Тариф"
-        className="mt-4 inline-flex self-start rounded-xl border border-border bg-muted p-1"
+        className="mt-4 inline-flex self-start rounded-xl border border-border bg-primary/5 p-1"
       >
         {pack.tiers.map((option, index) => {
           const active = index === tierIndex;
@@ -72,9 +72,7 @@ export function CarPackCard({ pack }: { pack: CarPack }) {
               onClick={() => setTierIndex(index)}
               className={cn(
                 "rounded-lg px-3 py-1.5 text-xs font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
-                active
-                  ? "bg-card text-foreground shadow-soft"
-                  : "text-muted-foreground hover:text-foreground",
+                active ? "bg-surface text-ink shadow-soft" : "text-muted hover:text-ink",
               )}
             >
               {option.name}
@@ -101,13 +99,13 @@ export function CarPackCard({ pack }: { pack: CarPack }) {
       <div className="mt-5 flex items-baseline justify-between">
         {tier.totalPrice !== null ? (
           <p>
-            <span className="text-sm text-muted-foreground">Цена </span>
-            <span className="font-display text-xl font-bold text-foreground">
+            <span className="text-sm text-muted">Цена </span>
+            <span className="font-display text-xl font-bold text-ink">
               {formatPrice(tier.totalPrice)}
             </span>
           </p>
         ) : (
-          <p className="text-sm text-muted-foreground">По запросу</p>
+          <p className="text-sm text-muted">По запросу</p>
         )}
       </div>
 

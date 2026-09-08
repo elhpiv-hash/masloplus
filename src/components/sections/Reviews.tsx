@@ -23,7 +23,7 @@ export function Reviews() {
           title="Отзывы о Масло Плюс на Яндекс.Картах"
           fallback={
             <div className="text-center">
-              <p className="text-muted-foreground">
+              <p className="text-muted">
                 Виджет отзывов Яндекс подключим с id организации. Пока — отзывы в 2ГИС:
               </p>
               <div className="mt-4 flex flex-wrap justify-center gap-3">

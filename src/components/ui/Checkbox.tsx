@@ -11,7 +11,7 @@ export type CheckboxProps = Omit<React.InputHTMLAttributes<HTMLInputElement>, "t
 };
 
 const inputClasses = cn(
-  "mt-0.5 h-5 w-5 shrink-0 cursor-pointer rounded-md border border-border bg-background accent-accent-500",
+  "mt-0.5 h-5 w-5 shrink-0 cursor-pointer rounded-md border border-border bg-background accent-primary",
   "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background",
   "disabled:cursor-not-allowed disabled:opacity-50",
 );
@@ -30,7 +30,7 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(function Che
   return (
     <label
       className={cn(
-        "flex cursor-pointer items-start gap-2.5 text-sm text-foreground",
+        "flex cursor-pointer items-start gap-2.5 text-sm text-ink",
         "has-[:disabled]:cursor-not-allowed has-[:disabled]:opacity-60",
         wrapperClassName,
       )}

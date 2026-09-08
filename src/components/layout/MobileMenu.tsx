@@ -35,7 +35,7 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
   return createPortal(
     <div className="fixed inset-0 z-50 lg:hidden">
       <div
-        className="absolute inset-0 bg-graphite-950/60 backdrop-blur-sm motion-safe:animate-fade-in"
+        className="absolute inset-0 bg-primary-dark/60 backdrop-blur-sm motion-safe:animate-fade-in"
         aria-hidden="true"
         onClick={onClose}
       />
@@ -45,7 +45,7 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
         aria-modal="true"
         aria-label="Меню сайта"
         data-surface="light"
-        className="absolute right-0 top-0 flex h-full w-[min(88vw,360px)] flex-col overflow-y-auto border-l border-border bg-card p-5 shadow-elevated motion-safe:animate-slide-in-right"
+        className="absolute right-0 top-0 flex h-full w-[min(88vw,360px)] flex-col overflow-y-auto border-l border-border bg-surface p-5 shadow-elevated motion-safe:animate-slide-in-right"
       >
         <div className="flex items-center justify-between">
           <Logo />
@@ -53,7 +53,7 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
             type="button"
             onClick={onClose}
             aria-label="Закрыть меню"
-            className="inline-flex h-10 w-10 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:bg-muted hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-card"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-lg text-muted transition-colors hover:bg-primary/5 hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-surface"
           >
             <span aria-hidden="true" className="text-2xl leading-none">
               ×
@@ -74,8 +74,8 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
                     className={cn(
                       "block rounded-lg px-3 py-2.5 text-base font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
                       isActive
-                        ? "bg-muted text-accent-strong"
-                        : "text-foreground hover:bg-muted hover:text-accent-strong",
+                        ? "bg-primary/5 text-accent-strong"
+                        : "text-ink hover:bg-primary/5 hover:text-accent-strong",
                     )}
                   >
                     {item.label}
@@ -95,7 +95,7 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
         </Link>
 
         <div className="mt-6 border-t border-border pt-5">
-          <p className="text-sm font-semibold text-foreground">Наши адреса</p>
+          <p className="text-sm font-semibold text-ink">Наши адреса</p>
           <div className="mt-3 flex flex-col gap-4">
             {siteConfig.locations.map((location) => (
               <LocationItem key={location.slug} location={location} showHours />

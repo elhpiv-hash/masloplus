@@ -16,7 +16,7 @@ export function NotFoundCarForm() {
   return (
     <Card className="p-6 sm:p-8">
       <h3 className="font-display text-xl font-semibold">Не нашли свою марку?</h3>
-      <p className="mt-2 max-w-xl text-muted-foreground">
+      <p className="mt-2 max-w-xl text-muted">
         Укажите марку и модель — подберём набор ТО и рассчитаем стоимость. Останется только оставить
         контакты в форме записи.
       </p>

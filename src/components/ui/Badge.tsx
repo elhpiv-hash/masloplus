@@ -7,9 +7,9 @@ type BadgeProps = React.HTMLAttributes<HTMLSpanElement> & {
 };
 
 const variants: Record<BadgeVariant, string> = {
-  default: "bg-muted text-muted-foreground",
-  accent: "bg-accent-500 text-accent-foreground",
-  outline: "border border-border text-foreground",
+  default: "bg-primary/5 text-muted",
+  accent: "bg-accent text-accent-foreground",
+  outline: "border border-border text-ink",
 };
 
 /** Небольшая метка/пилюля (тарифы, статусы, «Лучший выбор» и т. п.). */

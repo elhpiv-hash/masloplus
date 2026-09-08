@@ -24,7 +24,7 @@ export function Header() {
   }, []);
 
   return (
-    <header className="bg-background/90 sticky top-0 z-40 border-b border-border backdrop-blur">
+    <header className="sticky top-0 z-40 border-b border-border bg-white/90 backdrop-blur">
       {/* Верхняя полоса: 3 адреса с телефонами. Скрыта на мобильных, сворачивается при скролле. */}
       <div
         className={cn(
@@ -36,13 +36,13 @@ export function Header() {
           <ul className="flex items-center gap-6">
             {siteConfig.locations.map((location) => (
               <li key={location.slug} className="text-xs leading-tight">
-                <span className="text-foreground">{location.addressStreet}</span>
+                <span className="text-ink">{location.addressStreet}</span>
                 <span className="ml-2 inline-flex gap-2">
                   {location.phones.map((phone) => (
                     <a
                       key={phone.tel}
                       href={`tel:${phone.tel}`}
-                      className="rounded text-muted-foreground transition-colors hover:text-accent-strong focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                      className="rounded text-muted transition-colors hover:text-accent-strong focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
                     >
                       {phone.display}
                     </a>
@@ -77,7 +77,7 @@ export function Header() {
                       "rounded-lg px-3 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
                       isActive
                         ? "text-accent-strong"
-                        : "text-foreground hover:bg-muted hover:text-accent-strong",
+                        : "text-ink hover:bg-primary/5 hover:text-accent-strong",
                     )}
                   >
                     {item.label}
@@ -101,7 +101,7 @@ export function Header() {
             aria-label="Открыть меню"
             aria-expanded={menuOpen}
             aria-haspopup="dialog"
-            className="inline-flex h-11 w-11 items-center justify-center rounded-lg border border-border text-foreground transition-colors hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background lg:hidden"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-lg border border-border text-ink transition-colors hover:bg-primary/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background lg:hidden"
           >
             <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none">
               <path

@@ -37,7 +37,7 @@ export function SectionHeading({
           </Link>
         )}
       </div>
-      {subtitle && <p className="max-w-2xl text-muted-foreground">{subtitle}</p>}
+      {subtitle && <p className="max-w-2xl text-muted">{subtitle}</p>}
     </div>
   );
 }

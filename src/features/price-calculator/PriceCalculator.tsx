@@ -56,7 +56,7 @@ export function PriceCalculator({ categories, services }: PriceCalculatorProps) 
       <div
         role="group"
         aria-label="Тип материалов"
-        className="inline-flex rounded-xl border border-border bg-muted p-1"
+        className="inline-flex rounded-xl border border-border bg-primary/5 p-1"
       >
         {MATERIALS.map((option) => {
           const active = materials === option.value;
@@ -69,8 +69,8 @@ export function PriceCalculator({ categories, services }: PriceCalculatorProps) 
               className={cn(
                 "rounded-lg px-4 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
                 active
-                  ? "bg-accent-500 text-accent-foreground shadow-soft"
-                  : "text-muted-foreground hover:text-foreground",
+                  ? "bg-accent text-accent-foreground shadow-soft"
+                  : "text-muted hover:text-ink",
               )}
             >
               {option.label}
@@ -94,7 +94,7 @@ export function PriceCalculator({ categories, services }: PriceCalculatorProps) 
                   const selectable = service.inCalculator !== false && money !== null;
                   const checked = selected.has(service.slug);
                   const rowClass =
-                    "flex items-center justify-between gap-4 bg-card p-4 transition-colors";
+                    "flex items-center justify-between gap-4 bg-surface p-4 transition-colors";
 
                   const content = (
                     <>
@@ -109,13 +109,13 @@ export function PriceCalculator({ categories, services }: PriceCalculatorProps) 
                           <span className="h-5 w-5 shrink-0" aria-hidden="true" />
                         )}
                         <div>
-                          <p className="font-medium text-foreground">{service.title}</p>
+                          <p className="font-medium text-ink">{service.title}</p>
                           {service.note && (
-                            <p className="mt-0.5 text-xs text-muted-foreground">{service.note}</p>
+                            <p className="mt-0.5 text-xs text-muted">{service.note}</p>
                           )}
                         </div>
                       </div>
-                      <p className="shrink-0 whitespace-nowrap font-medium text-foreground">
+                      <p className="shrink-0 whitespace-nowrap font-medium text-ink">
                         {formatMoney(money)}
                       </p>
                     </>
@@ -124,7 +124,7 @@ export function PriceCalculator({ categories, services }: PriceCalculatorProps) 
                   return (
                     <li key={service.slug}>
                       {selectable ? (
-                        <label className={cn(rowClass, "cursor-pointer hover:bg-muted")}>
+                        <label className={cn(rowClass, "cursor-pointer hover:bg-primary/5")}>
                           {content}
                         </label>
                       ) : (
@@ -141,15 +141,15 @@ export function PriceCalculator({ categories, services }: PriceCalculatorProps) 
 
       {/* Итог + запись */}
       <div className="sticky bottom-4 mt-8">
-        <div className="flex flex-col gap-4 rounded-2xl border border-border bg-card p-4 shadow-elevated sm:flex-row sm:items-center sm:justify-between">
+        <div className="flex flex-col gap-4 rounded-2xl border border-border bg-surface p-4 shadow-elevated sm:flex-row sm:items-center sm:justify-between">
           <div>
-            <p className="text-sm text-muted-foreground">Выбрано услуг: {result.count}</p>
-            <p className="font-display text-2xl font-bold text-foreground" aria-live="polite">
+            <p className="text-sm text-muted">Выбрано услуг: {result.count}</p>
+            <p className="font-display text-2xl font-bold text-ink" aria-live="polite">
               {result.count === 0
                 ? formatPrice(0)
                 : `${result.isFrom ? "от " : ""}${formatPrice(result.total)}`}
               {result.hasByRequest && (
-                <span className="ml-1 text-sm font-normal text-muted-foreground">+ по запросу</span>
+                <span className="ml-1 text-sm font-normal text-muted">+ по запросу</span>
               )}
             </p>
           </div>

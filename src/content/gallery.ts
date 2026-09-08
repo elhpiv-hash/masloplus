@@ -1,38 +1,33 @@
 import type { GalleryItem } from "@/types/gallery";
 
 /**
- * Ручной список галереи — запасной вариант, когда авто-подтяжка из VK/Telegram недоступна.
- * Приоритет у авто-подтяжки: если задан VK-токен (см. .env), берётся лента VK, иначе — этот список.
+ * Галерея — РУЧНОЙ список (владелец наполняет сам, без автоподтяжки из соцсетей).
  *
- * Как добавить работу вручную: положите фото в public/gallery/ и добавьте объект ниже.
- * 🔴 Сейчас здесь ПРИМЕРЫ-заглушки — заменить реальными фото или включить автоподтяжку.
- *
- * Видео (только VK Видео / RuTube) добавляется так (пример):
- *   { id: "v1", type: "video", title: "Замена масла — видео",
- *     video: { provider: "rutube", id: "RUTUBE_VIDEO_ID" } }
- *   { id: "v2", type: "video", title: "ТО двигателя",
- *     video: { provider: "vk", ownerId: "-123456", id: "456239021" } }
+ * Как добавить работу: положите фото в public/gallery/ и добавьте объект ниже.
+ * Видео (только VK Видео / RuTube):
+ *   { id, type: "video", title, video: { provider: "rutube", id: "RUTUBE_ID" } }
+ *   { id, type: "video", title, video: { provider: "vk", ownerId: "-123", id: "456" } }
  */
 export const manualGallery: GalleryItem[] = [
   {
-    id: "sample-1",
+    id: "promo-oil",
     type: "photo",
-    src: "/gallery/sample-1.svg",
-    alt: "Замена масла в двигателе — Масло Плюс",
-    caption: "Замена масла и масляного фильтра",
+    src: "/gallery/promo-oil.jpg",
+    alt: "Только оригинальные масла — сеть станций техобслуживания Масло Плюс",
+    caption: "Только оригинальные масла",
   },
   {
-    id: "sample-2",
+    id: "promo-express",
     type: "photo",
-    src: "/gallery/sample-2.svg",
-    alt: "Аппаратная замена технической жидкости — Масло Плюс",
-    caption: "Аппаратная замена под давлением",
+    src: "/gallery/promo-express.jpg",
+    alt: "Экспресс-замена масла с сохранением гарантии на автомобиль — Масло Плюс",
+    caption: "Экспресс-замена масла с сохранением гарантии",
   },
   {
-    id: "sample-3",
+    id: "promo-diagnostics",
     type: "photo",
-    src: "/gallery/sample-3.svg",
-    alt: "Обслуживание автомобиля — Масло Плюс",
-    caption: "Обслуживание и диагностика",
+    src: "/gallery/promo-diagnostics.jpg",
+    alt: "Экспресс-диагностика автомобиля на вибростенде — Масло Плюс",
+    caption: "Экспресс-диагностика авто на вибростенде",
   },
 ];

@@ -20,7 +20,7 @@ function itemLabel(item: GalleryItem): string {
 }
 
 const controlClasses =
-  "inline-flex items-center justify-center rounded-full bg-graphite-900/80 text-graphite-100 transition-colors hover:bg-graphite-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring";
+  "inline-flex items-center justify-center rounded-full bg-primary-dark/80 text-white transition-colors hover:bg-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring";
 
 /** Модалка-лайтбокс: клавиатура (←/→/Esc), focus-trap, блокировка скролла, фото или видео-embed. */
 export function Lightbox({ items, index, onClose, onIndexChange }: LightboxProps) {
@@ -56,7 +56,7 @@ export function Lightbox({ items, index, onClose, onIndexChange }: LightboxProps
       className="fixed inset-0 z-50 flex items-center justify-center p-4 motion-safe:animate-fade-in"
       onMouseDown={onClose}
     >
-      <div className="absolute inset-0 bg-graphite-950/85 backdrop-blur-sm" aria-hidden="true" />
+      <div className="absolute inset-0 bg-primary-dark/85 backdrop-blur-sm" aria-hidden="true" />
 
       <div
         ref={dialogRef}
@@ -78,7 +78,7 @@ export function Lightbox({ items, index, onClose, onIndexChange }: LightboxProps
           </span>
         </button>
 
-        <div className="overflow-hidden rounded-2xl bg-graphite-950">
+        <div className="overflow-hidden rounded-2xl bg-primary-dark">
           {item.type === "photo" ? (
             // eslint-disable-next-line @next/next/no-img-element -- галерея: локальные SVG и удалённые фото VK без next/image
             <img
@@ -100,9 +100,9 @@ export function Lightbox({ items, index, onClose, onIndexChange }: LightboxProps
         </div>
 
         <div className="mt-3 flex items-center justify-between gap-4 text-sm">
-          <p className="text-graphite-200">{item.caption ?? itemLabel(item)}</p>
+          <p className="text-white/80">{item.caption ?? itemLabel(item)}</p>
           {hasMany && (
-            <p className="shrink-0 text-graphite-400">
+            <p className="shrink-0 text-white/60">
               {index + 1} / {items.length}
             </p>
           )}

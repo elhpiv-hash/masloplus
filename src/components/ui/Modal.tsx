@@ -39,7 +39,7 @@ export function Modal({ open, onClose, title, description, children, className }
       onMouseDown={onClose}
     >
       {/* Подложка */}
-      <div className="absolute inset-0 bg-graphite-950/60 backdrop-blur-sm" aria-hidden="true" />
+      <div className="absolute inset-0 bg-primary-dark/60 backdrop-blur-sm" aria-hidden="true" />
       {/* Панель — data-surface="light" гарантирует читаемость поверх тёмной страницы */}
       <div
         ref={dialogRef}
@@ -51,7 +51,7 @@ export function Modal({ open, onClose, title, description, children, className }
         data-surface="light"
         onMouseDown={(event) => event.stopPropagation()}
         className={cn(
-          "relative z-10 w-full max-w-lg rounded-2xl border border-border bg-card text-foreground shadow-elevated",
+          "relative z-10 w-full max-w-lg rounded-2xl border border-border bg-surface text-ink shadow-elevated",
           "p-6 focus:outline-none motion-safe:animate-fade-up",
           className,
         )}
@@ -60,7 +60,7 @@ export function Modal({ open, onClose, title, description, children, className }
           type="button"
           onClick={onClose}
           aria-label="Закрыть"
-          className="absolute right-4 top-4 inline-flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:bg-muted hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-card"
+          className="absolute right-4 top-4 inline-flex h-9 w-9 items-center justify-center rounded-lg text-muted transition-colors hover:bg-primary/5 hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-surface"
         >
           <span aria-hidden="true" className="text-xl leading-none">
             ×
@@ -73,7 +73,7 @@ export function Modal({ open, onClose, title, description, children, className }
           </h2>
         )}
         {description && (
-          <p id={descId} className="mt-1.5 text-sm text-muted-foreground">
+          <p id={descId} className="mt-1.5 text-sm text-muted">
             {description}
           </p>
         )}

@@ -3,37 +3,32 @@
 @tailwind utilities;
 
 /*
- * Семантические токены поверхностей.
- * Компоненты используют bg-background / text-foreground / border-border / bg-card / …
- * и автоматически адаптируются, когда секция объявляет тёмную поверхность.
+ * Семантические токены поверхностей (фирменные цвета: синий/жёлтый/белый).
+ * Компоненты используют bg-background / text-ink / bg-surface / text-muted / border-border
+ * и автоматически адаптируются на тёмных (синих) секциях (data-surface="dark").
  *
  * Светлая поверхность — по умолчанию (:root и [data-surface="light"]).
- * Тёмная — [data-surface="dark"] (переопределяет переменные внутри секции).
- * Фиксированные шкалы (graphite, accent) заданы в tailwind.config.ts.
+ * Фиксированные бренд-цвета (primary — синий, accent — жёлтый) — в tailwind.config.ts.
  */
 :root,
 [data-surface="light"] {
-  --background: #ffffff;
-  --foreground: #16191d;
-  --card: #ffffff;
-  --muted: #f4f5f7;
-  --muted-foreground: #5b636d;
-  --border: #e6e8eb;
-  --ring: #f26419;
-  /* Акцентный ТЕКСТ на светлой поверхности — accent-700 (контраст AA к белому/muted). */
-  --accent-strong: #ba3c0c;
+  --background: #f5f7fb; /* мягкий белый — доминирующий фон */
+  --surface: #ffffff; /* карточки/панели */
+  --ink: #0f1b33; /* основной текст */
+  --muted: #5a6a85; /* второстепенный текст */
+  --border: #e3e8f1;
+  --ring: #173a8b; /* фокус-кольцо на светлом — синий */
+  --accent-strong: #173a8b; /* акцентный ТЕКСТ на светлом — синий (не жёлтый на белом!) */
 }
 
 [data-surface="dark"] {
-  --background: #0c0e11;
-  --foreground: #f4f5f7;
-  --card: #16191d;
-  --muted: #1c2025;
-  --muted-foreground: #aab1ba;
-  --border: #2a2f36;
-  --ring: #f26419;
-  /* Акцентный ТЕКСТ на тёмной поверхности — accent-500 (контраст AA к графиту). */
-  --accent-strong: #f26419;
+  --background: #0e2559; /* глубокий синий (тёмные секции, футер) */
+  --surface: #173a8b; /* карточки на синем */
+  --ink: #ffffff; /* текст на синем — белый */
+  --muted: #b7c4e0; /* светло-синий второстепенный текст */
+  --border: rgba(255, 255, 255, 0.16);
+  --ring: #f7c31c; /* фокус-кольцо на синем — жёлтый */
+  --accent-strong: #f7c31c; /* акцентный ТЕКСТ на синем — жёлтый */
 }
 
 html {
@@ -49,8 +44,8 @@ body {
 }
 
 ::selection {
-  background-color: #f26419;
-  color: #0c0e11;
+  background-color: #f7c31c;
+  color: #0f1b33;
 }
 
 /* Глобальное уважение к настройке «уменьшить движение»: гасим анимации/переходы. */

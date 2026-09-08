@@ -24,16 +24,16 @@ export function LocationsMap() {
           heightClassName="h-[420px] sm:h-[460px]"
           fallback={
             <div className="w-full">
-              <p className="text-center text-muted-foreground">
+              <p className="text-center text-muted">
                 Интерактивную карту Яндекс подключим позже. Адреса и маршруты:
               </p>
               <ul className="mt-4 grid gap-3 sm:grid-cols-3">
                 {siteConfig.locations.map((location) => (
                   <li
                     key={location.slug}
-                    className="rounded-xl border border-border bg-card p-4 text-center"
+                    className="rounded-xl border border-border bg-surface p-4 text-center"
                   >
-                    <p className="font-medium text-foreground">{location.addressStreet}</p>
+                    <p className="font-medium text-ink">{location.addressStreet}</p>
                     {location.maps.gis2 && (
                       <Link
                         href={location.maps.gis2}

@@ -12,9 +12,12 @@ const base =
   "active:scale-[0.98] motion-reduce:active:scale-100";
 
 const variants: Record<ButtonVariant, string> = {
-  primary: "bg-accent-500 text-accent-foreground shadow-soft hover:bg-accent-600",
-  secondary: "border border-border bg-transparent text-foreground hover:bg-muted",
-  ghost: "bg-transparent text-foreground hover:bg-muted",
+  // primary — жёлтый фон + тёмно-синий текст (главные CTA).
+  primary: "bg-accent text-accent-foreground shadow-soft hover:bg-accent-dark",
+  // secondary — синий фон + белый текст.
+  secondary: "bg-primary text-primary-foreground shadow-soft hover:bg-primary-dark",
+  // ghost — синий контур + синий текст.
+  ghost: "border border-primary bg-transparent text-primary hover:bg-primary/5",
 };
 
 const sizes: Record<ButtonSize, string> = {

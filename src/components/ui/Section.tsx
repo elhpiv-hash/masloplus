@@ -8,9 +8,9 @@ type SectionProps = React.HTMLAttributes<HTMLElement> & {
 };
 
 const surfaceClasses: Record<SectionSurface, string> = {
-  light: "bg-background text-foreground",
-  muted: "bg-muted text-foreground",
-  dark: "bg-background text-foreground",
+  light: "bg-background text-ink",
+  muted: "bg-primary/5 text-ink",
+  dark: "bg-background text-ink",
 };
 
 /**

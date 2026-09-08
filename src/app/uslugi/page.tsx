@@ -18,7 +18,7 @@ export default function UslugiPage() {
           <h1 className="font-display text-4xl font-extrabold tracking-tight sm:text-5xl">
             Услуги и цены
           </h1>
-          <p className="mt-4 max-w-2xl text-muted-foreground">
+          <p className="mt-4 max-w-2xl text-muted">
             Выберите нужные услуги и переключатель материалов — стоимость посчитается сразу. Готовый
             выбор можно перенести в запись.
           </p>
@@ -30,7 +30,7 @@ export default function UslugiPage() {
           {/* Честная пометка: цены предварительные (реальный прайс Чебоксар подтверждает владелец). */}
           <p
             role="note"
-            className="rounded-xl border border-accent-500/30 bg-accent-500/5 p-4 text-sm text-foreground"
+            className="rounded-xl border border-accent/40 bg-accent/10 p-4 text-sm text-ink"
           >
             Цены указаны предварительно и носят справочный характер. Точную стоимость для вашего
             автомобиля подтвердит мастер при записи.

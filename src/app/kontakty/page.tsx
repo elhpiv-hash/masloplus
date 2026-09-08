@@ -24,7 +24,7 @@ export default function KontaktyPage() {
           <h1 className="font-display text-4xl font-extrabold tracking-tight sm:text-5xl">
             Контакты
           </h1>
-          <p className="mt-4 max-w-2xl text-muted-foreground">
+          <p className="mt-4 max-w-2xl text-muted">
             Три точки в Чебоксарах. Запишитесь онлайн — перезвоним и подтвердим удобное время.
           </p>
         </Container>
@@ -62,7 +62,7 @@ export default function KontaktyPage() {
               <Suspense
                 fallback={
                   <Card className="p-6 sm:p-8">
-                    <p className="text-muted-foreground">Загрузка формы…</p>
+                    <p className="text-muted">Загрузка формы…</p>
                   </Card>
                 }
               >

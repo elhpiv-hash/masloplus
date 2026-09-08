@@ -17,8 +17,10 @@ function TileImage({ src, alt }: { src: string; alt: string }) {
 
   return (
     <>
-      {!loaded && <span className="absolute inset-0 animate-pulse bg-muted" aria-hidden="true" />}
-      {/* eslint-disable-next-line @next/next/no-img-element -- галерея: локальные SVG и удалённые фото VK без next/image */}
+      {!loaded && (
+        <span className="absolute inset-0 animate-pulse bg-primary/5" aria-hidden="true" />
+      )}
+      {/* eslint-disable-next-line @next/next/no-img-element -- галерея: ленивые локальные фото без next/image */}
       <img
         ref={imgRef}
         src={src}
@@ -37,8 +39,8 @@ function TileImage({ src, alt }: { src: string; alt: string }) {
 
 function PlayOverlay() {
   return (
-    <span className="pointer-events-none absolute inset-0 flex items-center justify-center bg-graphite-950/30">
-      <span className="inline-flex h-14 w-14 items-center justify-center rounded-full bg-graphite-950/70 text-white">
+    <span className="pointer-events-none absolute inset-0 flex items-center justify-center bg-primary-dark/30">
+      <span className="inline-flex h-14 w-14 items-center justify-center rounded-full bg-primary-dark/70 text-white">
         <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor" aria-hidden="true">
           <path d="M8 5v14l11-7L8 5Z" />
         </svg>
@@ -64,12 +66,12 @@ export function GalleryGrid({ items }: { items: GalleryItem[] }) {
                 onClick={() => setOpenIndex(index)}
                 aria-label={`Открыть: ${label}`}
                 aria-haspopup="dialog"
-                className="group relative block aspect-[4/3] w-full overflow-hidden rounded-2xl border border-border bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+                className="group relative block aspect-[4/3] w-full overflow-hidden rounded-2xl border border-border bg-primary/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
               >
                 {thumbSrc ? (
                   <TileImage src={thumbSrc} alt={label} />
                 ) : (
-                  <span className="absolute inset-0 bg-graphite-900" aria-hidden="true" />
+                  <span className="absolute inset-0 bg-primary-dark" aria-hidden="true" />
                 )}
                 {item.type === "video" && <PlayOverlay />}
               </button>

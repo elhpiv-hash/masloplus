@@ -25,7 +25,7 @@ export function PacksPreview() {
                   <h3 className="font-display text-lg font-semibold">
                     {pack.brand} {pack.model}
                   </h3>
-                  <p className="text-sm text-muted-foreground">{pack.engine}</p>
+                  <p className="text-sm text-muted">{pack.engine}</p>
                 </div>
                 {pack.best && <Badge variant="accent">Лучший выбор</Badge>}
               </div>
@@ -43,13 +43,13 @@ export function PacksPreview() {
               <div className="flex items-baseline justify-between">
                 {pack.fromPrice ? (
                   <p>
-                    <span className="text-sm text-muted-foreground">от </span>
-                    <span className="font-display text-xl font-bold text-foreground">
+                    <span className="text-sm text-muted">от </span>
+                    <span className="font-display text-xl font-bold text-ink">
                       {formatPrice(pack.fromPrice)}
                     </span>
                   </p>
                 ) : (
-                  <p className="text-sm text-muted-foreground">Цена по запросу</p>
+                  <p className="text-sm text-muted">Цена по запросу</p>
                 )}
               </div>
 
