@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+ * Базовые токены (Промт 2). Полная палитра и типографика — в Промте 3.
+ * --font-sans задаёт next/font (кириллический subset) в layout.tsx.
+ * --font-display пока указывает на sans; собственный display-шрифт добавим в Промте 3.
+ */
+:root {
+  --font-display: var(--font-sans);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Уважаем настройку пользователя об уменьшении анимаций. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
