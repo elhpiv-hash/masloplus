@@ -1,6 +1,9 @@
 import type { MetadataRoute } from "next";
 import { SITE_URL } from "@/lib/seo";
 
+// Статический вывод — совместимо со статическим экспортом (GitHub Pages).
+export const dynamic = "force-static";
+
 const routes = [
   { path: "/", changeFrequency: "weekly", priority: 1 },
   { path: "/uslugi", changeFrequency: "monthly", priority: 0.9 },

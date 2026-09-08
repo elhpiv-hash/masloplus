@@ -50,17 +50,26 @@ const securityHeaders = [
   },
 ];
 
+// Статический экспорт для превью на GitHub Pages (включается флагом в CI).
+// ВНИМАНИЕ: на статике не работают API-роут формы и security-заголовки (нет сервера) —
+// это только витрина-демо. Боевой запуск — на хосте с Node (см. README, Промт 13).
+const isStaticExport = process.env.STATIC_EXPORT === "1";
+const basePath = process.env.PAGES_BASE_PATH ?? "";
+
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
-  async headers() {
-    return [
-      {
-        source: "/:path*",
-        headers: securityHeaders,
-      },
-    ];
-  },
+  ...(isStaticExport
+    ? {
+        output: "export",
+        images: { unoptimized: true },
+        ...(basePath ? { basePath, assetPrefix: basePath } : {}),
+      }
+    : {
+        async headers() {
+          return [{ source: "/:path*", headers: securityHeaders }];
+        },
+      }),
 };
 
 export default nextConfig;

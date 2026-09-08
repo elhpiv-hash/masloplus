@@ -4,6 +4,9 @@ export const alt = "Масло Плюс — замена масла и ТО в �
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
+// Рендер на этапе сборки — совместимо со статическим экспортом (GitHub Pages).
+export const dynamic = "force-static";
+
 /** Пытается загрузить кириллический шрифт для OG-картинки; при неудаче — null (фолбэк на латиницу). */
 async function loadFont(): Promise<ArrayBuffer | null> {
   try {
