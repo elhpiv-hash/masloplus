@@ -11,3 +11,16 @@ export function formatPrice(value: number): string {
   const formatted = new Intl.NumberFormat("ru-RU").format(Math.round(value));
   return `${formatted}${NBSP}₽`;
 }
+
+/**
+ * Форматирование цены-варианта услуги:
+ *  - null      → «по запросу»;
+ *  - 0         → «бесплатно»;
+ *  - number    → «N ₽»;
+ *  - { from }  → «от N ₽».
+ */
+export function formatMoney(value: number | { from: number } | null): string {
+  if (value === null) return "по запросу";
+  if (typeof value === "number") return value === 0 ? "бесплатно" : formatPrice(value);
+  return `от${NBSP}${formatPrice(value.from)}`;
+}
