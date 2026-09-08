@@ -1,16 +1,17 @@
-import type { Metadata } from "next";
 import { Container, Section } from "@/components/ui";
 import { getGalleryItems } from "@/lib/gallery";
 import { GalleryGrid } from "@/features/gallery";
+import { pageMetadata } from "@/lib/seo";
 
 /** ISR: страница пересобирается не чаще раза в час — свежие посты подтягиваются сами. */
 export const revalidate = 3600;
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "Галерея работ и видео",
   description:
     "Свежие работы и видео автосервиса «Масло Плюс» из Telegram и VK. Замена масла, ТО, обслуживание автомобилей в Чебоксарах.",
-};
+  path: "/galereya",
+});
 
 export default async function GalereyaPage() {
   const items = await getGalleryItems();

@@ -1,13 +1,14 @@
-import type { Metadata } from "next";
 import { Container, Section } from "@/components/ui";
 import { serviceCategories, services } from "@/content/services";
 import { PriceCalculator } from "@/features/price-calculator";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "Услуги и цены",
   description:
     "Услуги автосервиса «Масло Плюс» в Чебоксарах с ценами: замена масла в ДВС и трансмиссии, фильтры, доп. работы. Калькулятор стоимости с выбором материалов.",
-};
+  path: "/uslugi",
+});
 
 export default function UslugiPage() {
   return (

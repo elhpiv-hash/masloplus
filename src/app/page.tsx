@@ -1,3 +1,5 @@
+import { pageMetadata } from "@/lib/seo";
+import { LocationsJsonLd } from "@/components/seo/JsonLd";
 import {
   FinalCta,
   GalleryPreview,
@@ -10,9 +12,16 @@ import {
   TrustBar,
 } from "@/components/sections";
 
+export const metadata = pageMetadata({
+  description:
+    "Сеть автосервисов «Масло Плюс» в Чебоксарах: экспресс-замена масла и ТО, готовые наборы. 3 точки, прозрачные цены, гарантия.",
+  path: "/",
+});
+
 export default function HomePage() {
   return (
     <main>
+      <LocationsJsonLd />
       <Hero />
       <TrustBar />
       <ServicesOverview />

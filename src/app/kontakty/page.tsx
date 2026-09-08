@@ -1,21 +1,24 @@
 import { Suspense } from "react";
-import type { Metadata } from "next";
 import Link from "next/link";
 import { Card, Container, Section, buttonVariants } from "@/components/ui";
 import { siteConfig } from "@/content/site";
 import { LocationItem } from "@/components/layout/LocationItem";
 import { LocationsMap } from "@/components/sections";
+import { LocationsJsonLd } from "@/components/seo/JsonLd";
 import { BookingForm } from "@/features/booking";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "Контакты",
   description:
     "Контакты автосервиса «Масло Плюс» в Чебоксарах: 3 точки, адреса, телефоны, график работы, карта. Онлайн-запись.",
-};
+  path: "/kontakty",
+});
 
 export default function KontaktyPage() {
   return (
     <main>
+      <LocationsJsonLd />
       <Section surface="dark">
         <Container>
           <h1 className="font-display text-4xl font-extrabold tracking-tight sm:text-5xl">

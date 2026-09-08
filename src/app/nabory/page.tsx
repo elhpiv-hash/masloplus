@@ -1,13 +1,14 @@
-import type { Metadata } from "next";
 import { Container, Section } from "@/components/ui";
 import { packs } from "@/content/packs";
 import { NotFoundCarForm, PacksBrowser } from "@/features/packs";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "Готовые наборы ТО",
   description:
     "Готовые наборы ТО под ваш автомобиль: тарифы Бюджет, Оптимум и Премиум — масло, фильтры и цена. Поиск по марке. Автосервис «Масло Плюс», Чебоксары.",
-};
+  path: "/nabory",
+});
 
 export default function NaboryPage() {
   return (

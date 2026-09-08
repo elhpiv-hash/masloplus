@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import {
   Badge,
@@ -11,13 +10,16 @@ import {
   Section,
   Textarea,
 } from "@/components/ui";
+import { pageMetadata } from "@/lib/seo";
 import { ModalDemo } from "./ModalDemo";
 
-export const metadata: Metadata = {
+// Служебная страница — не индексируем.
+export const metadata = pageMetadata({
   title: "Styleguide",
-  // Служебная страница — не индексируем.
-  robots: { index: false, follow: false },
-};
+  description: "Внутренняя витрина дизайн-системы «Масло Плюс».",
+  path: "/styleguide",
+  noindex: true,
+});
 
 const graphiteScale = [
   "bg-graphite-50",
