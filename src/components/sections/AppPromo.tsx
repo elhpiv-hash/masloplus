@@ -125,15 +125,15 @@ export function AppPromo() {
               </div>
             </div>
 
-            {/* Телефон-визуал (в потоке, не перекрывает контент) */}
-            <div className="flex justify-center lg:h-full lg:items-end lg:justify-end">
+            {/* Телефон-визуал: по центру правой части, в потоке */}
+            <div className="flex items-center justify-center lg:py-10">
               <Image
                 src={asset("/app/phone.png")}
                 alt="Приложение «Масло Плюс» на смартфоне"
                 width={640}
                 height={1277}
-                sizes="(min-width: 1024px) 300px, (min-width: 640px) 260px, 220px"
-                className="h-auto w-56 drop-shadow-2xl sm:w-64 lg:w-[300px]"
+                sizes="(min-width: 1024px) 250px, (min-width: 640px) 220px, 190px"
+                className="h-auto w-48 drop-shadow-2xl sm:w-56 lg:w-[250px]"
               />
             </div>
           </div>
