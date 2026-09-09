@@ -14,8 +14,9 @@ const FOCUS =
   "rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background";
 
 /**
- * Логотип. На белой шапке — фирменные логотипы (wordmark на десктопе, щит на мобиле).
- * На синих поверхностях (футер) — текстовый знак, чтобы не было белого прямоугольника.
+ * Логотип. На белой шапке — горизонтальный словесный логотип (одинаково на всех
+ * ширинах, по центру на мобиле — см. Header). На синих поверхностях (футер) —
+ * текстовый знак, чтобы не было белого прямоугольника.
  */
 export function Logo({ className, variant = "image" }: LogoProps) {
   if (variant === "text") {
@@ -31,23 +32,13 @@ export function Logo({ className, variant = "image" }: LogoProps) {
 
   return (
     <Link href="/" className={cn("inline-flex items-center", FOCUS, className)}>
-      {/* Десктоп — горизонтальный словесный логотип */}
       <Image
         src={asset("/brand/logo-wordmark.jpg")}
         alt={siteConfig.brand}
         width={600}
         height={216}
         priority
-        className="hidden h-9 w-auto sm:block"
-      />
-      {/* Мобайл — квадратный щит */}
-      <Image
-        src={asset("/brand/logo-shield.jpg")}
-        alt={siteConfig.brand}
-        width={600}
-        height={600}
-        priority
-        className="h-10 w-auto sm:hidden"
+        className="h-11 w-auto sm:h-12"
       />
       <span className="sr-only"> — на главную</span>
     </Link>

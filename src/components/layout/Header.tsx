@@ -13,18 +13,35 @@ import { MobileMenu } from "./MobileMenu";
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
+  const [hidden, setHidden] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
 
+  // Скрываем шапку при прокрутке вниз и показываем при прокрутке вверх.
+  // Небольшой порог (±4px) гасит дрожание, у самого верха шапка всегда видна.
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 8);
+    let lastY = window.scrollY;
+    const onScroll = () => {
+      const y = window.scrollY;
+      setScrolled(y > 8);
+      if (y <= 8) setHidden(false);
+      else if (y > lastY + 4 && y > 120) setHidden(true);
+      else if (y < lastY - 4) setHidden(false);
+      lastY = y;
+    };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-border bg-white/90 backdrop-blur">
+    <header
+      className={cn(
+        "sticky top-0 z-40 border-b border-border bg-white transition-transform duration-300 will-change-transform",
+        // При открытом мобильном меню шапку не прячем.
+        hidden && !menuOpen ? "-translate-y-full" : "translate-y-0",
+      )}
+    >
       {/* Верхняя полоса: 3 адреса с телефонами. Скрыта на мобильных, сворачивается при скролле. */}
       <div
         className={cn(
@@ -55,14 +72,15 @@ export function Header() {
         </Container>
       </div>
 
-      {/* Основная полоса */}
+      {/* Основная полоса. На мобиле лого по центру (absolute), действия — справа;
+          на десктопе — обычная раскладка лого/меню/действия (justify-between). */}
       <Container
         className={cn(
-          "flex items-center justify-between gap-4 transition-all duration-300",
+          "relative flex items-center justify-end gap-4 transition-all duration-300 lg:justify-between",
           scrolled ? "py-2.5" : "py-4",
         )}
       >
-        <Logo />
+        <Logo className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 lg:static lg:translate-x-0 lg:translate-y-0" />
 
         <nav aria-label="Основное меню" className="hidden lg:block">
           <ul className="flex items-center gap-1">
