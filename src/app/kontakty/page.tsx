@@ -3,7 +3,7 @@ import { Card, Container, Section, buttonVariants } from "@/components/ui";
 import { siteConfig } from "@/content/site";
 import { sonlineBookingUrl } from "@/content/integrations";
 import { LocationItem } from "@/components/layout/LocationItem";
-import { LocationsMap } from "@/components/sections";
+import { AppPromo, LocationsMap } from "@/components/sections";
 import { SocialCards } from "@/components/sections/SocialCards";
 import { LocationsJsonLd } from "@/components/seo/JsonLd";
 import { pageMetadata } from "@/lib/seo";
@@ -139,6 +139,9 @@ export default function KontaktyPage() {
           </div>
         </Container>
       </Section>
+
+      {/* Мобильное приложение */}
+      <AppPromo />
 
       {/* Соцсети */}
       <Section surface="light" className="pt-0">

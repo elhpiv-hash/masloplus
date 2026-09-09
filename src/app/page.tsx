@@ -1,6 +1,7 @@
 import { pageMetadata } from "@/lib/seo";
 import { LocationsJsonLd } from "@/components/seo/JsonLd";
 import {
+  AppPromo,
   FinalCta,
   GalleryPreview,
   Hero,
@@ -28,6 +29,7 @@ export default function HomePage() {
       <PacksPreview />
       <OilsBlock />
       <GalleryPreview />
+      <AppPromo />
       <Reviews />
       <LocationsMap />
       <FinalCta />

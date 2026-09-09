@@ -7,5 +7,7 @@ export { GalleryPreview } from "./GalleryPreview";
 export { Reviews } from "./Reviews";
 export { LocationsMap } from "./LocationsMap";
 export { FinalCta } from "./FinalCta";
+export { AppPromo } from "./AppPromo";
+export { SocialCards } from "./SocialCards";
 export { SectionHeading } from "./SectionHeading";
 export { LazyEmbed } from "./LazyEmbed";
