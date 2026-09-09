@@ -41,15 +41,20 @@ export const heroSlides: HeroSlide[] = [
   },
 ];
 
-export type TrustBadge = { value: string; label: string };
+export type TrustBadge = {
+  value: string;
+  label: string;
+  /** Короткая подпись для компактной строки на мобиле. */
+  short: string;
+};
 
 /** Полоса доверия (как у референса, но честно под наш масштаб). */
 export const trustBadges: TrustBadge[] = [
-  { value: "3", label: "точки в Чебоксарах" },
-  { value: "от 15 мин", label: "на замену масла в ДВС" },
-  { value: "1 год", label: "гарантия на работы и материалы сети" },
-  { value: "200+", label: "видов масел в наличии" },
-  { value: "Оригинал", label: "масла и запчасти от ведущих брендов" },
+  { value: "3", label: "точки в Чебоксарах", short: "точки" },
+  { value: "15 мин", label: "на замену масла в ДВС", short: "на замену" },
+  { value: "1 год", label: "гарантия на работы и материалы сети", short: "гарантия" },
+  { value: "200+", label: "видов масел в наличии", short: "видов масел" },
+  { value: "Оригинал", label: "масла и запчасти от ведущих брендов", short: "бренды" },
 ];
 
 export type PackTeaser = {
