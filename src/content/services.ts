@@ -27,6 +27,7 @@ export const serviceCategories: ServiceCategory[] = [
     slug: "extra",
     title: "Доп. работы",
     description: "ГУР, тормоза, сцепление, аппаратная замена антифриза и тормозной жидкости.",
+    image: "/services/extra.png",
   },
 ];
 
