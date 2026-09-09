@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Container, buttonVariants } from "@/components/ui";
+import { asset } from "@/lib/asset";
 import { hero } from "@/content/home";
 import { siteConfig } from "@/content/site";
 
@@ -50,7 +51,7 @@ export function Hero() {
                 className="pointer-events-none absolute inset-0 -z-10 scale-110 rounded-full bg-accent/20 blur-3xl"
               />
               <Image
-                src="/brand/logo-full.png"
+                src={asset("/brand/logo-full.png")}
                 alt={`${siteConfig.brand} — сеть автосервисов в Чебоксарах`}
                 width={551}
                 height={594}

@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { cn } from "@/lib/cn";
+import { asset } from "@/lib/asset";
 import { useFocusTrap } from "@/hooks/useFocusTrap";
 import { useScrollLock } from "@/hooks/useScrollLock";
 import { getEmbedUrl } from "@/lib/gallery-embed";
@@ -82,7 +83,7 @@ export function Lightbox({ items, index, onClose, onIndexChange }: LightboxProps
           {item.type === "photo" ? (
             // eslint-disable-next-line @next/next/no-img-element -- галерея: локальные SVG и удалённые фото VK без next/image
             <img
-              src={item.src}
+              src={asset(item.src)}
               alt={item.alt}
               className="mx-auto max-h-[80vh] w-auto object-contain"
             />

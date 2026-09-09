@@ -59,6 +59,9 @@ const basePath = process.env.PAGES_BASE_PATH ?? "";
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
+  // Пробрасываем basePath в клиент: ассеты из public/ по абсолютному пути
+  // Next НЕ префиксует автоматически (в отличие от роутов и _next/). См. lib/asset.ts.
+  env: { NEXT_PUBLIC_BASE_PATH: basePath },
   ...(isStaticExport
     ? {
         output: "export",

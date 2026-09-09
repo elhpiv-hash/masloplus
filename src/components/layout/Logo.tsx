@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { cn } from "@/lib/cn";
+import { asset } from "@/lib/asset";
 import { siteConfig } from "@/content/site";
 
 type LogoProps = {
@@ -32,7 +33,7 @@ export function Logo({ className, variant = "image" }: LogoProps) {
     <Link href="/" className={cn("inline-flex items-center", FOCUS, className)}>
       {/* Десктоп — горизонтальный словесный логотип */}
       <Image
-        src="/brand/logo-wordmark.jpg"
+        src={asset("/brand/logo-wordmark.jpg")}
         alt={siteConfig.brand}
         width={600}
         height={216}
@@ -41,7 +42,7 @@ export function Logo({ className, variant = "image" }: LogoProps) {
       />
       {/* Мобайл — квадратный щит */}
       <Image
-        src="/brand/logo-shield.jpg"
+        src={asset("/brand/logo-shield.jpg")}
         alt={siteConfig.brand}
         width={600}
         height={600}

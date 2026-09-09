@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/cn";
+import { asset } from "@/lib/asset";
 import type { GalleryItem } from "@/types/gallery";
 import { Lightbox } from "./Lightbox";
 
@@ -69,7 +70,7 @@ export function GalleryGrid({ items }: { items: GalleryItem[] }) {
                 className="group relative block aspect-[4/3] w-full overflow-hidden rounded-2xl border border-border bg-primary/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
               >
                 {thumbSrc ? (
-                  <TileImage src={thumbSrc} alt={label} />
+                  <TileImage src={asset(thumbSrc)} alt={label} />
                 ) : (
                   <span className="absolute inset-0 bg-primary-dark" aria-hidden="true" />
                 )}
