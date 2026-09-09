@@ -1,5 +1,6 @@
 export { Hero } from "./Hero";
 export { HeroSlider } from "./HeroSlider";
+export { QuickBook } from "./QuickBook";
 export { TrustBar } from "./TrustBar";
 export { ServicesOverview } from "./ServicesOverview";
 export { PacksPreview } from "./PacksPreview";

@@ -8,6 +8,7 @@ import {
   LocationsMap,
   OilsBlock,
   PacksPreview,
+  QuickBook,
   Reviews,
   ServicesOverview,
   TrustBar,
@@ -24,9 +25,10 @@ export default function HomePage() {
     <main>
       <LocationsJsonLd />
       <HeroSlider />
-      <TrustBar />
+      <QuickBook />
       <ServicesOverview />
       <PacksPreview />
+      <TrustBar />
       <OilsBlock />
       <GalleryPreview />
       <AppPromo />
