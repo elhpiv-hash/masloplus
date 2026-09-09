@@ -50,6 +50,14 @@ export type Location = {
 export type Socials = {
   vk: string;
   telegram: string;
+  /** Instagram (принадлежит Meta, запрещённой в РФ) — по прямой просьбе владельца. */
+  instagram?: string;
+};
+
+/** Ссылки на мобильное приложение сети (для будущей секции-плашки на главной). */
+export type AppLinks = {
+  appStore?: string;
+  googlePlay?: string;
 };
 
 export type Organization = {
@@ -67,4 +75,6 @@ export type SiteConfig = {
   org: Organization;
   locations: Location[];
   socials: Socials;
+  /** Мобильное приложение (App Store / Google Play). */
+  apps?: AppLinks;
 };

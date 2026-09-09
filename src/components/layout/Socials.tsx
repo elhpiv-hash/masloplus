@@ -6,9 +6,9 @@ type SocialsProps = {
   linkClassName?: string;
 };
 
-/** Ссылки на соцсети из site.ts. Только VK и Telegram (по правилам проекта). */
+/** Ссылки на соцсети из site.ts (VK, Telegram и — по просьбе владельца — Instagram). */
 export function Socials({ className, linkClassName }: SocialsProps) {
-  const { vk, telegram } = siteConfig.socials;
+  const { vk, telegram, instagram } = siteConfig.socials;
 
   const linkClasses = cn(
     "inline-flex h-9 w-9 items-center justify-center rounded-lg border border-border text-ink transition-colors hover:bg-primary/5 hover:text-accent-strong focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background",
@@ -39,6 +39,21 @@ export function Socials({ className, linkClassName }: SocialsProps) {
           <path d="M21.9 4.6 18.9 19c-.2.98-.8 1.22-1.62.76l-4.48-3.3-2.16 2.08c-.24.24-.44.44-.9.44l.32-4.56 8.3-7.5c.36-.32-.08-.5-.56-.18L7.55 13.2 3.13 11.8c-.96-.3-.98-.96.2-1.42L20.66 3.6c.8-.3 1.5.18 1.24 1Z" />
         </svg>
       </a>
+      {instagram && (
+        <a
+          href={instagram}
+          aria-label="Мы в Instagram"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={linkClasses}
+        >
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none">
+            <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" strokeWidth="2" />
+            <circle cx="12" cy="12" r="4" stroke="currentColor" strokeWidth="2" />
+            <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" />
+          </svg>
+        </a>
+      )}
     </div>
   );
 }

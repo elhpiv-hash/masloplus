@@ -25,6 +25,11 @@ export const siteConfig: SiteConfig = {
   socials: {
     vk: "https://vk.com/masloplus21",
     telegram: "https://t.me/masloplus",
+    instagram: "https://www.instagram.com/masloplus21",
+  },
+  apps: {
+    appStore: "https://apps.apple.com/ru/app/id6755126334",
+    googlePlay: "https://play.google.com/store/apps/details?id=ru.maslo.plus",
   },
   locations: [
     {
