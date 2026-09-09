@@ -4,22 +4,24 @@ import type { Service, ServiceCategory } from "@/types/services";
  * Категории услуг (обзор на главной + группировка каталога на /uslugi).
  */
 export const serviceCategories: ServiceCategory[] = [
-  // Фото деталей (прозрачный PNG на светлом фоне) добавит владелец:
-  // положить файл в public/services/ и прописать поле image, напр. image: "/services/engine.png".
+  // Фото деталей — прозрачные PNG в public/services/ (для «Доп. работ» фото пока нет).
   {
     slug: "engine",
     title: "Двигатель",
     description: "Замена масла и масляного фильтра, промывка ДВС, выставление уровня масла.",
+    image: "/services/engine.png",
   },
   {
     slug: "transmission",
     title: "Трансмиссия",
     description: "Замена масла в АКПП, МКПП, DSG, CVT, раздатке и дифференциалах.",
+    image: "/services/transmission.png",
   },
   {
     slug: "filters",
     title: "Фильтры",
     description: "Замена салонного и воздушного фильтров.",
+    image: "/services/filters.png",
   },
   {
     slug: "extra",
