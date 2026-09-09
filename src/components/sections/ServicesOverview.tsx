@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { cn } from "@/lib/cn";
 import { Card, Container, Section } from "@/components/ui";
 import { asset } from "@/lib/asset";
 import { serviceCategories, services } from "@/content/services";
@@ -44,8 +45,10 @@ const categoryIcons: Record<ServiceCategoryKey, ReactNode> = {
 };
 
 /**
- * Обзор услуг: крупные карточки категорий со списком конкретных работ и
- * стрелкой-переходом на /uslugi (по образцу masloff.ru, в наших цветах).
+ * Обзор услуг: широкие карточки категорий (по образцу masloff.ru, в наших цветах).
+ * Название + список конкретных работ + круглая кнопка-стрелка, а сбоку — «плавающий»
+ * слот под фото детали, выступающий за верх карточки. Фото (прозрачный PNG) владелец
+ * добавит позже через поле image в content/services.ts; пока — лёгкий плейсхолдер.
  */
 export function ServicesOverview() {
   return (
@@ -57,72 +60,88 @@ export function ServicesOverview() {
           subtitle="Полный спектр по маслам и техническим жидкостям, а также сопутствующие работы."
           action={{ label: "Все услуги и цены", href: "/uslugi" }}
         />
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {serviceCategories.map((category) => {
+
+        {/* pt под выступающие вверх фото деталей */}
+        <div className="grid gap-6 pt-10 sm:grid-cols-2">
+          {serviceCategories.map((category, index) => {
             const items = services.filter((service) => service.categorySlug === category.slug);
+            const imageLeft = index % 2 === 1;
+
             return (
               <Link
                 key={category.slug}
                 href="/uslugi"
                 aria-label={`${category.title} — все услуги и цены`}
-                className="group rounded-2xl focus-visible:outline-none"
+                className="group rounded-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
               >
-                <Card
-                  interactive
-                  className="flex h-full flex-col overflow-hidden p-6 group-focus-visible:ring-2 group-focus-visible:ring-ring group-focus-visible:ring-offset-2 group-focus-visible:ring-offset-background"
-                >
-                  {category.image && (
-                    <div className="relative -mx-6 -mt-6 mb-5 h-36 sm:h-40">
+                <Card interactive className="relative min-h-[220px] overflow-visible p-6 sm:p-7">
+                  {/* Слот под фото детали: выступает за верхний край карточки */}
+                  <div
+                    className={cn(
+                      "pointer-events-none absolute -top-10 flex h-36 w-36 items-center justify-center sm:h-44 sm:w-44",
+                      imageLeft ? "left-3 sm:left-5" : "right-3 sm:right-5",
+                    )}
+                  >
+                    {category.image ? (
                       <Image
                         src={asset(category.image)}
                         alt=""
-                        fill
-                        sizes="(min-width: 1024px) 320px, (min-width: 640px) 45vw, 90vw"
-                        className="object-cover"
+                        width={220}
+                        height={220}
+                        sizes="176px"
+                        className="h-full w-full object-contain drop-shadow-xl"
                       />
+                    ) : (
                       <span
                         aria-hidden="true"
-                        className="absolute inset-0 bg-gradient-to-t from-primary-dark/40 to-transparent"
-                      />
-                    </div>
-                  )}
-
-                  <div className="flex items-center gap-3">
-                    <span className="inline-flex h-10 w-10 flex-none items-center justify-center rounded-xl bg-primary/10 text-accent-strong">
-                      {categoryIcons[category.slug]}
-                    </span>
-                    <h3 className="font-display text-lg font-semibold">{category.title}</h3>
+                        className="text-primary/15 [&_svg]:h-20 [&_svg]:w-20 sm:[&_svg]:h-24 sm:[&_svg]:w-24"
+                      >
+                        {categoryIcons[category.slug]}
+                      </span>
+                    )}
                   </div>
 
-                  <ul className="mt-3 space-y-2">
-                    {items.slice(0, 4).map((service) => (
-                      <li key={service.slug} className="flex gap-2 text-sm text-muted">
-                        <span
-                          aria-hidden="true"
-                          className="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-accent"
-                        />
-                        <span>{service.title}</span>
-                      </li>
-                    ))}
-                  </ul>
+                  {/* Текст: отступ со стороны фото, чтобы не перекрывалось */}
+                  <div
+                    className={cn(
+                      "flex h-full flex-col",
+                      imageLeft ? "pl-32 sm:pl-40" : "pr-32 sm:pr-40",
+                    )}
+                  >
+                    <h3 className="font-display text-xl font-bold text-accent-strong sm:text-2xl">
+                      {category.title}
+                    </h3>
 
-                  <span className="mt-auto inline-flex items-center gap-2 pt-6 font-medium text-accent-strong">
-                    Подробнее
-                    <svg
-                      viewBox="0 0 24 24"
-                      width={18}
-                      height={18}
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth={2}
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      aria-hidden="true"
-                      className="transition-transform duration-200 motion-safe:group-hover:translate-x-1"
+                    <ul className="mt-3 space-y-1.5">
+                      {items.slice(0, 4).map((service) => (
+                        <li key={service.slug} className="text-sm text-muted">
+                          {service.title}
+                        </li>
+                      ))}
+                    </ul>
+
+                    {/* Круглая кнопка-стрелка снизу */}
+                    <span
+                      className={cn(
+                        "mt-auto inline-flex h-11 w-11 items-center justify-center rounded-xl bg-surface text-accent-strong shadow-card ring-1 ring-border transition-transform duration-200 motion-safe:group-hover:translate-x-1",
+                        imageLeft ? "self-start" : "self-end",
+                      )}
                     >
-                      <path d="M5 12h14M13 6l6 6-6 6" />
-                    </svg>
-                  </span>
+                      <svg
+                        viewBox="0 0 24 24"
+                        width={20}
+                        height={20}
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth={2}
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        aria-hidden="true"
+                      >
+                        <path d="M5 12h14M13 6l6 6-6 6" />
+                      </svg>
+                    </span>
+                  </div>
                 </Card>
               </Link>
             );
