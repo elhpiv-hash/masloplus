@@ -16,7 +16,7 @@ const tiles = [
 
 export function GalleryPreview() {
   return (
-    <Section surface="muted">
+    <Section surface="light">
       <Container className="space-y-10">
         <SectionHeading
           eyebrow={galleryPreview.eyebrow}

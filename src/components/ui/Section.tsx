@@ -23,7 +23,7 @@ export function Section({ surface = "light", className, children, ...props }: Se
   return (
     <section
       data-surface={dataSurface}
-      className={cn("py-16 sm:py-20 lg:py-24", surfaceClasses[surface], className)}
+      className={cn("py-14 sm:py-16 lg:py-20", surfaceClasses[surface], className)}
       {...props}
     >
       {children}
