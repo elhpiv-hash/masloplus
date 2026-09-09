@@ -4,6 +4,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { cn } from "@/lib/cn";
+import { Container } from "@/components/ui";
 import { asset } from "@/lib/asset";
 import { heroSlides } from "@/content/home";
 
@@ -66,63 +67,65 @@ export function HeroSlider() {
         Масло Плюс — замена масла и ТО в Чебоксарах: 3 точки, оригинальные масла, экспресс-сервис
       </h1>
 
-      <div
-        className="relative w-full touch-pan-y overflow-hidden"
-        onTouchStart={onTouchStart}
-        onTouchMove={onTouchMove}
-        onTouchEnd={onTouchEnd}
-      >
-        {/* Дорожка слайдов */}
+      <Container className="py-4 sm:py-6">
         <div
-          className="flex transition-transform duration-500 ease-out motion-reduce:transition-none"
-          style={{ transform: `translateX(-${index * 100}%)` }}
+          className="relative mx-auto max-w-5xl touch-pan-y overflow-hidden shadow-card"
+          onTouchStart={onTouchStart}
+          onTouchMove={onTouchMove}
+          onTouchEnd={onTouchEnd}
         >
-          {heroSlides.map((slide, i) => (
-            <Link
-              key={slide.src}
-              href={slide.href}
-              aria-label={slide.alt}
-              aria-hidden={i !== index}
-              tabIndex={i === index ? 0 : -1}
-              // Не переходить, если это был свайп, а не тап.
-              onClick={(e) => {
-                if (swiped.current) e.preventDefault();
-              }}
-              className="relative block w-full flex-none focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-inset focus-visible:ring-ring"
-            >
-              <div className="relative aspect-[1280/548]">
-                <Image
-                  src={asset(slide.src)}
-                  alt={slide.alt}
-                  fill
-                  priority={i === 0}
-                  sizes="100vw"
-                  className="object-cover"
-                />
-              </div>
-            </Link>
-          ))}
-        </div>
-
-        {/* Точки-индикаторы (кликабельны) */}
-        {count > 1 && (
-          <div className="absolute bottom-3 left-1/2 z-20 flex -translate-x-1/2 gap-2 sm:bottom-5">
+          {/* Дорожка слайдов */}
+          <div
+            className="flex transition-transform duration-500 ease-out motion-reduce:transition-none"
+            style={{ transform: `translateX(-${index * 100}%)` }}
+          >
             {heroSlides.map((slide, i) => (
-              <button
+              <Link
                 key={slide.src}
-                type="button"
-                onClick={() => go(i)}
-                aria-label={`Слайд ${i + 1} из ${count}`}
-                aria-current={i === index}
-                className={cn(
-                  "h-2.5 rounded-full shadow ring-1 ring-black/10 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
-                  i === index ? "w-6 bg-white" : "w-2.5 bg-white/70 hover:bg-white",
-                )}
-              />
+                href={slide.href}
+                aria-label={slide.alt}
+                aria-hidden={i !== index}
+                tabIndex={i === index ? 0 : -1}
+                // Не переходить, если это был свайп, а не тап.
+                onClick={(e) => {
+                  if (swiped.current) e.preventDefault();
+                }}
+                className="relative block w-full flex-none focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-inset focus-visible:ring-ring"
+              >
+                <div className="relative aspect-[1280/548]">
+                  <Image
+                    src={asset(slide.src)}
+                    alt={slide.alt}
+                    fill
+                    priority={i === 0}
+                    sizes="100vw"
+                    className="object-cover"
+                  />
+                </div>
+              </Link>
             ))}
           </div>
-        )}
-      </div>
+
+          {/* Точки-индикаторы (кликабельны) */}
+          {count > 1 && (
+            <div className="absolute bottom-3 left-1/2 z-20 flex -translate-x-1/2 gap-2 sm:bottom-5">
+              {heroSlides.map((slide, i) => (
+                <button
+                  key={slide.src}
+                  type="button"
+                  onClick={() => go(i)}
+                  aria-label={`Слайд ${i + 1} из ${count}`}
+                  aria-current={i === index}
+                  className={cn(
+                    "h-2.5 rounded-full shadow ring-1 ring-black/10 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
+                    i === index ? "w-6 bg-white" : "w-2.5 bg-white/70 hover:bg-white",
+                  )}
+                />
+              ))}
+            </div>
+          )}
+        </div>
+      </Container>
     </section>
   );
 }
