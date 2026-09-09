@@ -31,16 +31,19 @@ export function Logo({ className, variant = "image" }: LogoProps) {
   }
 
   return (
-    <Link href="/" className={cn("inline-flex items-center", FOCUS, className)}>
+    <Link href="/" className={cn("inline-flex items-center gap-2.5", FOCUS, className)}>
       <Image
-        src={asset("/brand/logo-full.png")}
-        alt={siteConfig.brand}
-        width={551}
-        height={594}
+        src={asset("/brand/logo-icon.png")}
+        alt=""
+        width={400}
+        height={319}
         priority
-        className="h-12 w-auto sm:h-14"
+        className="h-10 w-auto sm:h-12"
       />
-      <span className="sr-only"> — на главную</span>
+      <span className="font-display text-lg font-extrabold leading-none tracking-tight text-primary sm:text-xl">
+        Масло&nbsp;Плюс
+      </span>
+      <span className="sr-only">{siteConfig.brand} — на главную</span>
     </Link>
   );
 }
