@@ -5,6 +5,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { OrganizationJsonLd } from "@/components/seo/JsonLd";
 import { YandexMetrika } from "@/components/seo/YandexMetrika";
+import { asset } from "@/lib/asset";
 import { DEFAULT_TITLE, SITE_NAME } from "@/lib/seo";
 
 /** Текстовый гротеск — кириллический subset обязателен (правило проекта). */
@@ -68,6 +69,18 @@ export default function RootLayout({
   return (
     <html lang="ru" className={`${inter.variable} ${montserrat.variable}`}>
       <body className="flex min-h-screen flex-col bg-background text-ink antialiased">
+        {/* Фирменный водяной знак льва на фоне (деликатно, за светлыми секциями). */}
+        <div
+          aria-hidden="true"
+          className="pointer-events-none fixed inset-0 -z-10 hidden items-center justify-center overflow-hidden md:flex"
+        >
+          {/* eslint-disable-next-line @next/next/no-img-element -- декоративный фон, не контент */}
+          <img
+            src={asset("/brand/logo-full.png")}
+            alt=""
+            className="w-[620px] max-w-[65vw] opacity-[0.06]"
+          />
+        </div>
         <OrganizationJsonLd />
         <a
           href="#content"

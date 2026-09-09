@@ -8,7 +8,8 @@ type SectionProps = React.HTMLAttributes<HTMLElement> & {
 };
 
 const surfaceClasses: Record<SectionSurface, string> = {
-  light: "bg-background text-ink",
+  // light — прозрачная: фон и фирменный водяной знак льва даёт body (layout).
+  light: "text-ink",
   muted: "bg-primary/5 text-ink",
   dark: "bg-background text-ink",
 };

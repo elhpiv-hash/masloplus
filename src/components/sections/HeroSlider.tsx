@@ -58,11 +58,7 @@ export function HeroSlider() {
   };
 
   return (
-    <section
-      aria-roledescription="карусель"
-      aria-label="Акции и услуги «Масло Плюс»"
-      className="bg-background"
-    >
+    <section aria-roledescription="карусель" aria-label="Акции и услуги «Масло Плюс»">
       <h1 className="sr-only">
         Масло Плюс — замена масла и ТО в Чебоксарах: 3 точки, оригинальные масла, экспресс-сервис
       </h1>
