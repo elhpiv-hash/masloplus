@@ -21,21 +21,20 @@ const SWIPE_THRESHOLD = 40;
 export function HeroSlider() {
   const count = heroSlides.length;
   const [index, setIndex] = useState(0);
-  const [paused, setPaused] = useState(false);
 
   const go = useCallback((i: number) => setIndex(((i % count) + count) % count), [count]);
 
-  // Автопрокрутка только на десктопе (точный указатель + hover).
+  // Автопрокрутка только на десктопе (точный указатель). Без паузы на hover,
+  // иначе широкий герой почти всегда «под курсором» и не листается.
   useEffect(() => {
-    if (count <= 1 || paused) return;
+    if (count <= 1) return;
     const mm = window.matchMedia;
     if (!mm) return;
-    const isDesktop = mm("(hover: hover) and (pointer: fine)").matches;
-    const reduce = mm("(prefers-reduced-motion: reduce)").matches;
-    if (!isDesktop || reduce) return;
+    if (!mm("(hover: hover) and (pointer: fine)").matches) return;
+    if (mm("(prefers-reduced-motion: reduce)").matches) return;
     const id = setInterval(() => setIndex((v) => (v + 1) % count), AUTOPLAY_MS);
     return () => clearInterval(id);
-  }, [count, paused, index]);
+  }, [count]);
 
   // Свайп на тач-устройствах.
   const startX = useRef<number | null>(null);
@@ -69,8 +68,6 @@ export function HeroSlider() {
 
       <div
         className="relative w-full touch-pan-y overflow-hidden"
-        onMouseEnter={() => setPaused(true)}
-        onMouseLeave={() => setPaused(false)}
         onTouchStart={onTouchStart}
         onTouchMove={onTouchMove}
         onTouchEnd={onTouchEnd}
