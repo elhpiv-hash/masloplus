@@ -31,9 +31,16 @@ export const serviceCategories: ServiceCategory[] = [
 /**
  * Перечень услуг с ценами (ключевая правка относительно старого сайта — там цен не было).
  *
- * 🔴 ВНИМАНИЕ: цены ПРЕДВАРИТЕЛЬНЫЕ и требуют подтверждения владельца (Чебоксары).
- * Реальный факт со старого сайта: замена масла в ДВС с материалами сети — работа бесплатно.
- * Правит только этот файл — разметку менять не нужно. Цены: number | {from} | null («по запросу»).
+ * Источник цен на аппаратные/ремонтные работы — ВИТРИНА Яндекс.Карт сети (одинаковая
+ * по всем трём точкам, сверено при аудите): замена масла в ДВС — с материалами сети
+ * бесплатно; аппаратная АКПП 3000, CVT/DSG/Haldex/антифриз/проточка дисков 2500,
+ * колодки 1000, свечи 800, прокладка клапанной крышки — от 1000.
+ *
+ * 🔴 Остаются ПРЕДВАРИТЕЛЬНЫМИ (нет в витрине, оценка — подтвердить у владельца):
+ * промывка ДВС, фильтр без масла, уровень масла, частичная АКПП, МКПП/раздатка,
+ * ГУР, тормозная жидкость, фильтры салонный/воздушный, клиентские материалы («свой»).
+ *
+ * Правит только этот файл — разметку менять не нужно. Цены: number | {from} | null.
  */
 export const services: Service[] = [
   // Двигатель
@@ -62,12 +69,20 @@ export const services: Service[] = [
     title: "Выставление уровня масла в ДВС",
     price: { network: { from: 300 }, client: { from: 300 } },
   },
+  {
+    slug: "valve-cover-gasket",
+    categorySlug: "engine",
+    title: "Замена прокладки клапанной крышки",
+    note: "Стоимость зависит от модели",
+    price: { network: { from: 1000 }, client: { from: 1000 } },
+    inCalculator: false,
+  },
 
   // Трансмиссия
   {
     slug: "atf-partial",
     categorySlug: "transmission",
-    title: "Замена масла в АКПП / CVT (частичная)",
+    title: "Замена масла в АКПП (частичная)",
     price: { network: { from: 1200 }, client: { from: 1600 } },
   },
   {
@@ -75,7 +90,25 @@ export const services: Service[] = [
     categorySlug: "transmission",
     title: "Аппаратная замена масла в АКПП",
     note: "Под давлением, полная замена",
-    price: { network: { from: 2500 }, client: { from: 3000 } },
+    price: { network: 3000, client: 3000 },
+  },
+  {
+    slug: "cvt-change",
+    categorySlug: "transmission",
+    title: "Замена масла в вариаторе (CVT)",
+    price: { network: 2500, client: 2500 },
+  },
+  {
+    slug: "dsg-change",
+    categorySlug: "transmission",
+    title: "Замена масла и фильтра в DSG",
+    price: { network: 2500, client: 2500 },
+  },
+  {
+    slug: "haldex-change",
+    categorySlug: "transmission",
+    title: "Замена масла в муфте Haldex",
+    price: { network: 2500, client: 2500 },
   },
   {
     slug: "mtf-change",
@@ -117,14 +150,26 @@ export const services: Service[] = [
     categorySlug: "extra",
     title: "Аппаратная замена антифриза",
     note: "Под давлением",
-    price: { network: { from: 1500 }, client: { from: 2000 } },
+    price: { network: 2500, client: 2500 },
   },
   {
     slug: "brake-disc-turning",
     categorySlug: "extra",
     title: "Проточка тормозных дисков",
     note: "Без снятия, за диск",
-    price: { network: { from: 1500 }, client: { from: 1500 } },
+    price: { network: 2500, client: 2500 },
+  },
+  {
+    slug: "brake-pads",
+    categorySlug: "extra",
+    title: "Замена тормозных колодок",
+    price: { network: 1000, client: 1000 },
+  },
+  {
+    slug: "spark-plugs",
+    categorySlug: "extra",
+    title: "Замена свечей зажигания",
+    price: { network: 800, client: 800 },
   },
   {
     slug: "clutch-replacement",
