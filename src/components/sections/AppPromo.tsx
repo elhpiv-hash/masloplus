@@ -60,7 +60,7 @@ export function AppPromo() {
   if (!apps?.appStore && !apps?.googlePlay) return null;
 
   return (
-    <section data-surface="dark" className="relative overflow-hidden bg-primary text-white">
+    <section className="relative overflow-hidden bg-primary text-white">
       {/* фирменное свечение */}
       <div aria-hidden="true" className="pointer-events-none absolute inset-0">
         <div className="absolute -left-16 -top-20 h-72 w-72 rounded-full bg-accent/20 blur-3xl" />
