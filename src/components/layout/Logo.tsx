@@ -33,12 +33,12 @@ export function Logo({ className, variant = "image" }: LogoProps) {
   return (
     <Link href="/" className={cn("inline-flex items-center", FOCUS, className)}>
       <Image
-        src={asset("/brand/logo-wordmark.jpg")}
+        src={asset("/brand/logo-full.png")}
         alt={siteConfig.brand}
-        width={600}
-        height={216}
+        width={551}
+        height={594}
         priority
-        className="h-9 w-auto sm:h-10 lg:h-11"
+        className="h-12 w-auto sm:h-14"
       />
       <span className="sr-only"> — на главную</span>
     </Link>
