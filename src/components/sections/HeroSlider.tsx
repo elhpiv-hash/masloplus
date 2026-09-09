@@ -67,7 +67,7 @@ export function HeroSlider() {
         Масло Плюс — замена масла и ТО в Чебоксарах: 3 точки, оригинальные масла, экспресс-сервис
       </h1>
 
-      <Container className="py-5 sm:py-8">
+      <Container className="pb-5 sm:pb-8">
         <div
           className="relative touch-pan-y overflow-hidden shadow-sm"
           onTouchStart={onTouchStart}
