@@ -19,5 +19,5 @@ export const legalNav: readonly NavItem[] = [
   { href: "/soglashenie", label: "Пользовательское соглашение" },
 ];
 
-/** Куда ведёт основной CTA «Записаться» (форма записи — на странице контактов, Промт 9). */
-export const bookingHref = "/kontakty";
+/** Куда ведёт основной CTA «Записаться» — к блоку онлайн-записи (SONLINE) на /kontakty. */
+export const bookingHref = "/kontakty#zapis";

@@ -17,3 +17,11 @@ export function yandexReviewsWidgetSrcById(orgId: string): string {
 
 /** Ссылка на iframe-виджет карты Яндекс со всеми точками. undefined → фолбэк. */
 export const yandexMapWidgetSrc: string | undefined = undefined;
+
+/**
+ * Онлайн-запись через SONLINE — сервис, которым сеть пользуется для приёма заявок
+ * (тот же виджет, что и на старом сайте). Встраивается iframe'ом на /kontakty;
+ * домен widget.sonline.su добавлен в белый список CSP (frame-src).
+ */
+export const sonlineBookingUrl =
+  "https://widget.sonline.su/ru/map/?groupid=556649&placeid=583132206";

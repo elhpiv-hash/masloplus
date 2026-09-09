@@ -27,8 +27,8 @@ const csp = [
   // Картинки: свои + data/blob + CDN VK/RuTube (галерея) + пиксель Яндекс.Метрики.
   "img-src 'self' data: blob: https://*.userapi.com https://*.vk.com https://*.rutube.ru https://mc.yandex.ru",
   "font-src 'self' data:",
-  // Embed по белому списку: VK Видео, RuTube, Яндекс.Карты, SmartCaptcha. YouTube не используем.
-  "frame-src https://vk.com https://vkvideo.ru https://rutube.ru https://yandex.ru https://smartcaptcha.yandexcloud.net",
+  // Embed по белому списку: VK Видео, RuTube, Яндекс.Карты, SmartCaptcha, SONLINE (онлайн-запись).
+  "frame-src https://vk.com https://vkvideo.ru https://rutube.ru https://yandex.ru https://smartcaptcha.yandexcloud.net https://widget.sonline.su",
   `script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ""} https://smartcaptcha.yandexcloud.net https://mc.yandex.ru`,
   "style-src 'self' 'unsafe-inline'",
   `connect-src 'self'${isDev ? " ws:" : ""} https://smartcaptcha.yandexcloud.net https://mc.yandex.ru`,
