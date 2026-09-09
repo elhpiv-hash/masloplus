@@ -46,8 +46,14 @@ export const packsPreview: PackTeaser[] = [
     fromPrice: 4650,
     best: true,
   },
-  { slug: "kia-rio", brand: "KIA", model: "Rio", engine: "1.4 / 1.6" },
-  { slug: "hyundai-solaris", brand: "Hyundai", model: "Solaris", engine: "1.4 / 1.6" },
+  { slug: "kia-rio", brand: "KIA", model: "Rio", engine: "1.4 / 1.6", fromPrice: 3800, best: true },
+  {
+    slug: "lada-8kl",
+    brand: "Lada",
+    model: "8 кл.",
+    engine: "Гранта, Калина, Приора",
+    fromPrice: 2900,
+  },
 ];
 
 export const oilsBlock = {

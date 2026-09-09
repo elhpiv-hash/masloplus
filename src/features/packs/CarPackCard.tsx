@@ -23,11 +23,8 @@ function DetailRow({ label, value }: { label: string; value: string }) {
 
 /** Карточка набора ТО по авто: переключение тарифов, состав и цена, перенос выбора в запись. */
 export function CarPackCard({ pack }: { pack: CarPack }) {
-  const defaultIndex = Math.max(
-    0,
-    pack.tiers.findIndex((tier) => tier.name === "Оптимум"),
-  );
-  const [tierIndex, setTierIndex] = useState(defaultIndex);
+  // По умолчанию — первый тариф (Бюджет).
+  const [tierIndex, setTierIndex] = useState(0);
   const tier = pack.tiers[tierIndex];
 
   const bookingHref = `/kontakty?nabor=${pack.slug}&tarif=${encodeURIComponent(tier.name)}`;

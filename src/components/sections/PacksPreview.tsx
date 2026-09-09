@@ -4,7 +4,7 @@ import { packsPreview } from "@/content/home";
 import { formatPrice } from "@/lib/format";
 import { SectionHeading } from "./SectionHeading";
 
-const TIERS = ["Бюджет", "Оптимум", "Премиум"] as const;
+const TIERS = ["Бюджет", "Премиум"] as const;
 
 /** Превью популярных наборов ТО. Полный раздел с поиском — /nabory (Промт 7). */
 export function PacksPreview() {
@@ -14,7 +14,7 @@ export function PacksPreview() {
         <SectionHeading
           eyebrow="Готовые наборы ТО"
           title="Наборы под ваш автомобиль"
-          subtitle="Масло и фильтры под конкретную модель — тарифы Бюджет, Оптимум и Премиум."
+          subtitle="Масло и фильтры под конкретную модель — тарифы Бюджет и Премиум."
           action={{ label: "Все наборы", href: "/nabory" }}
         />
         <div className="grid gap-4 md:grid-cols-3">
