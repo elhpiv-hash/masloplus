@@ -84,11 +84,16 @@ const config: Config = {
           from: { opacity: "0", transform: "translateX(100%)" },
           to: { opacity: "1", transform: "translateX(0)" },
         },
+        "cta-bounce": {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-5px)" },
+        },
       },
       animation: {
         "fade-up": "fade-up 0.5s ease-out both",
         "fade-in": "fade-in 0.4s ease-out both",
         "slide-in-right": "slide-in-right 0.25s ease-out both",
+        "cta-bounce": "cta-bounce 1.3s ease-in-out infinite",
       },
     },
   },

@@ -37,7 +37,7 @@ export const heroSlides: HeroSlide[] = [
   {
     src: "/gallery/promo-diagnostics.jpg",
     alt: "Новая услуга: экспресс-диагностика авто на вибростенде",
-    href: "/uslugi",
+    href: bookingHref,
   },
 ];
 
