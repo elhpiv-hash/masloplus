@@ -90,7 +90,7 @@ export function HeroSlider() {
               }}
               className="relative block w-full flex-none focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-inset focus-visible:ring-ring"
             >
-              <div className="relative aspect-[1280/548] sm:aspect-auto sm:h-[300px] md:h-[380px] lg:h-[440px]">
+              <div className="relative aspect-[1280/548]">
                 <Image
                   src={asset(slide.src)}
                   alt={slide.alt}
