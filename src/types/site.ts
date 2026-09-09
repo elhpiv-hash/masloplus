@@ -39,6 +39,12 @@ export type Location = {
   /** Координаты для карты (приблизительные — уточнить) */
   geo?: GeoPoint;
   maps: LocationMaps;
+  /**
+   * id организации в Яндекс.Картах для официального виджета отзывов
+   * (https://yandex.ru/maps-reviews-widget/<id>). Отзывы подтягиваются и
+   * обновляются на стороне Яндекса — ничего не парсим и не храним у себя.
+   */
+  reviewsWidgetId?: string;
 };
 
 export type Socials = {

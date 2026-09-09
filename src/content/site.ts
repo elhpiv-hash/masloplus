@@ -41,6 +41,7 @@ export const siteConfig: SiteConfig = {
       maps: {
         gis2: "https://2gis.ru/cheboksary/firm/70000001017325085",
       },
+      reviewsWidgetId: "214501904406",
     },
     {
       slug: "b-hmelnitskogo-73",
@@ -56,6 +57,7 @@ export const siteConfig: SiteConfig = {
       maps: {
         gis2: "https://2gis.ru/cheboksary/firm/70000001024154989",
       },
+      reviewsWidgetId: "76666692601",
     },
     {
       slug: "universitetskaya-35",
@@ -72,6 +74,7 @@ export const siteConfig: SiteConfig = {
       maps: {
         gis2: "https://2gis.ru/cheboksary/firm/70000001099177473",
       },
+      reviewsWidgetId: "89882408027",
     },
   ],
 };
