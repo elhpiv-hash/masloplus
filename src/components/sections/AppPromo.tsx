@@ -69,9 +69,9 @@ export function AppPromo() {
             <div className="absolute -bottom-24 right-1/3 h-72 w-72 rounded-full bg-primary-bright/30 blur-3xl" />
           </div>
 
-          <div className="relative grid items-center gap-8 lg:grid-cols-2">
+          <div className="relative grid items-center gap-8 p-6 sm:p-10 lg:grid-cols-2 lg:gap-4 lg:p-0">
             {/* Текст */}
-            <div className="px-6 pt-10 sm:px-10 lg:py-14 lg:pl-12">
+            <div className="lg:py-14 lg:pl-12">
               <p className="text-sm font-medium uppercase tracking-wide text-accent">
                 Мобильное приложение
               </p>
@@ -125,15 +125,15 @@ export function AppPromo() {
               </div>
             </div>
 
-            {/* Телефон-визуал */}
-            <div className="relative h-[340px] sm:h-[420px] lg:h-[480px]">
+            {/* Телефон-визуал (в потоке, не перекрывает контент) */}
+            <div className="flex justify-center lg:h-full lg:items-end lg:justify-end">
               <Image
                 src={asset("/app/phone.png")}
                 alt="Приложение «Масло Плюс» на смартфоне"
                 width={640}
                 height={1277}
-                sizes="(min-width: 1024px) 320px, 240px"
-                className="absolute bottom-0 left-1/2 w-[220px] -translate-x-1/2 drop-shadow-2xl sm:w-[260px] lg:w-[320px]"
+                sizes="(min-width: 1024px) 300px, (min-width: 640px) 260px, 220px"
+                className="h-auto w-56 drop-shadow-2xl sm:w-64 lg:w-[300px]"
               />
             </div>
           </div>
