@@ -9,7 +9,6 @@ const appPerks = [
   "Онлайн-запись в пару тапов",
   "Услуги, цены и адреса под рукой",
   "Звонок и Telegram — в один тап",
-  "История обслуживания вашего авто",
 ];
 
 const AppleIcon = (
@@ -67,23 +66,23 @@ export function AppPromo() {
         <div className="absolute -bottom-24 right-1/3 h-72 w-72 rounded-full bg-primary-bright/30 blur-3xl" />
       </div>
 
-      <Container className="relative grid items-center gap-8 py-10 lg:grid-cols-2 lg:gap-6 lg:py-0">
+      <Container className="relative grid grid-cols-[1fr_auto] items-center gap-4 py-8 sm:gap-8 lg:grid-cols-2 lg:gap-6 lg:py-0">
         {/* Текст */}
-        <div className="lg:py-14">
-          <p className="text-sm font-medium uppercase tracking-wide text-accent">
+        <div className="min-w-0 lg:py-14">
+          <p className="text-xs font-medium uppercase tracking-wide text-accent sm:text-sm">
             Мобильное приложение
           </p>
-          <h2 className="mt-2 font-display text-3xl font-extrabold tracking-tight sm:text-4xl">
+          <h2 className="mt-1.5 font-display text-xl font-extrabold tracking-tight sm:text-3xl lg:text-4xl">
             Приложение «Масло&nbsp;Плюс» — сервис в кармане
           </h2>
-          <p className="mt-4 max-w-xl text-white/80">
+          <p className="mt-3 hidden max-w-xl text-white/80 sm:block">
             Всё о вашем обслуживании в одном приложении: запись онлайн, услуги и цены, адреса точек
             и быстрая связь. Устанавливайте — это бесплатно.
           </p>
 
-          <ul className="mt-6 grid gap-2 sm:grid-cols-2">
+          <ul className="mt-4 grid gap-1.5 sm:mt-6 sm:gap-2 lg:grid-cols-2">
             {appPerks.map((perk) => (
-              <li key={perk} className="flex items-start gap-2 text-sm text-white/90">
+              <li key={perk} className="flex items-start gap-2 text-xs text-white/90 sm:text-sm">
                 <svg
                   viewBox="0 0 24 24"
                   width={18}
@@ -103,7 +102,7 @@ export function AppPromo() {
             ))}
           </ul>
 
-          <div className="mt-8 flex flex-wrap gap-3">
+          <div className="mt-4 flex flex-wrap gap-2 sm:mt-8 sm:gap-3">
             {apps.appStore && (
               <StoreButton
                 href={apps.appStore}
@@ -123,15 +122,15 @@ export function AppPromo() {
           </div>
         </div>
 
-        {/* Телефон-визуал: по центру правой части, в потоке */}
-        <div className="flex items-center justify-center lg:py-10">
+        {/* Телефон-визуал: справа на мобиле, по центру на десктопе */}
+        <div className="flex items-center justify-end lg:justify-center lg:py-10">
           <Image
             src={asset("/app/phone.png")}
             alt="Приложение «Масло Плюс» на смартфоне"
             width={640}
             height={1277}
-            sizes="(min-width: 1024px) 250px, (min-width: 640px) 220px, 190px"
-            className="h-auto w-48 drop-shadow-2xl sm:w-56 lg:w-[250px]"
+            sizes="(min-width: 1024px) 250px, (min-width: 640px) 160px, 104px"
+            className="h-auto w-24 drop-shadow-2xl sm:w-40 lg:w-[250px]"
           />
         </div>
       </Container>
