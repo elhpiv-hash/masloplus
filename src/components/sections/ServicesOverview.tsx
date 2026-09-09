@@ -1,7 +1,9 @@
 import type { ReactNode } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Card, Container, Section } from "@/components/ui";
-import { serviceCategories } from "@/content/services";
+import { asset } from "@/lib/asset";
+import { serviceCategories, services } from "@/content/services";
 import type { ServiceCategoryKey } from "@/types/services";
 import { SectionHeading } from "./SectionHeading";
 
@@ -41,36 +43,90 @@ const categoryIcons: Record<ServiceCategoryKey, ReactNode> = {
   ),
 };
 
-/** Обзор категорий услуг с иконками. Каждая карточка ведёт на /uslugi. */
+/**
+ * Обзор услуг: крупные карточки категорий со списком конкретных работ и
+ * стрелкой-переходом на /uslugi (по образцу masloff.ru, в наших цветах).
+ */
 export function ServicesOverview() {
   return (
     <Section surface="light">
       <Container className="space-y-10">
         <SectionHeading
           eyebrow="Услуги"
-          title="Что мы делаем"
+          title="Наши услуги"
           subtitle="Полный спектр по маслам и техническим жидкостям, а также сопутствующие работы."
           action={{ label: "Все услуги и цены", href: "/uslugi" }}
         />
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {serviceCategories.map((category) => (
-            <Link
-              key={category.slug}
-              href="/uslugi"
-              className="group rounded-2xl focus-visible:outline-none"
-            >
-              <Card
-                interactive
-                className="h-full p-6 group-focus-visible:ring-2 group-focus-visible:ring-ring group-focus-visible:ring-offset-2 group-focus-visible:ring-offset-background"
+          {serviceCategories.map((category) => {
+            const items = services.filter((service) => service.categorySlug === category.slug);
+            return (
+              <Link
+                key={category.slug}
+                href="/uslugi"
+                aria-label={`${category.title} — все услуги и цены`}
+                className="group rounded-2xl focus-visible:outline-none"
               >
-                <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-primary/10 text-accent-strong">
-                  {categoryIcons[category.slug]}
-                </span>
-                <h3 className="mt-4 font-display text-lg font-semibold">{category.title}</h3>
-                <p className="mt-1.5 text-sm text-muted">{category.description}</p>
-              </Card>
-            </Link>
-          ))}
+                <Card
+                  interactive
+                  className="flex h-full flex-col overflow-hidden p-6 group-focus-visible:ring-2 group-focus-visible:ring-ring group-focus-visible:ring-offset-2 group-focus-visible:ring-offset-background"
+                >
+                  {category.image && (
+                    <div className="relative -mx-6 -mt-6 mb-5 h-36 sm:h-40">
+                      <Image
+                        src={asset(category.image)}
+                        alt=""
+                        fill
+                        sizes="(min-width: 1024px) 320px, (min-width: 640px) 45vw, 90vw"
+                        className="object-cover"
+                      />
+                      <span
+                        aria-hidden="true"
+                        className="absolute inset-0 bg-gradient-to-t from-primary-dark/40 to-transparent"
+                      />
+                    </div>
+                  )}
+
+                  <div className="flex items-center gap-3">
+                    <span className="inline-flex h-10 w-10 flex-none items-center justify-center rounded-xl bg-primary/10 text-accent-strong">
+                      {categoryIcons[category.slug]}
+                    </span>
+                    <h3 className="font-display text-lg font-semibold">{category.title}</h3>
+                  </div>
+
+                  <ul className="mt-3 space-y-2">
+                    {items.slice(0, 4).map((service) => (
+                      <li key={service.slug} className="flex gap-2 text-sm text-muted">
+                        <span
+                          aria-hidden="true"
+                          className="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-accent"
+                        />
+                        <span>{service.title}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <span className="mt-auto inline-flex items-center gap-2 pt-6 font-medium text-accent-strong">
+                    Подробнее
+                    <svg
+                      viewBox="0 0 24 24"
+                      width={18}
+                      height={18}
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth={2}
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      aria-hidden="true"
+                      className="transition-transform duration-200 motion-safe:group-hover:translate-x-1"
+                    >
+                      <path d="M5 12h14M13 6l6 6-6 6" />
+                    </svg>
+                  </span>
+                </Card>
+              </Link>
+            );
+          })}
         </div>
       </Container>
     </Section>

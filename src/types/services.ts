@@ -7,6 +7,8 @@ export type ServiceCategory = {
   title: string;
   /** Короткое описание для обзорной карточки на главной. */
   description: string;
+  /** Фото категории для карточки обзора (путь в public/, напр. "/services/engine.jpg"). */
+  image?: string;
 };
 
 /** Материалы: сети (покупаем у нас) или клиента (привозит свои). */

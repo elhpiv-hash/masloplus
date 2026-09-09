@@ -8,21 +8,25 @@ export const serviceCategories: ServiceCategory[] = [
     slug: "engine",
     title: "Двигатель",
     description: "Замена масла и масляного фильтра, промывка ДВС, выставление уровня масла.",
+    image: "/services/engine.jpg",
   },
   {
     slug: "transmission",
     title: "Трансмиссия",
     description: "Замена масла в АКПП, МКПП, DSG, CVT, раздатке и дифференциалах.",
+    image: "/services/transmission.jpg",
   },
   {
     slug: "filters",
     title: "Фильтры",
     description: "Замена салонного и воздушного фильтров.",
+    image: "/services/filters.jpg",
   },
   {
     slug: "extra",
     title: "Доп. работы",
     description: "ГУР, тормоза, сцепление, аппаратная замена антифриза и тормозной жидкости.",
+    image: "/services/extra.jpg",
   },
 ];
 
