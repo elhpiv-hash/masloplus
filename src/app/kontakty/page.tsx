@@ -4,6 +4,7 @@ import { siteConfig } from "@/content/site";
 import { sonlineBookingUrl } from "@/content/integrations";
 import { LocationItem } from "@/components/layout/LocationItem";
 import { LocationsMap } from "@/components/sections";
+import { SocialCards } from "@/components/sections/SocialCards";
 import { LocationsJsonLd } from "@/components/seo/JsonLd";
 import { pageMetadata } from "@/lib/seo";
 
@@ -136,6 +137,19 @@ export default function KontaktyPage() {
               </Card>
             ))}
           </div>
+        </Container>
+      </Section>
+
+      {/* Соцсети */}
+      <Section surface="light" className="pt-0">
+        <Container className="space-y-6">
+          <div>
+            <h2 className="font-display text-2xl font-bold tracking-tight">Мы в соцсетях</h2>
+            <p className="mt-2 max-w-2xl text-muted">
+              Акции, фото работ и новости сети — подписывайтесь на удобной площадке.
+            </p>
+          </div>
+          <SocialCards />
         </Container>
       </Section>
 
