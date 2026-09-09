@@ -11,6 +11,36 @@ export const hero = {
   secondaryCta: { label: "Рассчитать стоимость", href: "/uslugi#kalkulyator" },
 } as const;
 
+export type HeroSlide = {
+  /** Баннер в public/ (1280×548). */
+  src: string;
+  alt: string;
+  /** Куда ведёт клик по слайду. */
+  href: string;
+};
+
+/**
+ * Слайды героя-карусели (фирменные баннеры из ФОТОЛОГО, уже лежат в public/gallery).
+ * Добавить баннер = добавить объект. Только без бонусов/ЛК (вне scope сайта).
+ */
+export const heroSlides: HeroSlide[] = [
+  {
+    src: "/gallery/promo-oil.jpg",
+    alt: "Только оригинальные масла — сеть станций техобслуживания «Масло Плюс»",
+    href: bookingHref,
+  },
+  {
+    src: "/gallery/promo-express.jpg",
+    alt: "Экспресс-замена масла — сохраняем гарантию на ваш автомобиль",
+    href: bookingHref,
+  },
+  {
+    src: "/gallery/promo-diagnostics.jpg",
+    alt: "Новая услуга: экспресс-диагностика авто на вибростенде",
+    href: "/uslugi",
+  },
+];
+
 export type TrustBadge = { value: string; label: string };
 
 /** Полоса доверия (как у референса, но честно под наш масштаб). */

@@ -4,7 +4,7 @@ import {
   AppPromo,
   FinalCta,
   GalleryPreview,
-  Hero,
+  HeroSlider,
   LocationsMap,
   OilsBlock,
   PacksPreview,
@@ -23,7 +23,7 @@ export default function HomePage() {
   return (
     <main>
       <LocationsJsonLd />
-      <Hero />
+      <HeroSlider />
       <TrustBar />
       <ServicesOverview />
       <PacksPreview />
