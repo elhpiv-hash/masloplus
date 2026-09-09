@@ -58,14 +58,18 @@ export function HeroSlider() {
   };
 
   return (
-    <section aria-roledescription="карусель" aria-label="Акции и услуги «Масло Плюс»">
+    <section
+      aria-roledescription="карусель"
+      aria-label="Акции и услуги «Масло Плюс»"
+      className="bg-gradient-to-b from-primary/[0.12] to-primary/[0.03]"
+    >
       <h1 className="sr-only">
         Масло Плюс — замена масла и ТО в Чебоксарах: 3 точки, оригинальные масла, экспресс-сервис
       </h1>
 
-      <Container className="py-4 sm:py-6">
+      <Container className="py-6 sm:py-9">
         <div
-          className="relative mx-auto max-w-5xl touch-pan-y overflow-hidden shadow-card"
+          className="relative mx-auto max-w-5xl touch-pan-y overflow-hidden shadow-elevated ring-1 ring-primary/10"
           onTouchStart={onTouchStart}
           onTouchMove={onTouchMove}
           onTouchEnd={onTouchEnd}
