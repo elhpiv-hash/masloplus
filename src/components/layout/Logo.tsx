@@ -38,7 +38,7 @@ export function Logo({ className, variant = "image" }: LogoProps) {
         width={600}
         height={216}
         priority
-        className="h-10 w-auto sm:h-11 lg:h-12"
+        className="h-9 w-auto sm:h-10 lg:h-11"
       />
       <span className="sr-only"> — на главную</span>
     </Link>
