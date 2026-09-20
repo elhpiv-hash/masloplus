@@ -34,7 +34,12 @@ export async function GalleryPreview() {
           subtitle={galleryPreview.text}
           action={{ label: "Вся галерея", href: galleryPreview.href }}
         />
-        <div className="grid grid-cols-2 gap-4 sm:gap-5 lg:grid-cols-4">
+        {/*
+          Мобайл/планшет — свайп-карусель (scroll-snap, листается пальцем, видно
+          краешек следующей карточки). Десктоп (lg) — обычная сетка 4×.
+          Скроллбар скрыт, но прокрутка колесом/тачпадом/свайпом работает.
+        */}
+        <div className="-mx-4 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 [scrollbar-width:none] sm:gap-5 lg:mx-0 lg:grid lg:grid-cols-4 lg:overflow-visible lg:px-0 [&::-webkit-scrollbar]:hidden">
           {items.length > 0
             ? items.map((item) => {
                 const label = item.type === "photo" ? item.alt : item.title;
@@ -44,7 +49,7 @@ export async function GalleryPreview() {
                     key={item.id}
                     href={galleryPreview.href}
                     aria-label={`Перейти в галерею: ${label}`}
-                    className="group relative block aspect-[4/3] overflow-hidden rounded-2xl border border-border bg-primary/5 shadow-card transition-all duration-300 hover:-translate-y-1 hover:shadow-elevated focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background motion-reduce:transition-none motion-reduce:hover:translate-y-0"
+                    className="group relative block aspect-[9/16] w-[78%] shrink-0 snap-start overflow-hidden rounded-2xl border border-border bg-primary/5 shadow-card transition-all duration-300 hover:-translate-y-1 hover:shadow-elevated focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background motion-reduce:transition-none motion-reduce:hover:translate-y-0 sm:w-[46%] lg:w-auto"
                   >
                     {thumbSrc ? (
                       // eslint-disable-next-line @next/next/no-img-element -- тизер: ленивые миниатюры без next/image
@@ -80,7 +85,7 @@ export async function GalleryPreview() {
                   key={index}
                   href={galleryPreview.href}
                   aria-label="Перейти в галерею работ и видео"
-                  className="group relative flex aspect-[4/3] items-center justify-center overflow-hidden rounded-2xl border border-border bg-surface text-muted transition-colors hover:text-accent-strong focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+                  className="group relative flex aspect-[9/16] w-[78%] shrink-0 snap-start items-center justify-center overflow-hidden rounded-2xl border border-border bg-surface text-muted transition-colors hover:text-accent-strong focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background sm:w-[46%] lg:w-auto"
                 >
                   <svg
                     viewBox="0 0 24 24"

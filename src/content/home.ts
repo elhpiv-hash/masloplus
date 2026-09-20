@@ -100,7 +100,7 @@ export const oilsBlock = {
 export const galleryPreview = {
   eyebrow: "Наши работы",
   title: "Галерея работ и видео",
-  text: "Свежие работы и видео сервиса. Обновляется из наших Telegram и VK.",
+  text: "Свежие работы и видео сервиса. Обновляется из нашего Telegram.",
   href: "/galereya",
 } as const;
 
