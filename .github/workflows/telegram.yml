@@ -46,6 +46,9 @@ jobs:
         run: npm run fetch:telegram
 
       - name: Commit synced data (if changed)
+        # Персистенция данных в репо — приятный бонус, но НЕ критична: даже если push
+        # не удался (например, в репо не включены Workflow write-permissions), сборка
+        # ниже всё равно возьмёт свежие видео и задеплоит их. Поэтому push некритичен.
         run: |
           if [[ -z "$(git status --porcelain)" ]]; then
             echo "Нет изменений — коммит не нужен."
@@ -55,7 +58,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add src/content/telegram-gallery.generated.ts public/gallery/telegram
           git commit -m "chore(gallery): sync Telegram videos [skip ci]"
-          git push
+          git push || echo "::warning::git push не удался — включите Settings → Actions → Workflow permissions → Read and write. Деплой свежих видео продолжится."
 
       - name: Configure Pages
         id: pages
