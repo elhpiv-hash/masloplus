@@ -1,7 +1,6 @@
 import type { ReactNode } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { cn } from "@/lib/cn";
 import { Card, Container, Section } from "@/components/ui";
 import { asset } from "@/lib/asset";
 import { serviceCategories, services } from "@/content/services";
@@ -61,11 +60,9 @@ export function ServicesOverview() {
           action={{ label: "Все услуги и цены", href: "/uslugi" }}
         />
 
-        {/* pt под выступающие вверх фото деталей */}
-        <div className="grid gap-6 pt-10 sm:grid-cols-2">
-          {serviceCategories.map((category, index) => {
+        <div className="grid gap-6 sm:grid-cols-2">
+          {serviceCategories.map((category) => {
             const items = services.filter((service) => service.categorySlug === category.slug);
-            const imageLeft = index % 2 === 1;
 
             return (
               <Link
@@ -74,40 +71,12 @@ export function ServicesOverview() {
                 aria-label={`${category.title} — все услуги и цены`}
                 className="group rounded-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
               >
-                <Card interactive className="relative min-h-[220px] overflow-visible p-6 sm:p-7">
-                  {/* Слот под фото детали: выступает за верхний край карточки */}
-                  <div
-                    className={cn(
-                      "pointer-events-none absolute -top-10 flex h-36 w-36 items-center justify-center sm:h-44 sm:w-44",
-                      imageLeft ? "left-3 sm:left-5" : "right-3 sm:right-5",
-                    )}
-                  >
-                    {category.image ? (
-                      <Image
-                        src={asset(category.image)}
-                        alt=""
-                        width={220}
-                        height={220}
-                        sizes="176px"
-                        className="h-full w-full object-contain drop-shadow-xl"
-                      />
-                    ) : (
-                      <span
-                        aria-hidden="true"
-                        className="text-primary/15 [&_svg]:h-20 [&_svg]:w-20 sm:[&_svg]:h-24 sm:[&_svg]:w-24"
-                      >
-                        {categoryIcons[category.slug]}
-                      </span>
-                    )}
-                  </div>
-
-                  {/* Текст: отступ со стороны фото, чтобы не перекрывалось */}
-                  <div
-                    className={cn(
-                      "flex h-full flex-col",
-                      imageLeft ? "pl-32 sm:pl-40" : "pr-32 sm:pr-40",
-                    )}
-                  >
+                <Card
+                  interactive
+                  className="flex h-full items-stretch gap-4 overflow-hidden p-6 sm:p-7"
+                >
+                  {/* Текст */}
+                  <div className="flex min-w-0 flex-1 flex-col">
                     <h3 className="font-display text-xl font-bold text-accent-strong sm:text-2xl">
                       {category.title}
                     </h3>
@@ -121,12 +90,7 @@ export function ServicesOverview() {
                     </ul>
 
                     {/* Круглая кнопка-стрелка снизу */}
-                    <span
-                      className={cn(
-                        "mt-auto inline-flex h-11 w-11 items-center justify-center rounded-xl bg-surface text-accent-strong shadow-card ring-1 ring-border transition-transform duration-200 motion-safe:group-hover:translate-x-1",
-                        imageLeft ? "self-start" : "self-end",
-                      )}
-                    >
+                    <span className="mt-auto inline-flex h-11 w-11 items-center justify-center self-start rounded-xl bg-surface text-accent-strong shadow-card ring-1 ring-border transition-transform duration-200 motion-safe:group-hover:translate-x-1">
                       <svg
                         viewBox="0 0 24 24"
                         width={20}
@@ -141,6 +105,27 @@ export function ServicesOverview() {
                         <path d="M5 12h14M13 6l6 6-6 6" />
                       </svg>
                     </span>
+                  </div>
+
+                  {/* Фото детали — внутри карточки, справа */}
+                  <div className="flex w-24 flex-none items-center justify-center sm:w-32">
+                    {category.image ? (
+                      <Image
+                        src={asset(category.image)}
+                        alt=""
+                        width={220}
+                        height={220}
+                        sizes="128px"
+                        className="h-auto w-full object-contain"
+                      />
+                    ) : (
+                      <span
+                        aria-hidden="true"
+                        className="text-primary/15 [&_svg]:h-16 [&_svg]:w-16"
+                      >
+                        {categoryIcons[category.slug]}
+                      </span>
+                    )}
                   </div>
                 </Card>
               </Link>

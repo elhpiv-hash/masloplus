@@ -57,8 +57,9 @@ export function PacksPreview() {
                 href="/nabory"
                 className={buttonVariants({
                   variant: "secondary",
-                  size: "sm",
-                  className: "mt-4 w-full",
+                  size: "md",
+                  className:
+                    "mt-4 w-full bg-white font-semibold text-primary shadow-card hover:bg-white/90",
                 })}
               >
                 Подробнее
