@@ -49,7 +49,7 @@ export async function GalleryPreview() {
                     key={item.id}
                     href={galleryPreview.href}
                     aria-label={`Перейти в галерею: ${label}`}
-                    className="group relative block aspect-[9/16] w-[78%] shrink-0 snap-start overflow-hidden rounded-2xl border border-border bg-primary/5 shadow-card transition-all duration-300 hover:-translate-y-1 hover:shadow-elevated focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background motion-reduce:transition-none motion-reduce:hover:translate-y-0 sm:w-[46%] lg:w-auto"
+                    className="group relative block aspect-[9/16] w-[52%] shrink-0 snap-start overflow-hidden rounded-2xl border border-border bg-primary/5 shadow-card transition-all duration-300 hover:-translate-y-1 hover:shadow-elevated focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background motion-reduce:transition-none motion-reduce:hover:translate-y-0 sm:w-[46%] lg:w-auto"
                   >
                     {thumbSrc ? (
                       // eslint-disable-next-line @next/next/no-img-element -- тизер: ленивые миниатюры без next/image
@@ -85,7 +85,7 @@ export async function GalleryPreview() {
                   key={index}
                   href={galleryPreview.href}
                   aria-label="Перейти в галерею работ и видео"
-                  className="group relative flex aspect-[9/16] w-[78%] shrink-0 snap-start items-center justify-center overflow-hidden rounded-2xl border border-border bg-surface text-muted transition-colors hover:text-accent-strong focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background sm:w-[46%] lg:w-auto"
+                  className="group relative flex aspect-[9/16] w-[52%] shrink-0 snap-start items-center justify-center overflow-hidden rounded-2xl border border-border bg-surface text-muted transition-colors hover:text-accent-strong focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background sm:w-[46%] lg:w-auto"
                 >
                   <svg
                     viewBox="0 0 24 24"
