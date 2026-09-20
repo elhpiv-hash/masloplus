@@ -7,9 +7,9 @@ import { SectionHeading } from "./SectionHeading";
 
 function PlayBadge() {
   return (
-    <span className="pointer-events-none absolute inset-0 flex items-center justify-center bg-primary-dark/25 transition-colors group-hover:bg-primary-dark/10">
-      <span className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-primary-dark/70 text-white">
-        <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true">
+    <span className="pointer-events-none absolute inset-0 flex items-center justify-center">
+      <span className="inline-flex h-14 w-14 items-center justify-center rounded-full bg-white/90 text-primary shadow-lg ring-1 ring-black/5 backdrop-blur transition-all duration-300 group-hover:scale-110 group-hover:bg-accent group-hover:text-primary-dark">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true">
           <path d="M8 5v14l11-7L8 5Z" />
         </svg>
       </span>
@@ -19,8 +19,8 @@ function PlayBadge() {
 
 /**
  * Тизер галереи на главной. Показывает 4 свежие работы (в основном видео из
- * Telegram — подтягиваются автоматически, см. lib/gallery.ts), плитки ведут в
- * раздел /galereya. Если контента нет — аккуратные заглушки-иконки.
+ * Telegram — подтягиваются автоматически, см. lib/gallery.ts), плитки-карточки
+ * ведут в раздел /galereya. Если контента нет — аккуратные заглушки-иконки.
  */
 export async function GalleryPreview() {
   const items = (await getGalleryItems()).slice(0, 4);
@@ -34,7 +34,7 @@ export async function GalleryPreview() {
           subtitle={galleryPreview.text}
           action={{ label: "Вся галерея", href: galleryPreview.href }}
         />
-        <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
+        <div className="grid grid-cols-2 gap-4 sm:gap-5 lg:grid-cols-4">
           {items.length > 0
             ? items.map((item) => {
                 const label = item.type === "photo" ? item.alt : item.title;
@@ -44,7 +44,7 @@ export async function GalleryPreview() {
                     key={item.id}
                     href={galleryPreview.href}
                     aria-label={`Перейти в галерею: ${label}`}
-                    className="group relative block aspect-[4/3] overflow-hidden rounded-2xl border border-border bg-primary/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+                    className="group relative block aspect-[4/3] overflow-hidden rounded-2xl border border-border bg-primary/5 shadow-card transition-all duration-300 hover:-translate-y-1 hover:shadow-elevated focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background motion-reduce:transition-none motion-reduce:hover:translate-y-0"
                   >
                     {thumbSrc ? (
                       // eslint-disable-next-line @next/next/no-img-element -- тизер: ленивые миниатюры без next/image
@@ -52,12 +52,26 @@ export async function GalleryPreview() {
                         src={asset(thumbSrc)}
                         alt={label}
                         loading="lazy"
-                        className="h-full w-full object-cover transition-transform duration-300 motion-safe:group-hover:scale-105"
+                        className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105 motion-reduce:transition-none motion-reduce:group-hover:scale-100"
                       />
                     ) : (
                       <span className="absolute inset-0 bg-primary-dark" aria-hidden="true" />
                     )}
+
+                    {/* Затемнение снизу — чтобы подпись читалась поверх любого кадра. */}
+                    <span
+                      aria-hidden="true"
+                      className="absolute inset-0 bg-gradient-to-t from-primary-dark/85 via-primary-dark/15 to-transparent opacity-90 transition-opacity duration-300 group-hover:opacity-100"
+                    />
+
                     {item.type === "video" && <PlayBadge />}
+
+                    {/* Подпись работы. */}
+                    <span className="absolute inset-x-0 bottom-0 p-3 sm:p-4">
+                      <span className="line-clamp-2 text-sm font-medium leading-snug text-white drop-shadow-sm">
+                        {label}
+                      </span>
+                    </span>
                   </Link>
                 );
               })
