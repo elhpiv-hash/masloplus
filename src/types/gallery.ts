@@ -2,7 +2,8 @@
 
 export type GalleryVideoSource =
   | { provider: "rutube"; id: string }
-  | { provider: "vk"; ownerId: string; id: string; hash?: string };
+  | { provider: "vk"; ownerId: string; id: string; hash?: string }
+  | { provider: "telegram"; channel: string; id: string };
 
 export type GalleryPhoto = {
   id: string;

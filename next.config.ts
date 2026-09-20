@@ -8,7 +8,7 @@ const isDev = process.env.NODE_ENV === "development";
  * default-src 'self': по умолчанию только собственный источник. Объекты и обрамление
  * нашего сайта запрещены (object-src/frame-ancestors 'none'). Внешнее разрешено только
  * там, где это реально нужно:
- *  - frame-src: VK Видео, RuTube (видео галереи), Яндекс.Карты (карта/отзывы),
+ *  - frame-src: VK Видео, RuTube, Telegram (видео галереи), Яндекс.Карты (карта/отзывы),
  *    Яндекс SmartCaptcha (антиспам форм). YouTube НЕ разрешён.
  *  - img-src: CDN VK/RuTube (фото галереи) + пиксель Яндекс.Метрики.
  *  - script-src/connect-src: Яндекс.Метрика и SmartCaptcha.
@@ -27,8 +27,9 @@ const csp = [
   // Картинки: свои + data/blob + CDN VK/RuTube (галерея) + пиксель Яндекс.Метрики.
   "img-src 'self' data: blob: https://*.userapi.com https://*.vk.com https://*.rutube.ru https://mc.yandex.ru",
   "font-src 'self' data:",
-  // Embed по белому списку: VK Видео, RuTube, Яндекс.Карты, SmartCaptcha, SONLINE (онлайн-запись).
-  "frame-src https://vk.com https://vkvideo.ru https://rutube.ru https://yandex.ru https://smartcaptcha.yandexcloud.net https://widget.sonline.su",
+  // Embed по белому списку: VK Видео, RuTube, Telegram (видео галереи из t.me),
+  // Яндекс.Карты, SmartCaptcha, SONLINE (онлайн-запись).
+  "frame-src https://vk.com https://vkvideo.ru https://rutube.ru https://t.me https://yandex.ru https://smartcaptcha.yandexcloud.net https://widget.sonline.su",
   `script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ""} https://smartcaptcha.yandexcloud.net https://mc.yandex.ru`,
   "style-src 'self' 'unsafe-inline'",
   `connect-src 'self'${isDev ? " ws:" : ""} https://smartcaptcha.yandexcloud.net https://mc.yandex.ru`,

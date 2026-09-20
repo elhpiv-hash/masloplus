@@ -88,7 +88,14 @@ export function Lightbox({ items, index, onClose, onIndexChange }: LightboxProps
               className="mx-auto max-h-[80vh] w-auto object-contain"
             />
           ) : (
-            <div className="aspect-video w-full">
+            // Telegram-embed — это весь пост (видео + подпись), ему нужна высота;
+            // VK/RuTube — обычное 16:9.
+            <div
+              className={cn(
+                "w-full",
+                item.video.provider === "telegram" ? "h-[80vh]" : "aspect-video",
+              )}
+            >
               <iframe
                 src={getEmbedUrl(item.video)}
                 title={item.title}

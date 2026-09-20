@@ -1,0 +1,81 @@
+name: Sync Telegram gallery
+
+# Раз в ~30 минут тянет свежие видео из t.me/masloplus, обновляет данные галереи
+# и пересобирает статический сайт на GitHub Pages.
+#
+# Почему sync + build + deploy в одном workflow, а не «закоммитил → pages.yml сам
+# соберёт»: push, сделанный автоматическим GITHUB_TOKEN, НЕ триггерит другие
+# workflow (защита от рекурсии в GitHub Actions). Поэтому деплой делаем здесь же.
+# Коммит данных — только чтобы сохранить историю и постеры между запусками.
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+
+# Тот же concurrency-group, что и у pages.yml — деплои не наступают друг другу на пятки.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+permissions:
+  contents: write # коммит сгенерированных данных и постеров
+  pages: write # деплой на Pages
+  id-token: write # OIDC для deploy-pages
+
+jobs:
+  sync-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    env:
+      HUSKY: "0"
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Fetch latest Telegram videos
+        run: npm run fetch:telegram
+
+      - name: Commit synced data (if changed)
+        run: |
+          if [[ -z "$(git status --porcelain)" ]]; then
+            echo "Нет изменений — коммит не нужен."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/content/telegram-gallery.generated.ts public/gallery/telegram
+          git commit -m "chore(gallery): sync Telegram videos [skip ci]"
+          git push
+
+      - name: Configure Pages
+        id: pages
+        uses: actions/configure-pages@v5
+
+      - name: Remove server-only API route (incompatible with static export)
+        run: rm -rf src/app/api
+
+      - name: Build static export
+        env:
+          STATIC_EXPORT: "1"
+          PAGES_BASE_PATH: ${{ steps.pages.outputs.base_path }}
+          NEXT_PUBLIC_SITE_URL: ${{ steps.pages.outputs.origin }}${{ steps.pages.outputs.base_path }}
+        run: npm run build
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: out
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

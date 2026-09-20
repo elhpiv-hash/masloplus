@@ -1,15 +1,19 @@
 import "server-only";
 import { manualGallery } from "@/content/gallery";
+import { telegramGallery } from "@/content/telegram-gallery.generated";
 import { sanitizeText } from "@/lib/sanitize";
 import type { GalleryItem } from "@/types/gallery";
 
 /**
- * Возвращает элементы галереи. Источник — ручной список content/gallery.ts
- * (владелец наполняет сам, без автоподтяжки из соцсетей).
- * Подписи на всякий случай санитизируются перед выводом.
+ * Возвращает элементы галереи. Два источника:
+ *  - telegramGallery — видео из канала t.me/masloplus, генерируется автоматически
+ *    (scripts/fetch-telegram.mjs по расписанию, свежие сверху);
+ *  - manualGallery — ручные фото, владелец добавляет сам.
+ * Видео Telegram идут первыми (самые новые работы), затем ручные фото.
+ * Подписи санитизируются перед выводом.
  */
 export async function getGalleryItems(): Promise<GalleryItem[]> {
-  return manualGallery.map(sanitizeItem);
+  return [...telegramGallery, ...manualGallery].map(sanitizeItem);
 }
 
 function sanitizeItem(item: GalleryItem): GalleryItem {
