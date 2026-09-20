@@ -108,20 +108,20 @@ export function ServicesOverview() {
                   </div>
 
                   {/* Фото детали — внутри карточки, справа */}
-                  <div className="flex w-24 flex-none items-center justify-center sm:w-32">
+                  <div className="flex w-32 flex-none items-center justify-center sm:w-40 lg:w-48">
                     {category.image ? (
                       <Image
                         src={asset(category.image)}
                         alt=""
-                        width={220}
-                        height={220}
-                        sizes="128px"
+                        width={384}
+                        height={384}
+                        sizes="(min-width: 1024px) 192px, (min-width: 640px) 160px, 128px"
                         className="h-auto w-full object-contain"
                       />
                     ) : (
                       <span
                         aria-hidden="true"
-                        className="text-primary/15 [&_svg]:h-16 [&_svg]:w-16"
+                        className="text-primary/15 [&_svg]:h-24 [&_svg]:w-24"
                       >
                         {categoryIcons[category.slug]}
                       </span>
