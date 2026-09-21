@@ -6,6 +6,26 @@ import type { GalleryVideo } from "@/types/gallery";
 /** Последние видео из Telegram-канала, свежие — сверху. */
 export const telegramGallery: GalleryVideo[] = [
   {
+    id: "tg-2773",
+    type: "video",
+    video: { provider: "telegram", channel: "masloplus", id: "2773" },
+    thumb: "/gallery/telegram/2773.jpg",
+    title: "⛽️ 95-й бензин найти всё сложнее. Но лить сомнительное топливо — прямой риск дл…",
+    caption: "⛽️ 95-й бензин найти всё сложнее. Но лить сомнительное топливо — прямой риск для двигателя. Помощник — топливная присадка. Она корректирует октановое число и к…",
+    publishedAt: "2026-09-21T19:36:17+00:00",
+    sourceUrl: "https://t.me/masloplus/2773",
+  },
+  {
+    id: "tg-2771",
+    type: "video",
+    video: { provider: "telegram", channel: "masloplus", id: "2771" },
+    thumb: "/gallery/telegram/2771.jpg",
+    title: "⚠️ Проверяйте уровень масла в АКПП сразу после покупки нового китайского автомо…",
+    caption: "⚠️ Проверяйте уровень масла в АКПП сразу после покупки нового китайского автомобиля. По статистике, около 70% таких машин приходят с завода с недолитым маслом…",
+    publishedAt: "2026-09-21T17:20:59+00:00",
+    sourceUrl: "https://t.me/masloplus/2771",
+  },
+  {
     id: "tg-2768",
     type: "video",
     video: { provider: "telegram", channel: "masloplus", id: "2768" },
