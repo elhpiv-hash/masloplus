@@ -6,6 +6,16 @@ import type { GalleryVideo } from "@/types/gallery";
 /** Последние видео из Telegram-канала, свежие — сверху. */
 export const telegramGallery: GalleryVideo[] = [
   {
+    id: "tg-2774",
+    type: "video",
+    video: { provider: "telegram", channel: "masloplus", id: "2774" },
+    thumb: "/gallery/telegram/2774.jpg",
+    title: "🔧 Запчасти и ремонт — в одном месте.",
+    caption: "🔧 Запчасти и ремонт — в одном месте. Не тратьте время на поиски. Всё нужное есть у нас, мастера приступят сразу. Доставка в течение часа. Быстро и без лишних…",
+    publishedAt: "2026-09-22T06:56:08+00:00",
+    sourceUrl: "https://t.me/masloplus/2774",
+  },
+  {
     id: "tg-2773",
     type: "video",
     video: { provider: "telegram", channel: "masloplus", id: "2773" },
@@ -144,15 +154,5 @@ export const telegramGallery: GalleryVideo[] = [
     caption: "🔥 Новое поступление — японское масло IDEMITSU ZEPRO 0W-20 Полностью синтетическое масло для современных бензиновых двигателей. 📋 Допуски: • API SP • ILSAC GF…",
     publishedAt: "2026-09-17T12:42:34+00:00",
     sourceUrl: "https://t.me/masloplus/2752",
-  },
-  {
-    id: "tg-2751",
-    type: "video",
-    video: { provider: "telegram", channel: "masloplus", id: "2751" },
-    thumb: "/gallery/telegram/2751.jpg",
-    title: "Сделано с любовью к твоему авто ❤️",
-    caption: "Сделано с любовью к твоему авто ❤️ Каждое масло, запчасть и обслуживание — подобраны с заботой 🔧 Заезжай в гости 🚗",
-    publishedAt: "2026-09-17T06:06:57+00:00",
-    sourceUrl: "https://t.me/masloplus/2751",
   },
 ];
