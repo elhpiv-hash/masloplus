@@ -55,13 +55,6 @@ export const services: Service[] = [
     price: { network: 0, client: { from: 700 } },
   },
   {
-    slug: "engine-flush",
-    categorySlug: "engine",
-    title: "Промывка двигателя",
-    // Промывка платная всегда (правка заказчика: «бесплатно» было ошибкой).
-    price: { network: { from: 900 }, client: { from: 900 } },
-  },
-  {
     slug: "oil-filter-only",
     categorySlug: "engine",
     title: "Замена масляного фильтра без замены масла",

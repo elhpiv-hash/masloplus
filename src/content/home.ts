@@ -12,35 +12,47 @@ export const hero = {
   secondaryCta: { label: "Рассчитать стоимость", href: "/uslugi#kalkulyator" },
 } as const;
 
+/** Прямоугольник на баннере в процентах от его ширины/высоты. */
+export type BannerArea = { left: number; top: number; width: number; height: number };
+
 export type HeroSlide = {
   /** Баннер в public/ (1280×548). */
   src: string;
   alt: string;
-  /** Куда ведёт клик по слайду (внешняя ссылка откроется в новой вкладке). */
-  href: string;
+  /**
+   * Кнопка «Записаться», нарисованная на самом баннере: кликабельна только эта
+   * зона (а не весь слайд). Нет кнопки на картинке — нет поля, слайд не кликается.
+   */
+  cta?: { href: string; label: string; area: BannerArea };
 };
 
 /**
  * Слайды героя-карусели (фирменные баннеры из ФОТОЛОГО, уже лежат в public/gallery).
- * На баннерах нарисована кнопка «Записаться» — поэтому клик по слайду сразу
- * открывает онлайн-запись SONLINE, без промежуточной страницы контактов.
+ * Координаты кнопки сняты с исходника 1280×548 (px / 1280 и px / 548 → %).
  * Добавить баннер = добавить объект. Только без бонусов/ЛК (вне scope сайта).
  */
 export const heroSlides: HeroSlide[] = [
   {
     src: "/gallery/promo-oil.jpg",
-    alt: "Только оригинальные масла — записаться онлайн в «Масло Плюс»",
-    href: sonlineBookingUrl,
+    alt: "Только оригинальные масла — сеть станций техобслуживания «Масло Плюс»",
+    cta: {
+      href: sonlineBookingUrl,
+      label: "Записаться онлайн",
+      area: { left: 82.9, top: 84.1, width: 13.9, height: 8.3 },
+    },
   },
   {
     src: "/gallery/promo-express.jpg",
-    alt: "Экспресс-замена масла с сохранением гарантии — записаться онлайн",
-    href: sonlineBookingUrl,
+    alt: "Экспресс-замена масла с сохранением гарантии на автомобиль",
+    cta: {
+      href: sonlineBookingUrl,
+      label: "Записаться онлайн",
+      area: { left: 2.5, top: 84.1, width: 13.9, height: 8.1 },
+    },
   },
   {
     src: "/gallery/promo-diagnostics.jpg",
-    alt: "Экспресс-диагностика авто на вибростенде — записаться онлайн",
-    href: sonlineBookingUrl,
+    alt: "Новая услуга: экспресс-диагностика авто на вибростенде",
   },
 ];
 
