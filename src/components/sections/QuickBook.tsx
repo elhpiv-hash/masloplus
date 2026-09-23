@@ -1,11 +1,10 @@
-import Link from "next/link";
-import { Container, buttonVariants } from "@/components/ui";
-import { bookingHref } from "@/content/navigation";
+import { Container } from "@/components/ui";
 
 /**
- * Фирменная CTA-полоса во всю ширину сразу под геро-баннером:
- * ключевая услуга + кнопка записи. Синий градиент, жёлтый акцент и
- * диагональные фигуры — узнаваемый стиль сети.
+ * Фирменная полоса во всю ширину сразу под геро-баннером: ключевое предложение
+ * сети. Без своей кнопки записи — её роль выполняет баннер прямо над полосой
+ * (клик по нему открывает онлайн-запись), чтобы не дублировать «Записаться».
+ * Синий градиент, жёлтый акцент и диагональные фигуры — узнаваемый стиль сети.
  */
 export function QuickBook() {
   return (
@@ -22,25 +21,13 @@ export function QuickBook() {
           <div className="absolute -top-16 right-1/3 h-48 w-48 rounded-full bg-primary-bright/25 blur-3xl" />
         </div>
 
-        <Container className="relative flex flex-col items-center gap-4 py-6 sm:flex-row sm:justify-between sm:py-7">
-          <div className="text-center sm:text-left">
-            <p className="font-display text-xl font-extrabold tracking-tight sm:text-2xl">
-              Замена масла в двигателе
-            </p>
-            <p className="mt-1 text-sm text-white/75 sm:text-base">
-              С материалами сети — работа бесплатно · от 15 минут
-            </p>
-          </div>
-          <Link
-            href={bookingHref}
-            className={buttonVariants({
-              variant: "primary",
-              size: "lg",
-              className: "relative rounded-none",
-            })}
-          >
-            Записаться
-          </Link>
+        <Container className="relative py-6 text-center sm:py-7 sm:text-left">
+          <p className="font-display text-xl font-extrabold tracking-tight sm:text-2xl">
+            Замена масла в двигателе
+          </p>
+          <p className="mt-1 text-sm text-white/75 sm:text-base">
+            С материалами сети — работа бесплатно · от 15 минут
+          </p>
         </Container>
       </div>
     </section>

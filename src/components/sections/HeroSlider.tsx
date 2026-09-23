@@ -15,9 +15,10 @@ const SWIPE_THRESHOLD = 40;
 
 /**
  * Герой-карусель во всю ширину из фирменных баннеров (content/home → heroSlides).
- * Телефон — листается свайпом; ПК — автопрокрутка сам по себе (пауза на hover,
- * уважает prefers-reduced-motion). Без стрелок и кнопок поверх — клик по баннеру
- * ведёт на запись, снизу точки-индикаторы. H1 скрытый (для SEO/скринридеров).
+ * Телефон — листается свайпом; ПК — автопрокрутка сам по себе (уважает
+ * prefers-reduced-motion). Без стрелок и кнопок поверх: кнопка «Записаться»
+ * нарисована на самих баннерах, поэтому клик по слайду сразу открывает онлайн-запись
+ * (внешняя ссылка — в новой вкладке). Снизу точки-индикаторы. H1 скрытый (SEO).
  */
 export function HeroSlider() {
   const count = heroSlides.length;
@@ -79,10 +80,13 @@ export function HeroSlider() {
             className="flex transition-transform duration-500 ease-out motion-reduce:transition-none"
             style={{ transform: `translateX(-${index * 100}%)` }}
           >
-            {heroSlides.map((slide, i) => (
+            {heroSlides.map((slide, i) => {
+              const external = /^https?:\/\//.test(slide.href);
+              return (
               <Link
                 key={slide.src}
                 href={slide.href}
+                {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                 aria-label={slide.alt}
                 aria-hidden={i !== index}
                 tabIndex={i === index ? 0 : -1}
@@ -103,7 +107,8 @@ export function HeroSlider() {
                   />
                 </div>
               </Link>
-            ))}
+              );
+            })}
           </div>
 
           {/* Точки-индикаторы (кликабельны) */}
