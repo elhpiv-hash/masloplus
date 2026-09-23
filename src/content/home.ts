@@ -22,14 +22,18 @@ export type HeroSlide = {
   /**
    * Кнопка «Записаться», нарисованная на самом баннере: кликабельна только эта
    * зона (а не весь слайд). Нет кнопки на картинке — нет поля, слайд не кликается.
+   * radius — скругление нарисованной кнопки в CSS-формате «гориз.% / верт.%»,
+   * чтобы подсветка при наведении повторяла её форму на любой ширине экрана.
    */
-  cta?: { href: string; label: string; area: BannerArea };
+  cta?: { href: string; label: string; area: BannerArea; radius?: string };
 };
 
 /**
  * Слайды героя-карусели (фирменные баннеры из ФОТОЛОГО, уже лежат в public/gallery).
- * Координаты кнопки сняты с исходника 1280×548 (px / 1280 и px / 548 → %).
- * Добавить баннер = добавить объект. Только без бонусов/ЛК (вне scope сайта).
+ * Координаты кнопки сняты с исходника 1280×548 по пикселям: кнопка 175×44 px,
+ * скругление ~3 px (px / 1280 и px / 548 → %). Если баннер заменят и кнопка
+ * сдвинется — поправить area. Добавить баннер = добавить объект.
+ * Только без бонусов/ЛК (вне scope сайта).
  */
 export const heroSlides: HeroSlide[] = [
   {
@@ -38,7 +42,8 @@ export const heroSlides: HeroSlide[] = [
     cta: {
       href: sonlineBookingUrl,
       label: "Записаться онлайн",
-      area: { left: 82.9, top: 84.1, width: 13.9, height: 8.3 },
+      area: { left: 82.97, top: 84.12, width: 13.67, height: 8.03 },
+      radius: "1.7% / 6.8%",
     },
   },
   {
@@ -47,7 +52,8 @@ export const heroSlides: HeroSlide[] = [
     cta: {
       href: sonlineBookingUrl,
       label: "Записаться онлайн",
-      area: { left: 2.5, top: 84.1, width: 13.9, height: 8.1 },
+      area: { left: 2.66, top: 84.12, width: 13.67, height: 8.03 },
+      radius: "1.7% / 6.8%",
     },
   },
   {

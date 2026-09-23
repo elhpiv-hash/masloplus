@@ -122,16 +122,43 @@ export function HeroSlider() {
                           top: `${cta.area.top}%`,
                           width: `${cta.area.width}%`,
                           height: `${cta.area.height}%`,
+                          borderRadius: cta.radius,
                         }}
                         className={cn(
-                          "absolute z-10 rounded-md transition-[background-color,box-shadow] duration-200",
-                          "hover:bg-white/20 hover:shadow-[0_0_0_2px_rgba(255,255,255,0.7)]",
-                          "focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-ring",
+                          "group absolute z-10 focus-visible:outline-none",
                           // Кнопка на баннере мелкая на телефоне — расширяем область
                           // нажатия невидимым полем, не меняя внешний вид.
                           "before:absolute before:-inset-3 before:content-['']",
                         )}
-                      />
+                      >
+                        {/* Внешний вид: повторяет форму нарисованной кнопки. */}
+                        <span
+                          aria-hidden="true"
+                          // outline-style задаём здесь, а не классом `outline`:
+                          // tailwind-merge v3 считает `outline` и `outline-2` одной
+                          // группой и выбрасывает `outline` → рамка не рисуется.
+                          style={{ borderRadius: cta.radius, outlineStyle: "solid" }}
+                          className={cn(
+                            "pointer-events-none absolute inset-0 overflow-hidden",
+                            // Кольцо с отступом (появляется плавно) + мягкое жёлтое
+                            // свечение + лёгкая подсветка самой кнопки под ним.
+                            "outline-2 outline-offset-0 outline-transparent",
+                            "transition-[outline-color,outline-offset,box-shadow,backdrop-filter] duration-300 ease-out",
+                            "group-hover:outline-offset-[3px] group-hover:outline-white group-hover:backdrop-brightness-110",
+                            "group-hover:shadow-[0_0_16px_4px_rgba(255,230,50,0.7)]",
+                            "group-focus-visible:outline-offset-[3px] group-focus-visible:outline-white",
+                            "group-focus-visible:shadow-[0_0_16px_4px_rgba(255,230,50,0.7)]",
+                            // Нажатие: кольцо чуть поджимается, кнопка «проседает».
+                            "group-active:outline-offset-[1px] group-active:backdrop-brightness-95",
+                            // Блик пробегает по кнопке при наведении (на ПК, без reduced motion).
+                            "after:absolute after:inset-y-0 after:left-0 after:w-2/5 after:content-['']",
+                            "after:-translate-x-[150%] after:-skew-x-[20deg]",
+                            "after:bg-gradient-to-r after:from-transparent after:via-white/55 after:to-transparent",
+                            "after:transition-transform after:duration-0",
+                            "motion-safe:group-hover:after:translate-x-[300%] motion-safe:group-hover:after:duration-700",
+                          )}
+                        />
+                      </a>
                     )}
                   </div>
                 </div>
