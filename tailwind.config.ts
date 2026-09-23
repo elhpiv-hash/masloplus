@@ -84,16 +84,27 @@ const config: Config = {
           from: { opacity: "0", transform: "translateX(100%)" },
           to: { opacity: "1", transform: "translateX(0)" },
         },
-        "cta-bounce": {
-          "0%, 100%": { transform: "translateY(0)" },
-          "50%": { transform: "translateY(-5px)" },
+        // Подсказка «сюда можно нажать» для кнопки на баннере героя:
+        // расходящаяся белая волна (размер — CSS-переменная --cta-pulse,
+        // меньше на телефоне) и синхронный блик, пробегающий по кнопке.
+        // Волна белая, а не жёлтая: полупрозрачный жёлтый на синем баннере
+        // смешивается в грязно-зелёный, белый даёт чистое голубое свечение.
+        "cta-pulse": {
+          "0%": { boxShadow: "0 0 0 0 rgba(255,255,255,0.8)" },
+          "70%, 100%": { boxShadow: "0 0 0 var(--cta-pulse, 10px) rgba(255,255,255,0)" },
+        },
+        "cta-shine": {
+          "0%": { transform: "translateX(-150%) skewX(-20deg)" },
+          "40%, 100%": { transform: "translateX(300%) skewX(-20deg)" },
         },
       },
       animation: {
         "fade-up": "fade-up 0.5s ease-out both",
         "fade-in": "fade-in 0.4s ease-out both",
         "slide-in-right": "slide-in-right 0.25s ease-out both",
-        "cta-bounce": "cta-bounce 1.3s ease-in-out infinite",
+        // Задержка 0.6s — чтобы начать, когда слайд уже доехал (переход 0.5s).
+        "cta-pulse": "cta-pulse 2.8s ease-out 0.6s infinite",
+        "cta-shine": "cta-shine 2.8s ease-in-out 0.6s infinite backwards",
       },
     },
   },

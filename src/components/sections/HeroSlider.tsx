@@ -19,8 +19,10 @@ const isExternal = (href: string) => /^https?:\/\//.test(href);
  * Телефон — листается свайпом; ПК — автопрокрутка сама по себе (уважает
  * prefers-reduced-motion). Сам баннер не кликается: кликабельна только кнопка
  * «Записаться», нарисованная на картинке, — поверх неё лежит прозрачная ссылка
- * (координаты в процентах, поэтому совпадает на любой ширине). Снизу точки.
- * H1 скрытый (для SEO/скринридеров).
+ * (координаты в процентах, поэтому совпадает на любой ширине). Чтобы было
+ * понятно, что на неё можно нажать, кнопка сама по себе периодически
+ * «пульсирует» волной и сверкает бликом; при наведении — белое кольцо.
+ * Снизу точки. H1 скрытый (для SEO/скринридеров).
  */
 export function HeroSlider() {
   const count = heroSlides.length;
@@ -158,6 +160,32 @@ export function HeroSlider() {
                             "motion-safe:group-hover:after:translate-x-[300%] motion-safe:group-hover:after:duration-700",
                           )}
                         />
+
+                        {/*
+                          Подсказка «нажми меня» без наведения: от кнопки расходится
+                          белая волна и по ней пробегает блик (раз в ~2.8s).
+                          Монтируется только на активном слайде — стартует при его
+                          появлении. При наведении/фокусе гаснет, уступая рамке выше.
+                          Размер волны меньше на телефоне (кнопка там крошечная).
+                        */}
+                        {active && (
+                          <span
+                            aria-hidden="true"
+                            style={{ borderRadius: cta.radius }}
+                            className={cn(
+                              "pointer-events-none absolute inset-0 overflow-hidden",
+                              "[--cta-pulse:5px] sm:[--cta-pulse:8px] lg:[--cta-pulse:11px]",
+                              "motion-safe:animate-cta-pulse",
+                              "after:absolute after:inset-y-0 after:left-0 after:w-2/5 after:content-['']",
+                              "after:-translate-x-[150%] after:-skew-x-[20deg]",
+                              // Блик ярче, чем при наведении: на лимонно-жёлтой кнопке
+                              // полупрозрачный белый почти не виден.
+                              "after:bg-gradient-to-r after:from-transparent after:via-white/85 after:to-transparent",
+                              "motion-safe:after:animate-cta-shine",
+                              "transition-opacity duration-200 group-hover:opacity-0 group-focus-visible:opacity-0",
+                            )}
+                          />
+                        )}
                       </a>
                     )}
                   </div>
