@@ -6,6 +6,26 @@ import type { GalleryVideo } from "@/types/gallery";
 /** Последние видео из Telegram-канала, свежие — сверху. */
 export const telegramGallery: GalleryVideo[] = [
   {
+    id: "tg-2776",
+    type: "video",
+    video: { provider: "telegram", channel: "masloplus", id: "2776" },
+    thumb: "/gallery/telegram/2776.jpg",
+    title: "BMW X6 — меняем масло в двигателе и в АКПП вместе с поддоном. 🔧",
+    caption: "BMW X6 — меняем масло в двигателе и в АКПП вместе с поддоном. 🔧 Мотор скажет спасибо за свежее масло, а коробка — за плавные переключения. ⚙️ Нужен уход для в…",
+    publishedAt: "2026-09-25T12:14:27+00:00",
+    sourceUrl: "https://t.me/masloplus/2776",
+  },
+  {
+    id: "tg-2775",
+    type: "video",
+    video: { provider: "telegram", channel: "masloplus", id: "2775" },
+    thumb: "/gallery/telegram/2775.jpg",
+    title: "Ура, посылка разгружена! 📦✨",
+    caption: "Ура, посылка разгружена! 📦✨ Совсем скоро — распаковка, вас ждёт приятный бонус 👀 Следите за новостями, чтобы не пропустить 😉",
+    publishedAt: "2026-09-25T10:55:11+00:00",
+    sourceUrl: "https://t.me/masloplus/2775",
+  },
+  {
     id: "tg-2774",
     type: "video",
     video: { provider: "telegram", channel: "masloplus", id: "2774" },
@@ -134,25 +154,5 @@ export const telegramGallery: GalleryVideo[] = [
     caption: "Новое поступление для Ford и GM. 🚗 Ford 5W30 Допуски: ACEA A5/B5, Ford WSS-M2C 913-A, 913-B, 913-C. ✅ GM 5W30 Допуски: GM-LL-A-025, GM-LL-B-025, VW 502.00/505…",
     publishedAt: "2026-09-18T11:00:52+00:00",
     sourceUrl: "https://t.me/masloplus/2754",
-  },
-  {
-    id: "tg-2753",
-    type: "video",
-    video: { provider: "telegram", channel: "masloplus", id: "2753" },
-    thumb: "/gallery/telegram/2753.jpg",
-    title: "Привет! 👋",
-    caption: "Привет! 👋 Работаем — приезжай, подберём масло под твой двигатель и заправим как надо. 🛠️ Ждём!",
-    publishedAt: "2026-09-18T09:15:44+00:00",
-    sourceUrl: "https://t.me/masloplus/2753",
-  },
-  {
-    id: "tg-2752",
-    type: "video",
-    video: { provider: "telegram", channel: "masloplus", id: "2752" },
-    thumb: "/gallery/telegram/2752.jpg",
-    title: "🔥 Новое поступление — японское масло",
-    caption: "🔥 Новое поступление — японское масло IDEMITSU ZEPRO 0W-20 Полностью синтетическое масло для современных бензиновых двигателей. 📋 Допуски: • API SP • ILSAC GF…",
-    publishedAt: "2026-09-17T12:42:34+00:00",
-    sourceUrl: "https://t.me/masloplus/2752",
   },
 ];
