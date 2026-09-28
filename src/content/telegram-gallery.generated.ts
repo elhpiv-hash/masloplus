@@ -6,6 +6,16 @@ import type { GalleryVideo } from "@/types/gallery";
 /** Последние видео из Telegram-канала, свежие — сверху. */
 export const telegramGallery: GalleryVideo[] = [
   {
+    id: "tg-2781",
+    type: "video",
+    video: { provider: "telegram", channel: "masloplus", id: "2781" },
+    thumb: "/gallery/telegram/2781.jpg",
+    title: "🔧 Hyundai Palisade 2025, дизель — замена масла в ДВС",
+    caption: "🔧 Hyundai Palisade 2025, дизель — замена масла в ДВС Дизельный Palisade на плановом ТО. Своевременная замена масла здесь — не рекомендация, а необходимость. \ud83d…",
+    publishedAt: "2026-09-28T14:58:01+00:00",
+    sourceUrl: "https://t.me/masloplus/2781",
+  },
+  {
     id: "tg-2780",
     type: "video",
     video: { provider: "telegram", channel: "masloplus", id: "2780" },
@@ -144,15 +154,5 @@ export const telegramGallery: GalleryVideo[] = [
     caption: "⛽️ Ситуация с топливом диктует новые правила ухода за авто. Вот что действительно имеет смысл делать: 🔧 Масло — чаще. Некачественное топливо ускоряет деградац…",
     publishedAt: "2026-09-21T06:40:51+00:00",
     sourceUrl: "https://t.me/masloplus/2761",
-  },
-  {
-    id: "tg-2760",
-    type: "video",
-    video: { provider: "telegram", channel: "masloplus", id: "2760" },
-    thumb: "/gallery/telegram/2760.jpg",
-    title: "☀️ Доброе утро! Пусть неделя будет лёгкой и продуктивной, а ваша машина — надёж…",
-    caption: "☀️ Доброе утро! Пусть неделя будет лёгкой и продуктивной, а ваша машина — надёжной и безотказной. А если что — мы рядом и всегда поможем. 📍 Адреса: 👨‍🔧 ул.…",
-    publishedAt: "2026-09-21T06:10:54+00:00",
-    sourceUrl: "https://t.me/masloplus/2760",
   },
 ];
