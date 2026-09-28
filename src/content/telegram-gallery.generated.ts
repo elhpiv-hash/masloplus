@@ -6,6 +6,16 @@ import type { GalleryVideo } from "@/types/gallery";
 /** Последние видео из Telegram-канала, свежие — сверху. */
 export const telegramGallery: GalleryVideo[] = [
   {
+    id: "tg-2780",
+    type: "video",
+    video: { provider: "telegram", channel: "masloplus", id: "2780" },
+    thumb: "/gallery/telegram/2780.jpg",
+    title: "🛠 Mazda 6 — замена масла АКПП.",
+    caption: "🛠 Mazda 6 — замена масла АКПП. Два этапа частичной замены, третий — со снятием поддона и заменой фильтра. Поэтапный подход обновляет жидкость без резких переп…",
+    publishedAt: "2026-09-28T09:35:05+00:00",
+    sourceUrl: "https://t.me/masloplus/2780",
+  },
+  {
     id: "tg-2779",
     type: "video",
     video: { provider: "telegram", channel: "masloplus", id: "2779" },
@@ -144,15 +154,5 @@ export const telegramGallery: GalleryVideo[] = [
     caption: "☀️ Доброе утро! Пусть неделя будет лёгкой и продуктивной, а ваша машина — надёжной и безотказной. А если что — мы рядом и всегда поможем. 📍 Адреса: 👨‍🔧 ул.…",
     publishedAt: "2026-09-21T06:10:54+00:00",
     sourceUrl: "https://t.me/masloplus/2760",
-  },
-  {
-    id: "tg-2759",
-    type: "video",
-    video: { provider: "telegram", channel: "masloplus", id: "2759" },
-    thumb: "/gallery/telegram/2759.jpg",
-    title: "Забота об автомобиле начинается с внимания к деталям, которые незаметны снаружи…",
-    caption: "Забота об автомобиле начинается с внимания к деталям, которые незаметны снаружи, но определяют его надёжность изнутри. Своевременная замена масла в АКПП с подд…",
-    publishedAt: "2026-09-18T18:21:05+00:00",
-    sourceUrl: "https://t.me/masloplus/2759",
   },
 ];
