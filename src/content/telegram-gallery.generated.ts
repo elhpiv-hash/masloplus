@@ -6,6 +6,26 @@ import type { GalleryVideo } from "@/types/gallery";
 /** Последние видео из Telegram-канала, свежие — сверху. */
 export const telegramGallery: GalleryVideo[] = [
   {
+    id: "tg-2795",
+    type: "video",
+    video: { provider: "telegram", channel: "masloplus", id: "2795" },
+    thumb: "/gallery/telegram/2795.jpg",
+    title: "Honda Stepwgn — комплексное обслуживание 🔧",
+    caption: "Honda Stepwgn — комплексное обслуживание 🔧 За один заезд: — передние стойки стабилизатора — тормозные колодки в круг 🛑 — сайлентблоки передних рычагов — масл…",
+    publishedAt: "2026-09-30T12:01:10+00:00",
+    sourceUrl: "https://t.me/masloplus/2795",
+  },
+  {
+    id: "tg-2794",
+    type: "video",
+    video: { provider: "telegram", channel: "masloplus", id: "2794" },
+    thumb: "/gallery/telegram/2794.jpg",
+    title: "Подбор масла для Kia Rio и Hyundai Solaris 🛢️",
+    caption: "Подбор масла для Kia Rio и Hyundai Solaris 🛢️ Выберем под ваш бюджет: — эконом — с допусками производителя — оптима — синтетика с хорошим пакетом присадок ✅ —…",
+    publishedAt: "2026-09-30T11:46:26+00:00",
+    sourceUrl: "https://t.me/masloplus/2794",
+  },
+  {
     id: "tg-2793",
     type: "video",
     video: { provider: "telegram", channel: "masloplus", id: "2793" },
@@ -124,25 +144,5 @@ export const telegramGallery: GalleryVideo[] = [
     caption: "BMW X6 — меняем масло в двигателе и в АКПП вместе с поддоном. 🔧 Мотор скажет спасибо за свежее масло, а коробка — за плавные переключения. ⚙️ Нужен уход для в…",
     publishedAt: "2026-09-25T12:14:27+00:00",
     sourceUrl: "https://t.me/masloplus/2776",
-  },
-  {
-    id: "tg-2775",
-    type: "video",
-    video: { provider: "telegram", channel: "masloplus", id: "2775" },
-    thumb: "/gallery/telegram/2775.jpg",
-    title: "Ура, посылка разгружена! 📦✨",
-    caption: "Ура, посылка разгружена! 📦✨ Совсем скоро — распаковка, вас ждёт приятный бонус 👀 Следите за новостями, чтобы не пропустить 😉",
-    publishedAt: "2026-09-25T10:55:11+00:00",
-    sourceUrl: "https://t.me/masloplus/2775",
-  },
-  {
-    id: "tg-2774",
-    type: "video",
-    video: { provider: "telegram", channel: "masloplus", id: "2774" },
-    thumb: "/gallery/telegram/2774.jpg",
-    title: "🔧 Запчасти и ремонт — в одном месте.",
-    caption: "🔧 Запчасти и ремонт — в одном месте. Не тратьте время на поиски. Всё нужное есть у нас, мастера приступят сразу. Доставка в течение часа. Быстро и без лишних…",
-    publishedAt: "2026-09-22T06:56:08+00:00",
-    sourceUrl: "https://t.me/masloplus/2774",
   },
 ];
