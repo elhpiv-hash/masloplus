@@ -6,6 +6,26 @@ import type { GalleryVideo } from "@/types/gallery";
 /** Последние видео из Telegram-канала, свежие — сверху. */
 export const telegramGallery: GalleryVideo[] = [
   {
+    id: "tg-2798",
+    type: "video",
+    video: { provider: "telegram", channel: "masloplus", id: "2798" },
+    thumb: "/gallery/telegram/2798.jpg",
+    title: "В работе 🚗",
+    caption: "В работе 🚗 Hyundai Solaris: 🔧 Замена переднего бампера 💡 Замена передних фар Замена рулевой рейки З амена сальника коленвала Лада Ларгус: 🛢️ Замена масла в…",
+    publishedAt: "2026-10-01T11:59:12+00:00",
+    sourceUrl: "https://t.me/masloplus/2798",
+  },
+  {
+    id: "tg-2797",
+    type: "video",
+    video: { provider: "telegram", channel: "masloplus", id: "2797" },
+    thumb: "/gallery/telegram/2797.jpg",
+    title: "🔧 Toyota Corolla — задние тормозные диски и колодки",
+    caption: "🔧 Toyota Corolla — задние тормозные диски и колодки Износ дисков и колодок — перегрев суппортов и рост тормозного пути. Заменили, обслужили направляющие, прок…",
+    publishedAt: "2026-10-01T10:29:50+00:00",
+    sourceUrl: "https://t.me/masloplus/2797",
+  },
+  {
     id: "tg-2796",
     type: "video",
     video: { provider: "telegram", channel: "masloplus", id: "2796" },
@@ -124,25 +144,5 @@ export const telegramGallery: GalleryVideo[] = [
     caption: "🛢 Подбор масла — задача не для наугад. Учитываем допуски производителя, пробег и режим эксплуатации. Подобрали — сразу заменили. Без лишних поездок и ожидания…",
     publishedAt: "2026-09-26T08:08:11+00:00",
     sourceUrl: "https://t.me/masloplus/2779",
-  },
-  {
-    id: "tg-2778",
-    type: "video",
-    video: { provider: "telegram", channel: "masloplus", id: "2778" },
-    thumb: "/gallery/telegram/2778.jpg",
-    title: "Замена масла в двигателе Genesis GV70",
-    caption: "Замена масла в двигателе Genesis GV70 Интервал — 10 000 км В городе сокращайте до 7–8 тысяч. 🛢️ Shell Helix Ultra 5W30 — синтетика на базе GTL. Соответствует…",
-    publishedAt: "2026-09-26T07:24:17+00:00",
-    sourceUrl: "https://t.me/masloplus/2778",
-  },
-  {
-    id: "tg-2777",
-    type: "video",
-    video: { provider: "telegram", channel: "masloplus", id: "2777" },
-    thumb: "/gallery/telegram/2777.jpg",
-    title: "Доброе субботнее утро! ☀️",
-    caption: "Доброе субботнее утро! ☀️ Самое время заняться машиной. Ждём вас в наших сервисах⬇️ 📍 Адреса: 👨‍🔧 ул. Б. Хмельницкого, 73 — 386-383 👨‍🔧 ул. Л. Комсомола,…",
-    publishedAt: "2026-09-26T05:20:35+00:00",
-    sourceUrl: "https://t.me/masloplus/2777",
   },
 ];
