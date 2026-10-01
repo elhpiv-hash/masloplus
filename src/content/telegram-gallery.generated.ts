@@ -6,6 +6,16 @@ import type { GalleryVideo } from "@/types/gallery";
 /** Последние видео из Telegram-канала, свежие — сверху. */
 export const telegramGallery: GalleryVideo[] = [
   {
+    id: "tg-2796",
+    type: "video",
+    video: { provider: "telegram", channel: "masloplus", id: "2796" },
+    thumb: "/gallery/telegram/2796.jpg",
+    title: "Опытные механики и доброжелательные менеджеры☺️",
+    caption: "Опытные механики и доброжелательные менеджеры☺️ 📍 ул. Б. Хмельницкого, 73 — 386-383 📍 ул. Л. Комсомола, 29 — 24-24-11 📍 Университетская, 35А — 21-22-88 Прие…",
+    publishedAt: "2026-10-01T06:59:50+00:00",
+    sourceUrl: "https://t.me/masloplus/2796",
+  },
+  {
     id: "tg-2795",
     type: "video",
     video: { provider: "telegram", channel: "masloplus", id: "2795" },
@@ -134,15 +144,5 @@ export const telegramGallery: GalleryVideo[] = [
     caption: "Доброе субботнее утро! ☀️ Самое время заняться машиной. Ждём вас в наших сервисах⬇️ 📍 Адреса: 👨‍🔧 ул. Б. Хмельницкого, 73 — 386-383 👨‍🔧 ул. Л. Комсомола,…",
     publishedAt: "2026-09-26T05:20:35+00:00",
     sourceUrl: "https://t.me/masloplus/2777",
-  },
-  {
-    id: "tg-2776",
-    type: "video",
-    video: { provider: "telegram", channel: "masloplus", id: "2776" },
-    thumb: "/gallery/telegram/2776.jpg",
-    title: "BMW X6 — меняем масло в двигателе и в АКПП вместе с поддоном. 🔧",
-    caption: "BMW X6 — меняем масло в двигателе и в АКПП вместе с поддоном. 🔧 Мотор скажет спасибо за свежее масло, а коробка — за плавные переключения. ⚙️ Нужен уход для в…",
-    publishedAt: "2026-09-25T12:14:27+00:00",
-    sourceUrl: "https://t.me/masloplus/2776",
   },
 ];
