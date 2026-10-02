@@ -6,6 +6,26 @@ import type { GalleryVideo } from "@/types/gallery";
 /** Последние видео из Telegram-канала, свежие — сверху. */
 export const telegramGallery: GalleryVideo[] = [
   {
+    id: "tg-2803",
+    type: "video",
+    video: { provider: "telegram", channel: "masloplus", id: "2803" },
+    thumb: "/gallery/telegram/2803.jpg",
+    title: "🔧 Красавец 😍заезжал на вибростенд — BMW X6 2024 , G06.",
+    caption: "🔧 Красавец 😍заезжал на вибростенд — BMW X6 2024 , G06. В ходе диагностики выявили проблему: рулевые тяги под замену. Клиент долго не мог найти причину. Вибро…",
+    publishedAt: "2026-10-02T16:22:34+00:00",
+    sourceUrl: "https://t.me/masloplus/2803",
+  },
+  {
+    id: "tg-2802",
+    type: "video",
+    video: { provider: "telegram", channel: "masloplus", id: "2802" },
+    thumb: "/gallery/telegram/2802.jpg",
+    title: "🛢️ Новинка — ZIC X9 FE 5W-30.",
+    caption: "🛢️ Новинка — ZIC X9 FE 5W-30. 🛢️ Новый ZIC X9 FE 5W-30 API SP. Масло для KIA/Hyundai, Ford, Toyota, Mazda, Mitsubishi и китайских авто. 🔹 API SP 🔹 ACEA A5/…",
+    publishedAt: "2026-10-02T14:11:10+00:00",
+    sourceUrl: "https://t.me/masloplus/2802",
+  },
+  {
     id: "tg-2801",
     type: "video",
     video: { provider: "telegram", channel: "masloplus", id: "2801" },
@@ -124,25 +144,5 @@ export const telegramGallery: GalleryVideo[] = [
     caption: "🚗 В сервис поступил KIA Sportage с пробегом всего 7500 км. Выполняем регламентное ТО: — замена масла в двигателе — замена воздушного фильтра — замена салонног…",
     publishedAt: "2026-09-29T12:43:26+00:00",
     sourceUrl: "https://t.me/masloplus/2785",
-  },
-  {
-    id: "tg-2784",
-    type: "video",
-    video: { provider: "telegram", channel: "masloplus", id: "2784" },
-    thumb: "/gallery/telegram/2784.jpg",
-    title: "🚗 Масла для Lada Vesta — в наличии",
-    caption: "🚗 Масла для Lada Vesta — в наличии Моторные масла: 🔹 G-Energy 5W-40 — 950 ₽/л, с фильтром MANN — 4800 ₽ 🔹 Лукойл 5W-40 — 950 ₽/л, с фильтром MANN — 4800 ₽ \ud83d…",
-    publishedAt: "2026-09-29T11:12:37+00:00",
-    sourceUrl: "https://t.me/masloplus/2784",
-  },
-  {
-    id: "tg-2782",
-    type: "video",
-    video: { provider: "telegram", channel: "masloplus", id: "2782" },
-    thumb: "/gallery/telegram/2782.jpg",
-    title: "Hyundai Solaris 🚗",
-    caption: "Hyundai Solaris 🚗 —Замена переднего бампера — Замена передних фар — Замена рулевой рейки — Замена сальника коленвала Lada Largus 🛢️ — Замена масла в двигател…",
-    publishedAt: "2026-09-29T08:14:00+00:00",
-    sourceUrl: "https://t.me/masloplus/2782",
   },
 ];
