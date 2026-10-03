@@ -6,6 +6,16 @@ import type { GalleryVideo } from "@/types/gallery";
 /** Последние видео из Telegram-канала, свежие — сверху. */
 export const telegramGallery: GalleryVideo[] = [
   {
+    id: "tg-2809",
+    type: "video",
+    video: { provider: "telegram", channel: "masloplus", id: "2809" },
+    thumb: "/gallery/telegram/2809.jpg",
+    title: "🚗 Работаем 7/7.",
+    caption: "🚗 Работаем 7/7. Выходные — самое время заняться авто. На подъёмнике Kia Rio: замена масла в двигателе, воздушного и салонного фильтров. На втором подъёмнике H…",
+    publishedAt: "2026-10-03T13:10:13+00:00",
+    sourceUrl: "https://t.me/masloplus/2809",
+  },
+  {
     id: "tg-2808",
     type: "video",
     video: { provider: "telegram", channel: "masloplus", id: "2808" },
