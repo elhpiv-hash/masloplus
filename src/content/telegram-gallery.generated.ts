@@ -6,6 +6,36 @@ import type { GalleryVideo } from "@/types/gallery";
 /** Последние видео из Telegram-канала, свежие — сверху. */
 export const telegramGallery: GalleryVideo[] = [
   {
+    id: "tg-2808",
+    type: "video",
+    video: { provider: "telegram", channel: "masloplus", id: "2808" },
+    thumb: "/gallery/telegram/2808.jpg",
+    title: "📍Точка СЗР",
+    caption: "📍Точка СЗР 📍 Адрес:Университетская 35А 📞 Телефон: 21-22-88 (звоните, записывайтесь) 📩 Написать нам в Telegram 📝 Записаться на обслуживание",
+    publishedAt: "2026-10-03T10:31:27+00:00",
+    sourceUrl: "https://t.me/masloplus/2808",
+  },
+  {
+    id: "tg-2807",
+    type: "video",
+    video: { provider: "telegram", channel: "masloplus", id: "2807" },
+    thumb: "/gallery/telegram/2807.jpg",
+    title: "📍Точка Новоюжка",
+    caption: "📍Точка Новоюжка 📍 Адрес: ул. Ленинского Комсомола , 29 📞 Телефон: 24-24-11 (звоните, записывайтесь) 📩 Написать нам в Telegram 📝 Записаться на обслуживание",
+    publishedAt: "2026-10-03T10:25:36+00:00",
+    sourceUrl: "https://t.me/masloplus/2807",
+  },
+  {
+    id: "tg-2806",
+    type: "video",
+    video: { provider: "telegram", channel: "masloplus", id: "2806" },
+    thumb: "/gallery/telegram/2806.jpg",
+    title: "📍Точка Богданка",
+    caption: "📍Точка Богданка 📍 Адрес: ул. Богдана Хмельницкого, 73 📞 Телефон: 386-383 (звоните, записывайтесь) 📩 Написать нам в Telegram 📝 Записаться на обслуживание",
+    publishedAt: "2026-10-03T10:20:06+00:00",
+    sourceUrl: "https://t.me/masloplus/2806",
+  },
+  {
     id: "tg-2803",
     type: "video",
     video: { provider: "telegram", channel: "masloplus", id: "2803" },
@@ -134,15 +164,5 @@ export const telegramGallery: GalleryVideo[] = [
     caption: "Renault Kaptur — замена масла в вариаторе 🔧 Меняем масло в CVT сразу с двумя фильтрами: — грубой очистки — держит стружку и крупные частицы 🧲 — тонкой очистк…",
     publishedAt: "2026-09-30T06:05:05+00:00",
     sourceUrl: "https://t.me/masloplus/2790",
-  },
-  {
-    id: "tg-2785",
-    type: "video",
-    video: { provider: "telegram", channel: "masloplus", id: "2785" },
-    thumb: "/gallery/telegram/2785.jpg",
-    title: "🚗 В сервис поступил KIA Sportage с пробегом всего 7500 км.",
-    caption: "🚗 В сервис поступил KIA Sportage с пробегом всего 7500 км. Выполняем регламентное ТО: — замена масла в двигателе — замена воздушного фильтра — замена салонног…",
-    publishedAt: "2026-09-29T12:43:26+00:00",
-    sourceUrl: "https://t.me/masloplus/2785",
   },
 ];
