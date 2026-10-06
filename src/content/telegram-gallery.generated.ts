@@ -6,6 +6,16 @@ import type { GalleryVideo } from "@/types/gallery";
 /** Последние видео из Telegram-канала, свежие — сверху. */
 export const telegramGallery: GalleryVideo[] = [
   {
+    id: "tg-2824",
+    type: "video",
+    video: { provider: "telegram", channel: "masloplus", id: "2824" },
+    thumb: "/gallery/telegram/2824.jpg",
+    title: "🔧 Honda Accord: замена масла в АКПП с фильтром теплообменника",
+    caption: "🔧 Honda Accord: замена масла в АКПП с фильтром теплообменника Что выполняем: — замена масла в АКПП — замена фильтра теплообменника. 🛢 Заливаем оригинальное м…",
+    publishedAt: "2026-10-06T12:22:48+00:00",
+    sourceUrl: "https://t.me/masloplus/2824",
+  },
+  {
     id: "tg-2820",
     type: "video",
     video: { provider: "telegram", channel: "masloplus", id: "2820" },
@@ -84,35 +94,5 @@ export const telegramGallery: GalleryVideo[] = [
     caption: "📍Точка СЗР 📍 Адрес:Университетская 35А 📞 Телефон: 21-22-88 (звоните, записывайтесь) 📩 Написать нам в Telegram 📝 Записаться на обслуживание",
     publishedAt: "2026-10-03T10:31:27+00:00",
     sourceUrl: "https://t.me/masloplus/2808",
-  },
-  {
-    id: "tg-2807",
-    type: "video",
-    video: { provider: "telegram", channel: "masloplus", id: "2807" },
-    thumb: "/gallery/telegram/2807.jpg",
-    title: "📍Точка Новоюжка",
-    caption: "📍Точка Новоюжка 📍 Адрес: ул. Ленинского Комсомола , 29 📞 Телефон: 24-24-11 (звоните, записывайтесь) 📩 Написать нам в Telegram 📝 Записаться на обслуживание",
-    publishedAt: "2026-10-03T10:25:36+00:00",
-    sourceUrl: "https://t.me/masloplus/2807",
-  },
-  {
-    id: "tg-2806",
-    type: "video",
-    video: { provider: "telegram", channel: "masloplus", id: "2806" },
-    thumb: "/gallery/telegram/2806.jpg",
-    title: "📍Точка Богданка",
-    caption: "📍Точка Богданка 📍 Адрес: ул. Богдана Хмельницкого, 73 📞 Телефон: 386-383 (звоните, записывайтесь) 📩 Написать нам в Telegram 📝 Записаться на обслуживание",
-    publishedAt: "2026-10-03T10:20:06+00:00",
-    sourceUrl: "https://t.me/masloplus/2806",
-  },
-  {
-    id: "tg-2803",
-    type: "video",
-    video: { provider: "telegram", channel: "masloplus", id: "2803" },
-    thumb: "/gallery/telegram/2803.jpg",
-    title: "🔧 Красавец 😍заезжал на вибростенд — BMW X6 2024 , G06.",
-    caption: "🔧 Красавец 😍заезжал на вибростенд — BMW X6 2024 , G06. В ходе диагностики выявили проблему: рулевые тяги под замену. Клиент долго не мог найти причину. Вибро…",
-    publishedAt: "2026-10-02T16:22:34+00:00",
-    sourceUrl: "https://t.me/masloplus/2803",
   },
 ];
