@@ -6,6 +6,26 @@ import type { GalleryVideo } from "@/types/gallery";
 /** Последние видео из Telegram-канала, свежие — сверху. */
 export const telegramGallery: GalleryVideo[] = [
   {
+    id: "tg-2834",
+    type: "video",
+    video: { provider: "telegram", channel: "masloplus", id: "2834" },
+    thumb: "/gallery/telegram/2834.jpg",
+    title: "🔥 Рабочий день кипит — и мы полностью в деле!",
+    caption: "🔥 Рабочий день кипит — и мы полностью в деле! Заезжайте, записывайтесь — всегда рады вам 🚗 Подберём все расходники, всё поменяем быстро и с заботой 🔧✨ Ваш а…",
+    publishedAt: "2026-10-07T07:51:09+00:00",
+    sourceUrl: "https://t.me/masloplus/2834",
+  },
+  {
+    id: "tg-2833",
+    type: "video",
+    video: { provider: "telegram", channel: "masloplus", id: "2833" },
+    thumb: "/gallery/telegram/2833.jpg",
+    title: "«Ох уже эти истории , на 5 минут, только глянуть» 🚗",
+    caption: "«Ох уже эти истории , на 5 минут, только глянуть» 🚗 Записался заранее — заехал без суеты Наши адреса 👇 📍 ул. Б. Хмельницкого, 73 — 386-383 📍 ул. Л. Комсомо…",
+    publishedAt: "2026-10-07T06:50:18+00:00",
+    sourceUrl: "https://t.me/masloplus/2833",
+  },
+  {
     id: "tg-2832",
     type: "video",
     video: { provider: "telegram", channel: "masloplus", id: "2832" },
@@ -94,15 +114,5 @@ export const telegramGallery: GalleryVideo[] = [
     caption: "Муфта Haldex Состояние её масла и насоса 🤨⚫️",
     publishedAt: "2026-10-04T08:02:10+00:00",
     sourceUrl: "https://t.me/masloplus/2814",
-  },
-  {
-    id: "tg-2811",
-    type: "video",
-    video: { provider: "telegram", channel: "masloplus", id: "2811" },
-    thumb: "/gallery/telegram/2811.jpg",
-    title: "🔧 Chery Tiggo 7 Pro Max — замена масла в редукторе и муфте Haldex",
-    caption: "🔧 Chery Tiggo 7 Pro Max — замена масла в редукторе и муфте Haldex Пробег 66 000 км. Из муфты Haldex слилось всего 100 грамм масла. ⚠️ Это в разы меньше нормы…",
-    publishedAt: "2026-10-04T08:00:14+00:00",
-    sourceUrl: "https://t.me/masloplus/2811",
   },
 ];
