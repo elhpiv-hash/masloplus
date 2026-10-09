@@ -6,6 +6,36 @@ import type { GalleryVideo } from "@/types/gallery";
 /** Последние видео из Telegram-канала, свежие — сверху. */
 export const telegramGallery: GalleryVideo[] = [
   {
+    id: "tg-2847",
+    type: "video",
+    video: { provider: "telegram", channel: "masloplus", id: "2847" },
+    thumb: "/gallery/telegram/2847.jpg",
+    title: "Комплексное ТО перед зимой: обновляем все жидкости.",
+    caption: "Комплексное ТО перед зимой: обновляем все жидкости. 🔧 Масло в муфте Haldex 🌡️ Аппаратная замена антифриза ⚙️ Масло в DSG с фильтром 🛢️ Масло в двигателе 🛑…",
+    publishedAt: "2026-10-09T13:33:11+00:00",
+    sourceUrl: "https://t.me/masloplus/2847",
+  },
+  {
+    id: "tg-2846",
+    type: "video",
+    video: { provider: "telegram", channel: "masloplus", id: "2846" },
+    thumb: "/gallery/telegram/2846.jpg",
+    title: "⚙️ Обслуживаем все виды коробок передач.",
+    caption: "⚙️ Обслуживаем все виды коробок передач. Автомат • ДСГ • Вариатор • Робот Для каждого агрегата — своя технология и свои жидкости. Ошибка в подборе стоит дорого…",
+    publishedAt: "2026-10-09T11:40:05+00:00",
+    sourceUrl: "https://t.me/masloplus/2846",
+  },
+  {
+    id: "tg-2845",
+    type: "video",
+    video: { provider: "telegram", channel: "masloplus", id: "2845" },
+    thumb: "/gallery/telegram/2845.jpg",
+    title: "🔧 Ищем профессионала в команду",
+    caption: "🔧 Ищем профессионала в команду Требуется мастер-приёмщик + менеджер с опытом работы от 1 года. Что важно: 📝 знание основных брендов масел 📝уверенная работа…",
+    publishedAt: "2026-10-09T11:26:32+00:00",
+    sourceUrl: "https://t.me/masloplus/2845",
+  },
+  {
     id: "tg-2836",
     type: "video",
     video: { provider: "telegram", channel: "masloplus", id: "2836" },
@@ -94,15 +124,5 @@ export const telegramGallery: GalleryVideo[] = [
     caption: "🔧 Honda Accord: замена масла в АКПП с фильтром теплообменника Что выполняем: — замена масла в АКПП — замена фильтра теплообменника. 🛢 Заливаем оригинальное м…",
     publishedAt: "2026-10-06T12:22:48+00:00",
     sourceUrl: "https://t.me/masloplus/2824",
-  },
-  {
-    id: "tg-2820",
-    type: "video",
-    video: { provider: "telegram", channel: "masloplus", id: "2820" },
-    thumb: "/gallery/telegram/2820.jpg",
-    title: "🔧 Lada Granta, 56 000 км — замена ремня ГРМ.",
-    caption: "🔧 Lada Granta, 56 000 км — замена ремня ГРМ. Ремень снят. Оцените износ: трещины, растяжение, выработка зубьев — прямой путь к обрыву. ⚠️ На Granta обрыв гроз…",
-    publishedAt: "2026-10-05T10:35:44+00:00",
-    sourceUrl: "https://t.me/masloplus/2820",
   },
 ];
