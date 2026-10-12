@@ -6,6 +6,16 @@ import type { GalleryVideo } from "@/types/gallery";
 /** Последние видео из Telegram-канала, свежие — сверху. */
 export const telegramGallery: GalleryVideo[] = [
   {
+    id: "tg-2848",
+    type: "video",
+    video: { provider: "telegram", channel: "masloplus", id: "2848" },
+    thumb: "/gallery/telegram/2848.jpg",
+    title: "Доброе утро! 🛠️",
+    caption: "Доброе утро! 🛠️ Начинаем рабочую неделю с полной загрузкой. В работе сегодня: — Lada Vesta: замена масла в двигателе и МКПП. — Honda Accord: замена передних т…",
+    publishedAt: "2026-10-12T07:54:54+00:00",
+    sourceUrl: "https://t.me/masloplus/2848",
+  },
+  {
     id: "tg-2847",
     type: "video",
     video: { provider: "telegram", channel: "masloplus", id: "2847" },
