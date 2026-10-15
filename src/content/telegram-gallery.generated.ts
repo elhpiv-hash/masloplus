@@ -6,6 +6,16 @@ import type { GalleryVideo } from "@/types/gallery";
 /** Последние видео из Telegram-канала, свежие — сверху. */
 export const telegramGallery: GalleryVideo[] = [
   {
+    id: "tg-2870",
+    type: "video",
+    video: { provider: "telegram", channel: "masloplus", id: "2870" },
+    thumb: "/gallery/telegram/2870.jpg",
+    title: "Geely Galaxy Starshine 7: замена масла на 7 тыс. км",
+    caption: "Geely Galaxy Starshine 7: замена масла на 7 тыс. км Ранняя замена — не перестраховка, а грамотный подход к ресурсу турбомотора. 🔧 Аргументы: — городской режим…",
+    publishedAt: "2026-10-15T13:42:17+00:00",
+    sourceUrl: "https://t.me/masloplus/2870",
+  },
+  {
     id: "tg-2869",
     type: "video",
     video: { provider: "telegram", channel: "masloplus", id: "2869" },
