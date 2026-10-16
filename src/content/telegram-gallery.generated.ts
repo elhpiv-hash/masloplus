@@ -6,6 +6,16 @@ import type { GalleryVideo } from "@/types/gallery";
 /** Последние видео из Telegram-канала, свежие — сверху. */
 export const telegramGallery: GalleryVideo[] = [
   {
+    id: "tg-2874",
+    type: "video",
+    video: { provider: "telegram", channel: "masloplus", id: "2874" },
+    thumb: "/gallery/telegram/2874.jpg",
+    title: "🔧 Осмотр, подбор запчастей и ремонт — всё в одном месте, без лишней суеты.",
+    caption: "🔧 Осмотр, подбор запчастей и ремонт — всё в одном месте, без лишней суеты. Диагностика, подбор деталей и ремонт в одном сервисе. Никаких поездок и долгих согл…",
+    publishedAt: "2026-10-16T10:54:37+00:00",
+    sourceUrl: "https://t.me/masloplus/2874",
+  },
+  {
     id: "tg-2873",
     type: "video",
     video: { provider: "telegram", channel: "masloplus", id: "2873" },
@@ -104,15 +114,5 @@ export const telegramGallery: GalleryVideo[] = [
     caption: "👀Ищем опытного автомеханика в «Масло Плюс» Задачи: ✅ ТО и замена жидкостей ✅ Мелкий ремонт ✅ Замена колодок, дисков, обслуживание тормозов ✅ Замена ГРМ, сцепл…",
     publishedAt: "2026-10-13T04:08:22+00:00",
     sourceUrl: "https://t.me/masloplus/2855",
-  },
-  {
-    id: "tg-2854",
-    type: "video",
-    video: { provider: "telegram", channel: "masloplus", id: "2854" },
-    thumb: "/gallery/telegram/2854.jpg",
-    title: "Подберём масло, фильтры и расходники под ваш бюджет и допуски производителя. 🔧",
-    caption: "Подберём масло, фильтры и расходники под ваш бюджет и допуски производителя. 🔧 Поможем с выбором — обращайтесь. ✅",
-    publishedAt: "2026-10-12T16:35:24+00:00",
-    sourceUrl: "https://t.me/masloplus/2854",
   },
 ];
