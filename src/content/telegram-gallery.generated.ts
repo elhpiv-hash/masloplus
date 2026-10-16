@@ -6,6 +6,26 @@ import type { GalleryVideo } from "@/types/gallery";
 /** Последние видео из Telegram-канала, свежие — сверху. */
 export const telegramGallery: GalleryVideo[] = [
   {
+    id: "tg-2876",
+    type: "video",
+    video: { provider: "telegram", channel: "masloplus", id: "2876" },
+    thumb: "/gallery/telegram/2876.jpg",
+    title: "Красив 💔",
+    caption: "Красив 💔",
+    publishedAt: "2026-10-16T16:51:51+00:00",
+    sourceUrl: "https://t.me/masloplus/2876",
+  },
+  {
+    id: "tg-2875",
+    type: "video",
+    video: { provider: "telegram", channel: "masloplus", id: "2875" },
+    thumb: "/gallery/telegram/2875.jpg",
+    title: "15 октября👨‍🔧",
+    caption: "15 октября👨‍🔧 Тепло, но в шиномонтаже уже машины 🚗 Клиенты мыслят на перспективу: пока погода позволяет, готовят железных коней к зиме и едут на переобувку.…",
+    publishedAt: "2026-10-16T14:43:13+00:00",
+    sourceUrl: "https://t.me/masloplus/2875",
+  },
+  {
     id: "tg-2874",
     type: "video",
     video: { provider: "telegram", channel: "masloplus", id: "2874" },
@@ -104,15 +124,5 @@ export const telegramGallery: GalleryVideo[] = [
     caption: "🔥 Актуальный ассортимент масел для китайских автомобилей — на разлив Собрали позиции, которые реально работают с двигателями Chery, Jetour, Haval, Geely и дру…",
     publishedAt: "2026-10-13T07:55:03+00:00",
     sourceUrl: "https://t.me/masloplus/2860",
-  },
-  {
-    id: "tg-2855",
-    type: "video",
-    video: { provider: "telegram", channel: "masloplus", id: "2855" },
-    thumb: "/gallery/telegram/2855.jpg",
-    title: "👀Ищем опытного автомеханика в «Масло Плюс»",
-    caption: "👀Ищем опытного автомеханика в «Масло Плюс» Задачи: ✅ ТО и замена жидкостей ✅ Мелкий ремонт ✅ Замена колодок, дисков, обслуживание тормозов ✅ Замена ГРМ, сцепл…",
-    publishedAt: "2026-10-13T04:08:22+00:00",
-    sourceUrl: "https://t.me/masloplus/2855",
   },
 ];
