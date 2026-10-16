@@ -6,6 +6,16 @@ import type { GalleryVideo } from "@/types/gallery";
 /** Последние видео из Telegram-канала, свежие — сверху. */
 export const telegramGallery: GalleryVideo[] = [
   {
+    id: "tg-2873",
+    type: "video",
+    video: { provider: "telegram", channel: "masloplus", id: "2873" },
+    thumb: "/gallery/telegram/2873.jpg",
+    title: "«Масло не ест, так перекусывает по дороге»🤪",
+    caption: "«Масло не ест, так перекусывает по дороге»🤪",
+    publishedAt: "2026-10-16T05:28:43+00:00",
+    sourceUrl: "https://t.me/masloplus/2873",
+  },
+  {
     id: "tg-2870",
     type: "video",
     video: { provider: "telegram", channel: "masloplus", id: "2870" },
@@ -104,15 +114,5 @@ export const telegramGallery: GalleryVideo[] = [
     caption: "Подберём масло, фильтры и расходники под ваш бюджет и допуски производителя. 🔧 Поможем с выбором — обращайтесь. ✅",
     publishedAt: "2026-10-12T16:35:24+00:00",
     sourceUrl: "https://t.me/masloplus/2854",
-  },
-  {
-    id: "tg-2849",
-    type: "video",
-    video: { provider: "telegram", channel: "masloplus", id: "2849" },
-    thumb: "/gallery/telegram/2849.jpg",
-    title: "BMW 5 серии G30 — приехала на плановое ТО. 🔧",
-    caption: "BMW 5 серии G30 — приехала на плановое ТО. 🔧 Под клиента подобрали масло и фильтры Mann. При осмотре выявили износ колодок 🛑 — сразу оформили заказ на колодк…",
-    publishedAt: "2026-10-12T16:33:45+00:00",
-    sourceUrl: "https://t.me/masloplus/2849",
   },
 ];
