@@ -6,6 +6,16 @@ import type { GalleryVideo } from "@/types/gallery";
 /** Последние видео из Telegram-канала, свежие — сверху. */
 export const telegramGallery: GalleryVideo[] = [
   {
+    id: "tg-2890",
+    type: "video",
+    video: { provider: "telegram", channel: "masloplus", id: "2890" },
+    thumb: "/gallery/telegram/2890.jpg",
+    title: "Уйти пораньше с работы всегда приятно 😄 А если причина — замена масла, то это…",
+    caption: "Уйти пораньше с работы всегда приятно 😄 А если причина — замена масла, то это вообще весомый повод! Заезжайте, будем рады вас видеть 🚗 Наши адреса 👇 📍 ул.…",
+    publishedAt: "2026-10-19T15:56:41+00:00",
+    sourceUrl: "https://t.me/masloplus/2890",
+  },
+  {
     id: "tg-2886",
     type: "video",
     video: { provider: "telegram", channel: "masloplus", id: "2886" },
@@ -94,15 +104,5 @@ export const telegramGallery: GalleryVideo[] = [
     caption: "В процессе👨‍🔧",
     publishedAt: "2026-10-14T12:05:25+00:00",
     sourceUrl: "https://t.me/masloplus/2869",
-  },
-  {
-    id: "tg-2865",
-    type: "video",
-    video: { provider: "telegram", channel: "masloplus", id: "2865" },
-    thumb: "/gallery/telegram/2865.jpg",
-    title: "🔧 Масло и муфта полного привода — рубрика, которую многие пропускают зря.◾️",
-    caption: "🔧 Масло и муфта полного привода — рубрика, которую многие пропускают зря.◾️ ◾️Масло стареет, накапливает продукты износа. ◾️Муфта перегревается и буксрует. Ит…",
-    publishedAt: "2026-10-14T07:45:49+00:00",
-    sourceUrl: "https://t.me/masloplus/2865",
   },
 ];
