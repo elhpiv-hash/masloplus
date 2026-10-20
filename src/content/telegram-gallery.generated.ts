@@ -6,6 +6,26 @@ import type { GalleryVideo } from "@/types/gallery";
 /** Последние видео из Telegram-канала, свежие — сверху. */
 export const telegramGallery: GalleryVideo[] = [
   {
+    id: "tg-2892",
+    type: "video",
+    video: { provider: "telegram", channel: "masloplus", id: "2892" },
+    thumb: "/gallery/telegram/2892.jpg",
+    title: "🔧 Разбор состояния масла в муфте Haldex — как всегда, показательно.",
+    caption: "🔧 Разбор состояния масла в муфте Haldex — как всегда, показательно. По фото видно состояние и масла, и насоса. Картина типичная для запущенных случаев. ⚠️ Гла…",
+    publishedAt: "2026-10-20T09:46:44+00:00",
+    sourceUrl: "https://t.me/masloplus/2892",
+  },
+  {
+    id: "tg-2891",
+    type: "video",
+    video: { provider: "telegram", channel: "masloplus", id: "2891" },
+    thumb: "/gallery/telegram/2891.jpg",
+    title: "🚗 CHERY Tiggo 7 Pro Max, 2023 г. — полное ТО, пробег 50 000 км",
+    caption: "🚗 CHERY Tiggo 7 Pro Max, 2023 г. — полное ТО, пробег 50 000 км Замена жидкостей по всем узлам: • ДВС — Zic X7 5W-30 • Робот — Zic DCTF • Передний редуктор — Z…",
+    publishedAt: "2026-10-20T09:14:43+00:00",
+    sourceUrl: "https://t.me/masloplus/2891",
+  },
+  {
     id: "tg-2890",
     type: "video",
     video: { provider: "telegram", channel: "masloplus", id: "2890" },
@@ -84,25 +104,5 @@ export const telegramGallery: GalleryVideo[] = [
     caption: "«Масло не ест, так перекусывает по дороге»🤪",
     publishedAt: "2026-10-16T05:28:43+00:00",
     sourceUrl: "https://t.me/masloplus/2873",
-  },
-  {
-    id: "tg-2870",
-    type: "video",
-    video: { provider: "telegram", channel: "masloplus", id: "2870" },
-    thumb: "/gallery/telegram/2870.jpg",
-    title: "Geely Galaxy Starshine 7: замена масла на 7 тыс. км",
-    caption: "Geely Galaxy Starshine 7: замена масла на 7 тыс. км Ранняя замена — не перестраховка, а грамотный подход к ресурсу турбомотора. 🔧 Аргументы: — городской режим…",
-    publishedAt: "2026-10-15T13:42:17+00:00",
-    sourceUrl: "https://t.me/masloplus/2870",
-  },
-  {
-    id: "tg-2869",
-    type: "video",
-    video: { provider: "telegram", channel: "masloplus", id: "2869" },
-    thumb: "/gallery/telegram/2869.jpg",
-    title: "В процессе👨‍🔧",
-    caption: "В процессе👨‍🔧",
-    publishedAt: "2026-10-14T12:05:25+00:00",
-    sourceUrl: "https://t.me/masloplus/2869",
   },
 ];
