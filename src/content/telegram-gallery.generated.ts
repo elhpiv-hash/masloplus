@@ -6,6 +6,26 @@ import type { GalleryVideo } from "@/types/gallery";
 /** Последние видео из Telegram-канала, свежие — сверху. */
 export const telegramGallery: GalleryVideo[] = [
   {
+    id: "tg-2897",
+    type: "video",
+    video: { provider: "telegram", channel: "masloplus", id: "2897" },
+    thumb: "/gallery/telegram/2897.jpg",
+    title: "Сезон подготовки авто к холодам открыт ❄️",
+    caption: "Сезон подготовки авто к холодам открыт ❄️ Шиномонтаж, замена всех спецжидкостей и запчастей — всё в одном месте. 🛠 Записывайтесь заранее Подготовьте авто вовр…",
+    publishedAt: "2026-10-21T13:41:51+00:00",
+    sourceUrl: "https://t.me/masloplus/2897",
+  },
+  {
+    id: "tg-2896",
+    type: "video",
+    video: { provider: "telegram", channel: "masloplus", id: "2896" },
+    thumb: "/gallery/telegram/2896.jpg",
+    title: "Castrol EDGE 5W-30 — одна из самых популярных позиций для замены масла. 🛠",
+    caption: "Castrol EDGE 5W-30 — одна из самых популярных позиций для замены масла. 🛠 Главное преимущество — почти весь набор самых востребованных допусков, что делает ег…",
+    publishedAt: "2026-10-21T13:06:08+00:00",
+    sourceUrl: "https://t.me/masloplus/2896",
+  },
+  {
     id: "tg-2895",
     type: "video",
     video: { provider: "telegram", channel: "masloplus", id: "2895" },
@@ -84,25 +104,5 @@ export const telegramGallery: GalleryVideo[] = [
     caption: "Красив 💔",
     publishedAt: "2026-10-16T16:51:51+00:00",
     sourceUrl: "https://t.me/masloplus/2876",
-  },
-  {
-    id: "tg-2875",
-    type: "video",
-    video: { provider: "telegram", channel: "masloplus", id: "2875" },
-    thumb: "/gallery/telegram/2875.jpg",
-    title: "15 октября👨‍🔧",
-    caption: "15 октября👨‍🔧 Тепло, но в шиномонтаже уже машины 🚗 Клиенты мыслят на перспективу: пока погода позволяет, готовят железных коней к зиме и едут на переобувку.…",
-    publishedAt: "2026-10-16T14:43:13+00:00",
-    sourceUrl: "https://t.me/masloplus/2875",
-  },
-  {
-    id: "tg-2874",
-    type: "video",
-    video: { provider: "telegram", channel: "masloplus", id: "2874" },
-    thumb: "/gallery/telegram/2874.jpg",
-    title: "🔧 Осмотр, подбор запчастей и ремонт — всё в одном месте, без лишней суеты.",
-    caption: "🔧 Осмотр, подбор запчастей и ремонт — всё в одном месте, без лишней суеты. Диагностика, подбор деталей и ремонт в одном сервисе. Никаких поездок и долгих согл…",
-    publishedAt: "2026-10-16T10:54:37+00:00",
-    sourceUrl: "https://t.me/masloplus/2874",
   },
 ];
