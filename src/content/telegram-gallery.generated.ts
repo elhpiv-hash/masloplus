@@ -6,6 +6,16 @@ import type { GalleryVideo } from "@/types/gallery";
 /** Последние видео из Telegram-канала, свежие — сверху. */
 export const telegramGallery: GalleryVideo[] = [
   {
+    id: "tg-2898",
+    type: "video",
+    video: { provider: "telegram", channel: "masloplus", id: "2898" },
+    thumb: "/gallery/telegram/2898.jpg",
+    title: "Changan Q05: нулевое ТО электрокара",
+    caption: "Changan Q05: нулевое ТО электрокара Полностью электрический Changan Q05, пригнан из-за рубежа. Пробег — 4000 км, и авто уже на первом ТО. ⚡ Главный пункт обслу…",
+    publishedAt: "2026-10-21T17:18:16+00:00",
+    sourceUrl: "https://t.me/masloplus/2898",
+  },
+  {
     id: "tg-2897",
     type: "video",
     video: { provider: "telegram", channel: "masloplus", id: "2897" },
