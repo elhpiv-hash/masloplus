@@ -6,6 +6,26 @@ import type { GalleryVideo } from "@/types/gallery";
 /** Последние видео из Telegram-канала, свежие — сверху. */
 export const telegramGallery: GalleryVideo[] = [
   {
+    id: "tg-2900",
+    type: "video",
+    video: { provider: "telegram", channel: "masloplus", id: "2900" },
+    thumb: "/gallery/telegram/2900.jpg",
+    title: "Добрый день! 🚗",
+    caption: "Добрый день! 🚗 Клиент обратился с течью из сальника АКПП. В ходе работ выявили: замена привода и шаровой опоры, плюс частичная замена масла в АКПП. 🔧 Заезжай…",
+    publishedAt: "2026-10-22T07:27:49+00:00",
+    sourceUrl: "https://t.me/masloplus/2900",
+  },
+  {
+    id: "tg-2899",
+    type: "video",
+    video: { provider: "telegram", channel: "masloplus", id: "2899" },
+    thumb: "/gallery/telegram/2899.jpg",
+    title: "Добрый день! 🚗",
+    caption: "Добрый день! 🚗 Комплексное ТО с подбором всех расходников — под любое авто и бюджет. 🔧 Ждём вас: 📍 ул. Б. Хмельницкого, 73 — 386-383 📍 ул. Л. Комсомола, 29…",
+    publishedAt: "2026-10-22T07:12:59+00:00",
+    sourceUrl: "https://t.me/masloplus/2899",
+  },
+  {
     id: "tg-2898",
     type: "video",
     video: { provider: "telegram", channel: "masloplus", id: "2898" },
@@ -104,15 +124,5 @@ export const telegramGallery: GalleryVideo[] = [
     caption: "📍Точка Новоюжка 📍 Адрес: ул. Ленинского Комсомола , 29 📞 Телефон: 24-24-11 (звоните, записывайтесь) 📩 Написать нам в Telegram 📝 Записаться на обслуживание",
     publishedAt: "2026-10-19T06:35:13+00:00",
     sourceUrl: "https://t.me/masloplus/2884",
-  },
-  {
-    id: "tg-2876",
-    type: "video",
-    video: { provider: "telegram", channel: "masloplus", id: "2876" },
-    thumb: "/gallery/telegram/2876.jpg",
-    title: "Красив 💔",
-    caption: "Красив 💔",
-    publishedAt: "2026-10-16T16:51:51+00:00",
-    sourceUrl: "https://t.me/masloplus/2876",
   },
 ];
