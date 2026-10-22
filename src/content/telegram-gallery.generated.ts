@@ -6,6 +6,26 @@ import type { GalleryVideo } from "@/types/gallery";
 /** Последние видео из Telegram-канала, свежие — сверху. */
 export const telegramGallery: GalleryVideo[] = [
   {
+    id: "tg-2902",
+    type: "video",
+    video: { provider: "telegram", channel: "masloplus", id: "2902" },
+    thumb: "/gallery/telegram/2902.jpg",
+    title: "Любовь к любимому железу — штука дорогая, но зараза любимая 💔",
+    caption: "Любовь к любимому железу — штука дорогая, но зараза любимая 💔",
+    publishedAt: "2026-10-22T17:06:34+00:00",
+    sourceUrl: "https://t.me/masloplus/2902",
+  },
+  {
+    id: "tg-2901",
+    type: "video",
+    video: { provider: "telegram", channel: "masloplus", id: "2901" },
+    thumb: "/gallery/telegram/2901.jpg",
+    title: "Работы на СТО 🔧",
+    caption: "Работы на СТО 🔧 — Лада Гранта — снятие и установка двигателя 🛠️ — Киа Рио — замена задних тормозных дисков и суппортов 🛞 — Субару — замена масла 🛢️ Каждый…",
+    publishedAt: "2026-10-22T13:24:59+00:00",
+    sourceUrl: "https://t.me/masloplus/2901",
+  },
+  {
     id: "tg-2900",
     type: "video",
     video: { provider: "telegram", channel: "masloplus", id: "2900" },
