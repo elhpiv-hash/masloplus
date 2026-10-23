@@ -6,6 +6,16 @@ import type { GalleryVideo } from "@/types/gallery";
 /** Последние видео из Telegram-канала, свежие — сверху. */
 export const telegramGallery: GalleryVideo[] = [
   {
+    id: "tg-2909",
+    type: "video",
+    video: { provider: "telegram", channel: "masloplus", id: "2909" },
+    thumb: "/gallery/telegram/2909.jpg",
+    title: "Крипта мимо 😎",
+    caption: "Крипта мимо 😎 А вот сервис и оригинальные масла — это к нам. 15 лет в деле. Не на словах, а на деле. 🛠",
+    publishedAt: "2026-10-23T13:38:57+00:00",
+    sourceUrl: "https://t.me/masloplus/2909",
+  },
+  {
     id: "tg-2908",
     type: "video",
     video: { provider: "telegram", channel: "masloplus", id: "2908" },
