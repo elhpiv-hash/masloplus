@@ -6,6 +6,16 @@ import type { GalleryVideo } from "@/types/gallery";
 /** Последние видео из Telegram-канала, свежие — сверху. */
 export const telegramGallery: GalleryVideo[] = [
   {
+    id: "tg-2908",
+    type: "video",
+    video: { provider: "telegram", channel: "masloplus", id: "2908" },
+    thumb: "/gallery/telegram/2908.jpg",
+    title: "🔧 Skoda Karoq — масло в DSG и мехатроник: зачем и когда?",
+    caption: "🔧 Skoda Karoq — масло в DSG и мехатроник: зачем и когда? Мехатроник — гидравлика и электроника в одном блоке. Работает на том же масле, что и коробка, поэтому…",
+    publishedAt: "2026-10-23T11:02:12+00:00",
+    sourceUrl: "https://t.me/masloplus/2908",
+  },
+  {
     id: "tg-2907",
     type: "video",
     video: { provider: "telegram", channel: "masloplus", id: "2907" },
@@ -144,15 +154,5 @@ export const telegramGallery: GalleryVideo[] = [
     caption: "Уйти пораньше с работы всегда приятно 😄 А если причина — замена масла, то это вообще весомый повод! Заезжайте, будем рады вас видеть 🚗 Наши адреса 👇 📍 ул.…",
     publishedAt: "2026-10-19T15:56:41+00:00",
     sourceUrl: "https://t.me/masloplus/2890",
-  },
-  {
-    id: "tg-2886",
-    type: "video",
-    video: { provider: "telegram", channel: "masloplus", id: "2886" },
-    thumb: "/gallery/telegram/2886.jpg",
-    title: "📍Точка СЗР",
-    caption: "📍Точка СЗР 📍 Адрес:Университетская 35Г 📞 Телефон: 21-22-88 (звоните, записывайтесь) 📩 Написать нам в Telegram 📝 Записаться на обслуживание",
-    publishedAt: "2026-10-19T07:40:58+00:00",
-    sourceUrl: "https://t.me/masloplus/2886",
   },
 ];
