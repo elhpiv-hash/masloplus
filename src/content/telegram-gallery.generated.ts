@@ -6,6 +6,16 @@ import type { GalleryVideo } from "@/types/gallery";
 /** Последние видео из Telegram-канала, свежие — сверху. */
 export const telegramGallery: GalleryVideo[] = [
   {
+    id: "tg-2910",
+    type: "video",
+    video: { provider: "telegram", channel: "masloplus", id: "2910" },
+    thumb: "/gallery/telegram/2910.jpg",
+    title: "Работаем 7/7, в выходные — с 9:00 до 17:00. 🕘",
+    caption: "Работаем 7/7, в выходные — с 9:00 до 17:00. 🕘 📍 ул. Б. Хмельницкого, 73 — 386-383 📍 ул. Л. Комсомола, 29 — 24-24-11 📍 Университетская, 35А — 21-22-88 Обращ…",
+    publishedAt: "2026-10-24T12:34:22+00:00",
+    sourceUrl: "https://t.me/masloplus/2910",
+  },
+  {
     id: "tg-2909",
     type: "video",
     video: { provider: "telegram", channel: "masloplus", id: "2909" },
@@ -144,25 +154,5 @@ export const telegramGallery: GalleryVideo[] = [
     caption: "🔧 Разбор состояния масла в муфте Haldex — как всегда, показательно. По фото видно состояние и масла, и насоса. Картина типичная для запущенных случаев. ⚠️ Гла…",
     publishedAt: "2026-10-20T09:46:44+00:00",
     sourceUrl: "https://t.me/masloplus/2892",
-  },
-  {
-    id: "tg-2891",
-    type: "video",
-    video: { provider: "telegram", channel: "masloplus", id: "2891" },
-    thumb: "/gallery/telegram/2891.jpg",
-    title: "🚗 CHERY Tiggo 7 Pro Max, 2023 г. — полное ТО, пробег 50 000 км",
-    caption: "🚗 CHERY Tiggo 7 Pro Max, 2023 г. — полное ТО, пробег 50 000 км Замена жидкостей по всем узлам: • ДВС — Zic X7 5W-30 • Робот — Zic DCTF • Передний редуктор — Z…",
-    publishedAt: "2026-10-20T09:14:43+00:00",
-    sourceUrl: "https://t.me/masloplus/2891",
-  },
-  {
-    id: "tg-2890",
-    type: "video",
-    video: { provider: "telegram", channel: "masloplus", id: "2890" },
-    thumb: "/gallery/telegram/2890.jpg",
-    title: "Уйти пораньше с работы всегда приятно 😄 А если причина — замена масла, то это…",
-    caption: "Уйти пораньше с работы всегда приятно 😄 А если причина — замена масла, то это вообще весомый повод! Заезжайте, будем рады вас видеть 🚗 Наши адреса 👇 📍 ул.…",
-    publishedAt: "2026-10-19T15:56:41+00:00",
-    sourceUrl: "https://t.me/masloplus/2890",
   },
 ];
