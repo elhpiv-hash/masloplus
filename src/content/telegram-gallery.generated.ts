@@ -6,6 +6,26 @@ import type { GalleryVideo } from "@/types/gallery";
 /** Последние видео из Telegram-канала, свежие — сверху. */
 export const telegramGallery: GalleryVideo[] = [
   {
+    id: "tg-2923",
+    type: "video",
+    video: { provider: "telegram", channel: "masloplus", id: "2923" },
+    thumb: "/gallery/telegram/2923.jpg",
+    title: "😎💰😜",
+    caption: "😎💰😜",
+    publishedAt: "2026-10-27T13:02:30+00:00",
+    sourceUrl: "https://t.me/masloplus/2923",
+  },
+  {
+    id: "tg-2922",
+    type: "video",
+    video: { provider: "telegram", channel: "masloplus", id: "2922" },
+    thumb: "/gallery/telegram/2922.jpg",
+    title: "🔧 Импульсная промывка радиатора печки Hyundai i40",
+    caption: "🔧 Импульсная промывка радиатора печки Hyundai i40 Слабая печка в i40 — частый признак забитого радиатора отопителя. Импульсная промывка восстанавливает теплоо…",
+    publishedAt: "2026-10-27T12:35:22+00:00",
+    sourceUrl: "https://t.me/masloplus/2922",
+  },
+  {
     id: "tg-2918",
     type: "video",
     video: { provider: "telegram", channel: "masloplus", id: "2918" },
@@ -114,25 +134,5 @@ export const telegramGallery: GalleryVideo[] = [
     caption: "🔧 Audi Q5 — ТО по регламенту Масло в ДВС + полный комплект фильтров. Масло — допуск VW 508 00, вязкость 0W20. Малозольное, сверхнизкой вязкости — предписание…",
     publishedAt: "2026-10-23T07:35:01+00:00",
     sourceUrl: "https://t.me/masloplus/2904",
-  },
-  {
-    id: "tg-2903",
-    type: "video",
-    video: { provider: "telegram", channel: "masloplus", id: "2903" },
-    thumb: "/gallery/telegram/2903.jpg",
-    title: "Доброе масляное утро 🩸",
-    caption: "Доброе масляное утро 🩸 Заезжайте: 📍 ул. Б. Хмельницкого, 73 — 386-383 📍 ул. Л. Комсомола, 29 — 24-24-11 📍 Университетская, 35Г — 21-22-88 👨‍🔧Записаться \ud83d…",
-    publishedAt: "2026-10-23T07:08:03+00:00",
-    sourceUrl: "https://t.me/masloplus/2903",
-  },
-  {
-    id: "tg-2902",
-    type: "video",
-    video: { provider: "telegram", channel: "masloplus", id: "2902" },
-    thumb: "/gallery/telegram/2902.jpg",
-    title: "Любовь к любимому железу — штука дорогая, но зараза любимая 💔",
-    caption: "Любовь к любимому железу — штука дорогая, но зараза любимая 💔",
-    publishedAt: "2026-10-22T17:06:34+00:00",
-    sourceUrl: "https://t.me/masloplus/2902",
   },
 ];
