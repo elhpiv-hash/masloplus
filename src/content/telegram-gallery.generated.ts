@@ -6,6 +6,16 @@ import type { GalleryVideo } from "@/types/gallery";
 /** Последние видео из Telegram-канала, свежие — сверху. */
 export const telegramGallery: GalleryVideo[] = [
   {
+    id: "tg-2937",
+    type: "video",
+    video: { provider: "telegram", channel: "masloplus", id: "2937" },
+    thumb: "/gallery/telegram/2937.jpg",
+    title: "Жуткий настрой? Легко 👻",
+    caption: "Жуткий настрой? Легко 👻 В «Масло плюс» приведения выходят на смену и держат марку сервиса 🔧 Точная диагностика, оригинальные масла, мастера на месте. Мистики…",
+    publishedAt: "2026-10-30T05:23:36+00:00",
+    sourceUrl: "https://t.me/masloplus/2937",
+  },
+  {
     id: "tg-2935",
     type: "video",
     video: { provider: "telegram", channel: "masloplus", id: "2935" },
@@ -114,15 +124,5 @@ export const telegramGallery: GalleryVideo[] = [
     caption: "🔧 Changan Gan: замена масла в коробке при 49 500 км Пробег подошёл к регламентному рубежу — масло в DCT уже отработало ресурс. Продукты износа и деградация жи…",
     publishedAt: "2026-10-27T07:21:25+00:00",
     sourceUrl: "https://t.me/masloplus/2918",
-  },
-  {
-    id: "tg-2917",
-    type: "video",
-    video: { provider: "telegram", channel: "masloplus", id: "2917" },
-    thumb: "/gallery/telegram/2917.jpg",
-    title: "Доброе масляное утро 🩸",
-    caption: "Доброе масляное утро 🩸 Заезжайте: 📍 ул. Б. Хмельницкого, 73 — 386-383 📍 ул. Л. Комсомола, 29 — 24-24-11 📍 Университетская, 35Г — 21-22-88 👨‍🔧Записаться \ud83d…",
-    publishedAt: "2026-10-27T05:20:43+00:00",
-    sourceUrl: "https://t.me/masloplus/2917",
   },
 ];
