@@ -6,6 +6,26 @@ import type { GalleryVideo } from "@/types/gallery";
 /** Последние видео из Telegram-канала, свежие — сверху. */
 export const telegramGallery: GalleryVideo[] = [
   {
+    id: "tg-2950",
+    type: "video",
+    video: { provider: "telegram", channel: "masloplus", id: "2950" },
+    thumb: "/gallery/telegram/2950.jpg",
+    title: "📦 Крупное поступление Totachi на всех точках",
+    caption: "📦 Крупное поступление Totachi на всех точках В наличии: 🔧 Totachi NS — для вариаторов ⚙️ ATF LV — для автоматов Оригинальные составы с корректными допусками…",
+    publishedAt: "2026-11-03T08:32:36+00:00",
+    sourceUrl: "https://t.me/masloplus/2950",
+  },
+  {
+    id: "tg-2949",
+    type: "video",
+    video: { provider: "telegram", channel: "masloplus", id: "2949" },
+    thumb: "/gallery/telegram/2949.jpg",
+    title: "Бодрое утро в сервисе👨‍🔧",
+    caption: "Бодрое утро в сервисе👨‍🔧 📩 Написать нам в Telegram 📝 Записаться на обслуживание",
+    publishedAt: "2026-11-03T07:26:37+00:00",
+    sourceUrl: "https://t.me/masloplus/2949",
+  },
+  {
     id: "tg-2948",
     type: "video",
     video: { provider: "telegram", channel: "masloplus", id: "2948" },
@@ -124,25 +144,5 @@ export const telegramGallery: GalleryVideo[] = [
     caption: "Подбор шин и шиномонтаж🛞 📍Точка Богданка 📍 Адрес: ул. Богдана Хмельницкого, 73 📞 Телефон: 386-383 (звоните, записывайтесь) 📩 Написать нам в Telegram 📝 За…",
     publishedAt: "2026-10-29T08:52:59+00:00",
     sourceUrl: "https://t.me/masloplus/2931",
-  },
-  {
-    id: "tg-2930",
-    type: "video",
-    video: { provider: "telegram", channel: "masloplus", id: "2930" },
-    thumb: "/gallery/telegram/2930.jpg",
-    title: "🔧 Москвич с пробегом 12 000 км прошёл плановое обслуживание.",
-    caption: "🔧 Москвич с пробегом 12 000 км прошёл плановое обслуживание. Что сделали: — подобрали и привезли нужную резинку; — переобули автомобиль; — заменили масло в дв…",
-    publishedAt: "2026-10-29T07:31:10+00:00",
-    sourceUrl: "https://t.me/masloplus/2930",
-  },
-  {
-    id: "tg-2927",
-    type: "video",
-    video: { provider: "telegram", channel: "masloplus", id: "2927" },
-    thumb: "/gallery/telegram/2927.jpg",
-    title: "🔧 BMW X5 3.0 d — очередное ТО.",
-    caption: "🔧 BMW X5 3.0 d — очередное ТО. Замена масла в ДВС выполнена. Залито BMW 5W30 — оригинальный допуск, стабильная работа в любых условиях. Дополнительно внесена…",
-    publishedAt: "2026-10-28T07:42:03+00:00",
-    sourceUrl: "https://t.me/masloplus/2927",
   },
 ];
