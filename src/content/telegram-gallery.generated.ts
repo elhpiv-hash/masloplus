@@ -6,6 +6,16 @@ import type { GalleryVideo } from "@/types/gallery";
 /** Последние видео из Telegram-канала, свежие — сверху. */
 export const telegramGallery: GalleryVideo[] = [
   {
+    id: "tg-2958",
+    type: "video",
+    video: { provider: "telegram", channel: "masloplus", id: "2958" },
+    thumb: "/gallery/telegram/2958.jpg",
+    title: "Вибростенд — диагностическое оборудование, имитирующее реальные дорожные нагруз…",
+    caption: "Вибростенд — диагностическое оборудование, имитирующее реальные дорожные нагрузки на автомобиль прямо в сервисе. Колёса ставят на подвижные платформы, и стенд…",
+    publishedAt: "2026-11-06T10:20:18+00:00",
+    sourceUrl: "https://t.me/masloplus/2958",
+  },
+  {
     id: "tg-2957",
     type: "video",
     video: { provider: "telegram", channel: "masloplus", id: "2957" },
