@@ -6,6 +6,26 @@ import type { GalleryVideo } from "@/types/gallery";
 /** Последние видео из Telegram-канала, свежие — сверху. */
 export const telegramGallery: GalleryVideo[] = [
   {
+    id: "tg-2957",
+    type: "video",
+    video: { provider: "telegram", channel: "masloplus", id: "2957" },
+    thumb: "/gallery/telegram/2957.jpg",
+    title: "Первый снег — отличный повод обновить жидкости в авто. ❄️🚗",
+    caption: "Первый снег — отличный повод обновить жидкости в авто. ❄️🚗 С приходом холодов стоит проверить технические жидкости: от их состояния зависит работа двигателя и…",
+    publishedAt: "2026-11-06T08:20:41+00:00",
+    sourceUrl: "https://t.me/masloplus/2957",
+  },
+  {
+    id: "tg-2956",
+    type: "video",
+    video: { provider: "telegram", channel: "masloplus", id: "2956" },
+    thumb: "/gallery/telegram/2956.jpg",
+    title: "Рабочеее утро в сервисе👨‍🔧",
+    caption: "Рабочеее утро в сервисе👨‍🔧 Заезжайте в гости : 📍 ул. Б. Хмельницкого, 73 — 386-383 📍 ул. Л. Комсомола, 29 — 24-24-11 📍 Университетская, 35Г — 21-22-88 👨‍…",
+    publishedAt: "2026-11-06T05:36:31+00:00",
+    sourceUrl: "https://t.me/masloplus/2956",
+  },
+  {
     id: "tg-2955",
     type: "video",
     video: { provider: "telegram", channel: "masloplus", id: "2955" },
@@ -134,25 +154,5 @@ export const telegramGallery: GalleryVideo[] = [
     caption: "Подбор шин и шиномонтаж🛞 📍Точка Богданка 📍 Адрес: ул. Богдана Хмельницкого, 73 📞 Телефон: 386-383 (звоните, записывайтесь) 📩 Написать нам в Telegram 📝 За…",
     publishedAt: "2026-11-02T07:23:23+00:00",
     sourceUrl: "https://t.me/masloplus/2941",
-  },
-  {
-    id: "tg-2937",
-    type: "video",
-    video: { provider: "telegram", channel: "masloplus", id: "2937" },
-    thumb: "/gallery/telegram/2937.jpg",
-    title: "Жуткий настрой? Легко 👻",
-    caption: "Жуткий настрой? Легко 👻 В «Масло плюс» приведения выходят на смену и держат марку сервиса 🔧 Точная диагностика, оригинальные масла, мастера на месте. Мистики…",
-    publishedAt: "2026-10-30T05:23:36+00:00",
-    sourceUrl: "https://t.me/masloplus/2937",
-  },
-  {
-    id: "tg-2935",
-    type: "video",
-    video: { provider: "telegram", channel: "masloplus", id: "2935" },
-    thumb: "/gallery/telegram/2935.jpg",
-    title: "🔧 Hyundai Sonata 2019, пробег 150 000 км — диагностика на вибростенде.",
-    caption: "🔧 Hyundai Sonata 2019, пробег 150 000 км — диагностика на вибростенде. Стенд точно локализовал источники вибраций и стуков. К замене: 🔹 Стойки стабилизатора…",
-    publishedAt: "2026-10-29T11:29:19+00:00",
-    sourceUrl: "https://t.me/masloplus/2935",
   },
 ];
