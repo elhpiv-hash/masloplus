@@ -6,6 +6,16 @@ import type { GalleryVideo } from "@/types/gallery";
 /** Последние видео из Telegram-канала, свежие — сверху. */
 export const telegramGallery: GalleryVideo[] = [
   {
+    id: "tg-2959",
+    type: "video",
+    video: { provider: "telegram", channel: "masloplus", id: "2959" },
+    thumb: "/gallery/telegram/2959.jpg",
+    title: "«From process to perfection»",
+    caption: "«From process to perfection» («От процесса к совершенству»)👨‍🔧",
+    publishedAt: "2026-11-07T07:25:05+00:00",
+    sourceUrl: "https://t.me/masloplus/2959",
+  },
+  {
     id: "tg-2958",
     type: "video",
     video: { provider: "telegram", channel: "masloplus", id: "2958" },
