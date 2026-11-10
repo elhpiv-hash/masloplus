@@ -6,6 +6,16 @@ import type { GalleryVideo } from "@/types/gallery";
 /** Последние видео из Telegram-канала, свежие — сверху. */
 export const telegramGallery: GalleryVideo[] = [
   {
+    id: "tg-2979",
+    type: "video",
+    video: { provider: "telegram", channel: "masloplus", id: "2979" },
+    thumb: "/gallery/telegram/2979.jpg",
+    title: "⚠️ Эмульсия в системе охлаждения — итог отложенной замены",
+    caption: "⚠️ Эмульсия в системе охлаждения — итог отложенной замены Toyota Corolla — аппаратная замена антифриза с промывкой. Из-за несвоевременной замены жидкости в сис…",
+    publishedAt: "2026-11-10T09:10:20+00:00",
+    sourceUrl: "https://t.me/masloplus/2979",
+  },
+  {
     id: "tg-2975",
     type: "video",
     video: { provider: "telegram", channel: "masloplus", id: "2975" },
@@ -114,35 +124,5 @@ export const telegramGallery: GalleryVideo[] = [
     caption: "Вибростенд — диагностическое оборудование, имитирующее реальные дорожные нагрузки на автомобиль прямо в сервисе. Колёса ставят на подвижные платформы, и стенд…",
     publishedAt: "2026-11-06T10:20:18+00:00",
     sourceUrl: "https://t.me/masloplus/2958",
-  },
-  {
-    id: "tg-2957",
-    type: "video",
-    video: { provider: "telegram", channel: "masloplus", id: "2957" },
-    thumb: "/gallery/telegram/2957.jpg",
-    title: "Первый снег — отличный повод обновить жидкости в авто. ❄️🚗",
-    caption: "Первый снег — отличный повод обновить жидкости в авто. ❄️🚗 С приходом холодов стоит проверить технические жидкости: от их состояния зависит работа двигателя и…",
-    publishedAt: "2026-11-06T08:20:41+00:00",
-    sourceUrl: "https://t.me/masloplus/2957",
-  },
-  {
-    id: "tg-2956",
-    type: "video",
-    video: { provider: "telegram", channel: "masloplus", id: "2956" },
-    thumb: "/gallery/telegram/2956.jpg",
-    title: "Рабочеее утро в сервисе👨‍🔧",
-    caption: "Рабочеее утро в сервисе👨‍🔧 Заезжайте в гости : 📍 ул. Б. Хмельницкого, 73 — 386-383 📍 ул. Л. Комсомола, 29 — 24-24-11 📍 Университетская, 35Г — 21-22-88 👨‍…",
-    publishedAt: "2026-11-06T05:36:31+00:00",
-    sourceUrl: "https://t.me/masloplus/2956",
-  },
-  {
-    id: "tg-2955",
-    type: "video",
-    video: { provider: "telegram", channel: "masloplus", id: "2955" },
-    thumb: "/gallery/telegram/2955.jpg",
-    title: "📢 Открыта запись на шиномонтаж на завтра — есть свободные окна.",
-    caption: "📢 Открыта запись на шиномонтаж на завтра — есть свободные окна. 📍 Точка Богданка Адрес: ул. Богдана Хмельницкого, 73 📞 Телефон: 386-383 — звоните и записыва…",
-    publishedAt: "2026-11-03T15:14:20+00:00",
-    sourceUrl: "https://t.me/masloplus/2955",
   },
 ];
