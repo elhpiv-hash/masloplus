@@ -6,6 +6,36 @@ import type { GalleryVideo } from "@/types/gallery";
 /** Последние видео из Telegram-канала, свежие — сверху. */
 export const telegramGallery: GalleryVideo[] = [
   {
+    id: "tg-2992",
+    type: "video",
+    video: { provider: "telegram", channel: "masloplus", id: "2992" },
+    thumb: "/gallery/telegram/2992.jpg",
+    title: "А так хотелось просто на море , а не вот это вот все😅",
+    caption: "А так хотелось просто на море , а не вот это вот все😅",
+    publishedAt: "2026-11-12T12:45:51+00:00",
+    sourceUrl: "https://t.me/masloplus/2992",
+  },
+  {
+    id: "tg-2991",
+    type: "video",
+    video: { provider: "telegram", channel: "masloplus", id: "2991" },
+    thumb: "/gallery/telegram/2991.jpg",
+    title: "Новая поставка📦",
+    caption: "Новая поставка📦 • Hyundai/Kia SP-IV — масло для АКПП Hyundai и Kia Полное соответствие заводским допускам ✅ Плавная работа коробки и продление ресурса агрегат…",
+    publishedAt: "2026-11-12T11:59:05+00:00",
+    sourceUrl: "https://t.me/masloplus/2991",
+  },
+  {
+    id: "tg-2989",
+    type: "video",
+    video: { provider: "telegram", channel: "masloplus", id: "2989" },
+    thumb: "/gallery/telegram/2989.jpg",
+    title: "📍Точка СЗР",
+    caption: "📍Точка СЗР • Skoda Rapid — замена масла в ДВС, заливаем Jetour 5W30 • Ford Kuga — ремонт задней подвески • Hyundai Creta — замена масла в ДВС, заливаем SHELL…",
+    publishedAt: "2026-11-12T11:20:41+00:00",
+    sourceUrl: "https://t.me/masloplus/2989",
+  },
+  {
     id: "tg-2984",
     type: "video",
     video: { provider: "telegram", channel: "masloplus", id: "2984" },
@@ -74,15 +104,5 @@ export const telegramGallery: GalleryVideo[] = [
     caption: "Записаться на вибростенд 📍Точка СЗР Адрес:Университетская 35Г 📞 Телефон: 21-22-88 (звоните, записывайтесь) 📩 Написать нам в Telegram 📝 Записаться на обслуж…",
     publishedAt: "2026-11-09T10:49:25+00:00",
     sourceUrl: "https://t.me/masloplus/2973",
-  },
-  {
-    id: "tg-2969",
-    type: "video",
-    video: { provider: "telegram", channel: "masloplus", id: "2969" },
-    thumb: "/gallery/telegram/2969.jpg",
-    title: "Hyundai Santa Fe, 30 000 км — обращение по биению тормозных дисков 🔧",
-    caption: "Hyundai Santa Fe, 30 000 км — обращение по биению тормозных дисков 🔧 Сняли диск, проверили биение, замерили толщину штангенциркулем — допуск для проточки есть…",
-    publishedAt: "2026-11-09T07:54:06+00:00",
-    sourceUrl: "https://t.me/masloplus/2969",
   },
 ];
