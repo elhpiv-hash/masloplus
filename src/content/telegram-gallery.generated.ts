@@ -6,6 +6,26 @@ import type { GalleryVideo } from "@/types/gallery";
 /** Последние видео из Telegram-канала, свежие — сверху. */
 export const telegramGallery: GalleryVideo[] = [
   {
+    id: "tg-2996",
+    type: "video",
+    video: { provider: "telegram", channel: "masloplus", id: "2996" },
+    thumb: "/gallery/telegram/2996.jpg",
+    title: "🔥 Долгожданное поступление!",
+    caption: "🔥 Долгожданное поступление! MOTUL 8100 X-CLEAN+ 5W-30 — масло для современных двигателей BMW, MERCEDES, PORSCHE и VAG (VW, AUDI, SEAT, SKODA). 📋 Стандарт: AC…",
+    publishedAt: "2026-11-13T13:44:45+00:00",
+    sourceUrl: "https://t.me/masloplus/2996",
+  },
+  {
+    id: "tg-2993",
+    type: "video",
+    video: { provider: "telegram", channel: "masloplus", id: "2993" },
+    thumb: "/gallery/telegram/2993.jpg",
+    title: "📥 Новое поступление — моторное масло MANNOL Longlife 504/507 5W30",
+    caption: "📥 Новое поступление — моторное масло MANNOL Longlife 504/507 5W30 Полностью синтетическое масло 5W-30 для современных бензиновых и дизельных двигателей, в том…",
+    publishedAt: "2026-11-13T11:46:03+00:00",
+    sourceUrl: "https://t.me/masloplus/2993",
+  },
+  {
     id: "tg-2992",
     type: "video",
     video: { provider: "telegram", channel: "masloplus", id: "2992" },
@@ -84,25 +104,5 @@ export const telegramGallery: GalleryVideo[] = [
     caption: "Привет! 👋 Хотим напомнить: у нас можно записаться на обслуживание вашего автомобиля! 🚗 Мы подберём все необходимые расходники — с учётом вашего бюджета и тех…",
     publishedAt: "2026-11-09T17:27:05+00:00",
     sourceUrl: "https://t.me/masloplus/2975",
-  },
-  {
-    id: "tg-2974",
-    type: "video",
-    video: { provider: "telegram", channel: "masloplus", id: "2974" },
-    thumb: "/gallery/telegram/2974.jpg",
-    title: "Комплексное ТО Kia Sorento — это обслуживание всей трансмиссии, а не только дви…",
-    caption: "Комплексное ТО Kia Sorento — это обслуживание всей трансмиссии, а не только двигателя. 🛠 Регламент включает: — Масло ДВС — базовый этап. — Раздатка — узел под…",
-    publishedAt: "2026-11-09T17:13:00+00:00",
-    sourceUrl: "https://t.me/masloplus/2974",
-  },
-  {
-    id: "tg-2973",
-    type: "video",
-    video: { provider: "telegram", channel: "masloplus", id: "2973" },
-    thumb: "/gallery/telegram/2973.jpg",
-    title: "Записаться на вибростенд",
-    caption: "Записаться на вибростенд 📍Точка СЗР Адрес:Университетская 35Г 📞 Телефон: 21-22-88 (звоните, записывайтесь) 📩 Написать нам в Telegram 📝 Записаться на обслуж…",
-    publishedAt: "2026-11-09T10:49:25+00:00",
-    sourceUrl: "https://t.me/masloplus/2973",
   },
 ];
