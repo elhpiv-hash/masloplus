@@ -6,6 +6,26 @@ import type { GalleryVideo } from "@/types/gallery";
 /** Последние видео из Telegram-канала, свежие — сверху. */
 export const telegramGallery: GalleryVideo[] = [
   {
+    id: "tg-2999",
+    type: "video",
+    video: { provider: "telegram", channel: "masloplus", id: "2999" },
+    thumb: "/gallery/telegram/2999.jpg",
+    title: "Вибрации, борозды или неровности на тормозных дисках?",
+    caption: "Вибрации, борозды или неровности на тормозных дисках? Возможно, им нужна проточка 👨‍🔧🛞 Она убирает неровности и следы износа, возвращая диску ровную рабочую…",
+    publishedAt: "2026-11-14T10:49:01+00:00",
+    sourceUrl: "https://t.me/masloplus/2999",
+  },
+  {
+    id: "tg-2998",
+    type: "video",
+    video: { provider: "telegram", channel: "masloplus", id: "2998" },
+    thumb: "/gallery/telegram/2998.jpg",
+    title: "Заявка на обслуживание авто👨‍🔧",
+    caption: "Заявка на обслуживание авто👨‍🔧 Подберём бюджет именно под ваш автомобиль и запишем на удобное время. Оставьте заявку — всё остальное сделаем за вас. ✅ 📍 ул.…",
+    publishedAt: "2026-11-14T06:45:26+00:00",
+    sourceUrl: "https://t.me/masloplus/2998",
+  },
+  {
     id: "tg-2996",
     type: "video",
     video: { provider: "telegram", channel: "masloplus", id: "2996" },
@@ -94,15 +114,5 @@ export const telegramGallery: GalleryVideo[] = [
     caption: "⚠️ Эмульсия в системе охлаждения — итог отложенной замены Toyota Corolla — аппаратная замена антифриза с промывкой. Из-за несвоевременной замены жидкости в сис…",
     publishedAt: "2026-11-10T09:10:20+00:00",
     sourceUrl: "https://t.me/masloplus/2979",
-  },
-  {
-    id: "tg-2975",
-    type: "video",
-    video: { provider: "telegram", channel: "masloplus", id: "2975" },
-    thumb: "/gallery/telegram/2975.jpg",
-    title: "Привет! 👋",
-    caption: "Привет! 👋 Хотим напомнить: у нас можно записаться на обслуживание вашего автомобиля! 🚗 Мы подберём все необходимые расходники — с учётом вашего бюджета и тех…",
-    publishedAt: "2026-11-09T17:27:05+00:00",
-    sourceUrl: "https://t.me/masloplus/2975",
   },
 ];
