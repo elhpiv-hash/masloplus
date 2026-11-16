@@ -6,6 +6,16 @@ import type { GalleryVideo } from "@/types/gallery";
 /** Последние видео из Telegram-канала, свежие — сверху. */
 export const telegramGallery: GalleryVideo[] = [
   {
+    id: "tg-3000",
+    type: "video",
+    video: { provider: "telegram", channel: "masloplus", id: "3000" },
+    thumb: "/gallery/telegram/3000.jpg",
+    title: "🤫",
+    caption: "🤫",
+    publishedAt: "2026-11-16T07:33:04+00:00",
+    sourceUrl: "https://t.me/masloplus/3000",
+  },
+  {
     id: "tg-2999",
     type: "video",
     video: { provider: "telegram", channel: "masloplus", id: "2999" },
