@@ -6,6 +6,26 @@ import type { GalleryVideo } from "@/types/gallery";
 /** Последние видео из Telegram-канала, свежие — сверху. */
 export const telegramGallery: GalleryVideo[] = [
   {
+    id: "tg-3002",
+    type: "video",
+    video: { provider: "telegram", channel: "masloplus", id: "3002" },
+    thumb: "/gallery/telegram/3002.jpg",
+    title: "Новое поступление! 🚗✨",
+    caption: "Новое поступление! 🚗✨ Castrol EDGE 5W-30 LL — в наличии. Востребованная позиция для VAG, BMW, Mercedes и Porsche. Для бензиновых и дизельных двигателей — надё…",
+    publishedAt: "2026-11-17T09:55:41+00:00",
+    sourceUrl: "https://t.me/masloplus/3002",
+  },
+  {
+    id: "tg-3001",
+    type: "video",
+    video: { provider: "telegram", channel: "masloplus", id: "3001" },
+    thumb: "/gallery/telegram/3001.jpg",
+    title: "Доброе утро! ☀️",
+    caption: "Доброе утро! ☀️ Мы уже ждём вас — на обслуживание и подбор технических жидкостей. 📍 ул. Б. Хмельницкого, 73 — 386-383 📍 ул. Л. Комсомола, 29 — 24-24-11 📍 Ун…",
+    publishedAt: "2026-11-17T06:06:44+00:00",
+    sourceUrl: "https://t.me/masloplus/3001",
+  },
+  {
     id: "tg-3000",
     type: "video",
     video: { provider: "telegram", channel: "masloplus", id: "3000" },
@@ -104,25 +124,5 @@ export const telegramGallery: GalleryVideo[] = [
     caption: "🔧 Точка Нюр — Ленинского комсомола, 29. Chery Tiggo 7 Pro Max: замена масла в роботе — Zic DCTF Multi, плюс замена масла в муфте полного привода. Chery Tiggo…",
     publishedAt: "2026-11-11T11:29:32+00:00",
     sourceUrl: "https://t.me/masloplus/2983",
-  },
-  {
-    id: "tg-2982",
-    type: "video",
-    video: { provider: "telegram", channel: "masloplus", id: "2982" },
-    thumb: "/gallery/telegram/2982.jpg",
-    title: "Ну как скажешь 😅",
-    caption: "Ну как скажешь 😅",
-    publishedAt: "2026-11-11T08:20:28+00:00",
-    sourceUrl: "https://t.me/masloplus/2982",
-  },
-  {
-    id: "tg-2979",
-    type: "video",
-    video: { provider: "telegram", channel: "masloplus", id: "2979" },
-    thumb: "/gallery/telegram/2979.jpg",
-    title: "⚠️ Эмульсия в системе охлаждения — итог отложенной замены",
-    caption: "⚠️ Эмульсия в системе охлаждения — итог отложенной замены Toyota Corolla — аппаратная замена антифриза с промывкой. Из-за несвоевременной замены жидкости в сис…",
-    publishedAt: "2026-11-10T09:10:20+00:00",
-    sourceUrl: "https://t.me/masloplus/2979",
   },
 ];
