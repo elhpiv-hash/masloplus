@@ -6,6 +6,26 @@ import type { GalleryVideo } from "@/types/gallery";
 /** Последние видео из Telegram-канала, свежие — сверху. */
 export const telegramGallery: GalleryVideo[] = [
   {
+    id: "tg-3005",
+    type: "video",
+    video: { provider: "telegram", channel: "masloplus", id: "3005" },
+    thumb: "/gallery/telegram/3005.jpg",
+    title: "Mercedes-Maybach S-Class X222: регламентное ТО 🔧",
+    caption: "Mercedes-Maybach S-Class X222: регламентное ТО 🔧 Флагману нужен точный регламент, а не «по факту». Масло в АКПП с поддоном ⚙️ Поддон идёт с фильтром — только…",
+    publishedAt: "2026-11-17T14:56:22+00:00",
+    sourceUrl: "https://t.me/masloplus/3005",
+  },
+  {
+    id: "tg-3004",
+    type: "video",
+    video: { provider: "telegram", channel: "masloplus", id: "3004" },
+    thumb: "/gallery/telegram/3004.jpg",
+    title: "🔧 VW Lavida 1.4 Turbo из-за рубежа — первая замена масла в России.",
+    caption: "🔧 VW Lavida 1.4 Turbo из-за рубежа — первая замена масла в России. Заливаем 0W20 с допусками VW 508 00 / 509 00 — штатный стандарт для турбомотора EA211: нужн…",
+    publishedAt: "2026-11-17T12:43:38+00:00",
+    sourceUrl: "https://t.me/masloplus/3004",
+  },
+  {
     id: "tg-3002",
     type: "video",
     video: { provider: "telegram", channel: "masloplus", id: "3002" },
@@ -114,15 +134,5 @@ export const telegramGallery: GalleryVideo[] = [
     caption: "📌 Chery Tiggo 8 Pro Max: при каком пробеге менять масло в муфте Haldex По факту: в робот залили Zic DCTF Multi, обслужили передний и задний мосты, в муфте Hal…",
     publishedAt: "2026-11-11T11:44:36+00:00",
     sourceUrl: "https://t.me/masloplus/2984",
-  },
-  {
-    id: "tg-2983",
-    type: "video",
-    video: { provider: "telegram", channel: "masloplus", id: "2983" },
-    thumb: "/gallery/telegram/2983.jpg",
-    title: "🔧 Точка Нюр — Ленинского комсомола, 29.",
-    caption: "🔧 Точка Нюр — Ленинского комсомола, 29. Chery Tiggo 7 Pro Max: замена масла в роботе — Zic DCTF Multi, плюс замена масла в муфте полного привода. Chery Tiggo…",
-    publishedAt: "2026-11-11T11:29:32+00:00",
-    sourceUrl: "https://t.me/masloplus/2983",
   },
 ];
