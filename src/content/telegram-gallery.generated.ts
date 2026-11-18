@@ -6,6 +6,26 @@ import type { GalleryVideo } from "@/types/gallery";
 /** Последние видео из Telegram-канала, свежие — сверху. */
 export const telegramGallery: GalleryVideo[] = [
   {
+    id: "tg-3013",
+    type: "video",
+    video: { provider: "telegram", channel: "masloplus", id: "3013" },
+    thumb: "/gallery/telegram/3013.jpg",
+    title: "Комплексное ТО Geely Monjaro: что и зачем меняем.",
+    caption: "Комплексное ТО Geely Monjaro: что и зачем меняем. 🔧 Халдекс — масло и фильтр каждые 40–60 тыс. км. Игнорирование ведёт к перегреву муфты и удару по карману. \ud83d…",
+    publishedAt: "2026-11-18T13:13:28+00:00",
+    sourceUrl: "https://t.me/masloplus/3013",
+  },
+  {
+    id: "tg-3012",
+    type: "video",
+    video: { provider: "telegram", channel: "masloplus", id: "3012" },
+    thumb: "/gallery/telegram/3012.jpg",
+    title: "📌 Наши адреса — выбирайте удобный:",
+    caption: "📌 Наши адреса — выбирайте удобный: 📍 ул. Б. Хмельницкого, 73 — 386-383 📍 ул. Л. Комсомола, 29 — 24-24-11 📍 Университетская, 35Г — 21-22-88 🕘 График работы…",
+    publishedAt: "2026-11-18T11:24:49+00:00",
+    sourceUrl: "https://t.me/masloplus/3012",
+  },
+  {
     id: "tg-3007",
     type: "video",
     video: { provider: "telegram", channel: "masloplus", id: "3007" },
@@ -114,15 +134,5 @@ export const telegramGallery: GalleryVideo[] = [
     caption: "📥 Новое поступление — моторное масло MANNOL Longlife 504/507 5W30 Полностью синтетическое масло 5W-30 для современных бензиновых и дизельных двигателей, в том…",
     publishedAt: "2026-11-13T11:46:03+00:00",
     sourceUrl: "https://t.me/masloplus/2993",
-  },
-  {
-    id: "tg-2992",
-    type: "video",
-    video: { provider: "telegram", channel: "masloplus", id: "2992" },
-    thumb: "/gallery/telegram/2992.jpg",
-    title: "А так хотелось просто на море , а не вот это вот все😅",
-    caption: "А так хотелось просто на море , а не вот это вот все😅",
-    publishedAt: "2026-11-12T12:45:51+00:00",
-    sourceUrl: "https://t.me/masloplus/2992",
   },
 ];
