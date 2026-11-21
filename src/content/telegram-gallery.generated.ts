@@ -6,6 +6,26 @@ import type { GalleryVideo } from "@/types/gallery";
 /** Последние видео из Telegram-канала, свежие — сверху. */
 export const telegramGallery: GalleryVideo[] = [
   {
+    id: "tg-3015",
+    type: "video",
+    video: { provider: "telegram", channel: "masloplus", id: "3015" },
+    thumb: "/gallery/telegram/3015.jpg",
+    title: "Volkswagen Tiguan поступил с жалобой на тормозную систему. 🚗",
+    caption: "Volkswagen Tiguan поступил с жалобой на тормозную систему. 🚗 Диагностика выявила необходимость замены тормозных колодок по кругу и задних тормозных дисков. 🔧…",
+    publishedAt: "2026-11-21T10:24:28+00:00",
+    sourceUrl: "https://t.me/masloplus/3015",
+  },
+  {
+    id: "tg-3014",
+    type: "video",
+    video: { provider: "telegram", channel: "masloplus", id: "3014" },
+    thumb: "/gallery/telegram/3014.jpg",
+    title: "Когда автослесарь объясняет, а клиент понимает по своему 👨‍🔧🤣",
+    caption: "Когда автослесарь объясняет, а клиент понимает по своему 👨‍🔧🤣",
+    publishedAt: "2026-11-21T08:19:03+00:00",
+    sourceUrl: "https://t.me/masloplus/3014",
+  },
+  {
     id: "tg-3013",
     type: "video",
     video: { provider: "telegram", channel: "masloplus", id: "3013" },
@@ -124,15 +144,5 @@ export const telegramGallery: GalleryVideo[] = [
     caption: "🔥 Долгожданное поступление! MOTUL 8100 X-CLEAN+ 5W-30 — масло для современных двигателей BMW, MERCEDES, PORSCHE и VAG (VW, AUDI, SEAT, SKODA). 📋 Стандарт: AC…",
     publishedAt: "2026-11-13T13:44:45+00:00",
     sourceUrl: "https://t.me/masloplus/2996",
-  },
-  {
-    id: "tg-2993",
-    type: "video",
-    video: { provider: "telegram", channel: "masloplus", id: "2993" },
-    thumb: "/gallery/telegram/2993.jpg",
-    title: "📥 Новое поступление — моторное масло MANNOL Longlife 504/507 5W30",
-    caption: "📥 Новое поступление — моторное масло MANNOL Longlife 504/507 5W30 Полностью синтетическое масло 5W-30 для современных бензиновых и дизельных двигателей, в том…",
-    publishedAt: "2026-11-13T11:46:03+00:00",
-    sourceUrl: "https://t.me/masloplus/2993",
   },
 ];
