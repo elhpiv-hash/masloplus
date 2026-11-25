@@ -6,6 +6,16 @@ import type { GalleryVideo } from "@/types/gallery";
 /** Последние видео из Telegram-канала, свежие — сверху. */
 export const telegramGallery: GalleryVideo[] = [
   {
+    id: "tg-3032",
+    type: "video",
+    video: { provider: "telegram", channel: "masloplus", id: "3032" },
+    thumb: "/gallery/telegram/3032.jpg",
+    title: "🎄Christmas New в «Масло Плюс»",
+    caption: "🎄Christmas New в «Масло Плюс»",
+    publishedAt: "2026-11-25T18:24:25+00:00",
+    sourceUrl: "https://t.me/masloplus/3032",
+  },
+  {
     id: "tg-3031",
     type: "video",
     video: { provider: "telegram", channel: "masloplus", id: "3031" },
@@ -144,15 +154,5 @@ export const telegramGallery: GalleryVideo[] = [
     caption: "📌 Наши адреса — выбирайте удобный: 📍 ул. Б. Хмельницкого, 73 — 386-383 📍 ул. Л. Комсомола, 29 — 24-24-11 📍 Университетская, 35Г — 21-22-88 🕘 График работы…",
     publishedAt: "2026-11-18T11:24:49+00:00",
     sourceUrl: "https://t.me/masloplus/3012",
-  },
-  {
-    id: "tg-3007",
-    type: "video",
-    video: { provider: "telegram", channel: "masloplus", id: "3007" },
-    thumb: "/gallery/telegram/3007.jpg",
-    title: "Замена масла в 9G-Tronic с поддоном — регламентная процедура.",
-    caption: "Замена масла в 9G-Tronic с поддоном — регламентная процедура. Поддон здесь идёт в сборе с фильтром: отдельно фильтр не меняется. Поэтому замена масла без поддо…",
-    publishedAt: "2026-11-18T06:51:00+00:00",
-    sourceUrl: "https://t.me/masloplus/3007",
   },
 ];
