@@ -6,6 +6,16 @@ import type { GalleryVideo } from "@/types/gallery";
 /** Последние видео из Telegram-канала, свежие — сверху. */
 export const telegramGallery: GalleryVideo[] = [
   {
+    id: "tg-3036",
+    type: "video",
+    video: { provider: "telegram", channel: "masloplus", id: "3036" },
+    thumb: "/gallery/telegram/3036.jpg",
+    title: "Замена масла в роботе Faw Besturn T77 на 55 000 км — работа с нюансами ⚙️",
+    caption: "Замена масла в роботе Faw Besturn T77 на 55 000 км — работа с нюансами ⚙️ Доступ к агрегату перекрыт: снимать приходится аккумулятор, воздуховод и подушку. Тру…",
+    publishedAt: "2026-11-27T11:57:29+00:00",
+    sourceUrl: "https://t.me/masloplus/3036",
+  },
+  {
     id: "tg-3035",
     type: "video",
     video: { provider: "telegram", channel: "masloplus", id: "3035" },
@@ -124,25 +134,5 @@ export const telegramGallery: GalleryVideo[] = [
     caption: "Hyundai Santa Fe — комплексная замена жидкостей 🛠️ Выполнили полный регламент: 🛢️ Масло в АКПП — стабильная работа коробки ⚙️ Масло в двигателе — защита от и…",
     publishedAt: "2026-11-22T08:08:13+00:00",
     sourceUrl: "https://t.me/masloplus/3017",
-  },
-  {
-    id: "tg-3015",
-    type: "video",
-    video: { provider: "telegram", channel: "masloplus", id: "3015" },
-    thumb: "/gallery/telegram/3015.jpg",
-    title: "Volkswagen Tiguan поступил с жалобой на тормозную систему. 🚗",
-    caption: "Volkswagen Tiguan поступил с жалобой на тормозную систему. 🚗 Диагностика выявила необходимость замены тормозных колодок по кругу и задних тормозных дисков. 🔧…",
-    publishedAt: "2026-11-21T10:24:28+00:00",
-    sourceUrl: "https://t.me/masloplus/3015",
-  },
-  {
-    id: "tg-3014",
-    type: "video",
-    video: { provider: "telegram", channel: "masloplus", id: "3014" },
-    thumb: "/gallery/telegram/3014.jpg",
-    title: "Когда автослесарь объясняет, а клиент понимает по своему 👨‍🔧🤣",
-    caption: "Когда автослесарь объясняет, а клиент понимает по своему 👨‍🔧🤣",
-    publishedAt: "2026-11-21T08:19:03+00:00",
-    sourceUrl: "https://t.me/masloplus/3014",
   },
 ];
