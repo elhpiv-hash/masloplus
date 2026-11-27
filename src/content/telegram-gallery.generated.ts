@@ -6,6 +6,16 @@ import type { GalleryVideo } from "@/types/gallery";
 /** Последние видео из Telegram-канала, свежие — сверху. */
 export const telegramGallery: GalleryVideo[] = [
   {
+    id: "tg-3035",
+    type: "video",
+    video: { provider: "telegram", channel: "masloplus", id: "3035" },
+    thumb: "/gallery/telegram/3035.jpg",
+    title: "🛢 Поставка: Motul 8100 X-Clean C3.",
+    caption: "🛢 Поставка: Motul 8100 X-Clean C3. Допуски: — BMW LL-04 — MB 229.51 — Porsche C30 — VW 504 00 / 507 00 Класс C3 — среднезольное, под DPF и прямой впрыск. На п…",
+    publishedAt: "2026-11-27T08:20:45+00:00",
+    sourceUrl: "https://t.me/masloplus/3035",
+  },
+  {
     id: "tg-3032",
     type: "video",
     video: { provider: "telegram", channel: "masloplus", id: "3032" },
@@ -134,25 +144,5 @@ export const telegramGallery: GalleryVideo[] = [
     caption: "Когда автослесарь объясняет, а клиент понимает по своему 👨‍🔧🤣",
     publishedAt: "2026-11-21T08:19:03+00:00",
     sourceUrl: "https://t.me/masloplus/3014",
-  },
-  {
-    id: "tg-3013",
-    type: "video",
-    video: { provider: "telegram", channel: "masloplus", id: "3013" },
-    thumb: "/gallery/telegram/3013.jpg",
-    title: "Комплексное ТО Geely Monjaro: что и зачем меняем.",
-    caption: "Комплексное ТО Geely Monjaro: что и зачем меняем. 🔧 Халдекс — масло и фильтр каждые 40–60 тыс. км. Игнорирование ведёт к перегреву муфты и удару по карману. \ud83d…",
-    publishedAt: "2026-11-18T13:13:28+00:00",
-    sourceUrl: "https://t.me/masloplus/3013",
-  },
-  {
-    id: "tg-3012",
-    type: "video",
-    video: { provider: "telegram", channel: "masloplus", id: "3012" },
-    thumb: "/gallery/telegram/3012.jpg",
-    title: "📌 Наши адреса — выбирайте удобный:",
-    caption: "📌 Наши адреса — выбирайте удобный: 📍 ул. Б. Хмельницкого, 73 — 386-383 📍 ул. Л. Комсомола, 29 — 24-24-11 📍 Университетская, 35Г — 21-22-88 🕘 График работы…",
-    publishedAt: "2026-11-18T11:24:49+00:00",
-    sourceUrl: "https://t.me/masloplus/3012",
   },
 ];
