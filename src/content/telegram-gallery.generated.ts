@@ -6,6 +6,16 @@ import type { GalleryVideo } from "@/types/gallery";
 /** Последние видео из Telegram-канала, свежие — сверху. */
 export const telegramGallery: GalleryVideo[] = [
   {
+    id: "tg-3039",
+    type: "video",
+    video: { provider: "telegram", channel: "masloplus", id: "3039" },
+    thumb: "/gallery/telegram/3039.jpg",
+    title: "Работаем 7/7, в выходные — с 9:00 до 17:00. 🕘",
+    caption: "Работаем 7/7, в выходные — с 9:00 до 17:00. 🕘 📍 ул. Б. Хмельницкого, 73 — 386-383 📍 ул. Л. Комсомола, 29 — 24-24-11 📍 Университетская, 35А — 21-22-88 Обращ…",
+    publishedAt: "2026-11-28T07:36:53+00:00",
+    sourceUrl: "https://t.me/masloplus/3039",
+  },
+  {
     id: "tg-3036",
     type: "video",
     video: { provider: "telegram", channel: "masloplus", id: "3036" },
@@ -124,15 +134,5 @@ export const telegramGallery: GalleryVideo[] = [
     caption: "Записаться на вибростенд 📍Точка СЗР Адрес:Университетская 35Г 📞 Телефон: 21-22-88 (звоните, записывайтесь) 📩 Написать нам в Telegram 📝 Записаться на обслуж…",
     publishedAt: "2026-11-22T09:30:35+00:00",
     sourceUrl: "https://t.me/masloplus/3018",
-  },
-  {
-    id: "tg-3017",
-    type: "video",
-    video: { provider: "telegram", channel: "masloplus", id: "3017" },
-    thumb: "/gallery/telegram/3017.jpg",
-    title: "Hyundai Santa Fe — комплексная замена жидкостей 🛠️",
-    caption: "Hyundai Santa Fe — комплексная замена жидкостей 🛠️ Выполнили полный регламент: 🛢️ Масло в АКПП — стабильная работа коробки ⚙️ Масло в двигателе — защита от и…",
-    publishedAt: "2026-11-22T08:08:13+00:00",
-    sourceUrl: "https://t.me/masloplus/3017",
   },
 ];
